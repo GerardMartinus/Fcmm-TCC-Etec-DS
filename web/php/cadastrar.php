@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("cadastro.html");
+include("conexao.php");
 
 $apelido = mysqli_real_escape_string($conexao, $_POST['apelido']);
 $email = mysqli_real_escape_string($conexao, $_POST['email']);
