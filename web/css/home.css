@@ -57,16 +57,19 @@
 h1{
   padding: 10px;
   color: #21629E;
+  user-select: none; 
 }
 
 h2 {
   padding: 10px;
   color: #21629E;
+  user-select: none; 
 }
 
 h3{
   padding: 10px;
   color: #21629E;
+  user-select: none; 
 }
 
 p {
@@ -76,25 +79,9 @@ p {
 dd {
   padding: 10px;
 }
-.hideBtn1{
-  background-color: #21629E;
-  width: 20px;
-  height: 20px;
-}
- 
 
-.hideBtn2{
-  margin-left: 10px;
-  background-color: #21629E;
-  width: 20px;
-  height: 20px;
-}
-.hideBtn3{
-  margin-left: 10px;
-  margin-bottom: 10px;
-  background-color: #21629E;
-  width: 20px;
-  height: 20px;
+#conteudo{
+  display: none;
 }
 
 
