@@ -1,124 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar</title>
-    <link rel="stylesheet" href="../css/home.css" />
-    <script src="http://kit.fontawsome.com/a076d05399.js"></script>
-  </head>
 
-  <body>
-    <!-- navbar -->
-    <header>
-      <nav>
-        <a class="logo" href="/">Fale com Minha Mão</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="unidade1.html">Unidade 1</a></li>
-          <li><a href="unidade2.html">Unidade 2</a></li>
-          <li><a href="unidade3.html">Unidade 3</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- conteudo da home -->
-    <div class="conteudo">
-      <h2>Introdução à Libras</h2>
-          <p>Aprenda a utilizar a lingua brasileira de sinais(Libras) de forma contextualizada adiquirindo o vocabuulario para garantir o atendimento e tratamento</p>
-           adequado as pessoas com deficiena auditiva.</p>
-          A lei n°10.436/2002 legitima a Libras como idioma advindo das comunidades surdas brasileiras e obriga o poder publico a  adotar formas</p>
-          institucionalizadas a apoiar o uso e a propagação da lingua como meio de comuniação.
-          </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <script src="http://kit.fontawsome.com/a076d05399.js"></script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <header>
+    <nav id="nav-header">
+      <a class="logo" href="/">Fale com Minha Mão</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="unidade1.html">Unidade 1</a></li>
+        <li><a href="unidade2.html">Unidade 2</a></li>
+        <li><a href="unidade3.html">Unidade 3</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- conteudo da home -->
+  <h1>
+    Introdução à Libras
+    <div class="hideBtn1" onclick="hideIntro()">
     </div>
-    <div class="Sobre" style="text-align:justify">
-          <h1>SOBRE O CURSO</h1>
-              <p>Nivel de experiencia: Básico</p>
-              <p>Publico alvo: Qualquer pessoa que tenha interesse em aprender a Língua Brasileira de Sinais – Libras.</p>
-              <p>Carga horaria: 24 horas</p>
+  </h1>
+  <div id="introducao">
+    <p>Aprenda a utilizar a lingua brasileira de sinais(Libras) de forma contextualizada adiquirindo o vocabuulario para
+      garantir o atendimento e tratamento adequado as pessoas com deficiena auditiva.
+      A lei n°10.436/2002 legitima a Libras como idioma advindo das comunidades surdas brasileiras e obriga o poder
+      publico a adotar formas institucionalizadas a apoiar o uso e a propagação da lingua como meio de comuniação.
+    </p>
+  </div>
+  <h2>Sobre o curso</h2>
+  <div class="hideBtn2" onclick="hideSobre()">
+  </div>
+  <div id="sobre">
+    <p>Nivel de experiencia: Básico</p>
+    <p>Publico alvo: Qualquer pessoa que tenha interesse em aprender a Língua Brasileira de Sinais – Libras.</p>
+    <p>Carga horaria: 24 horas</p>
+  </div>
+  <h2>Conteudo</h2>
+  <div class="hideBtn3" onclick="hideConteudo()"></div>
+  <div id="conteudo">
+    <div class="Capitulo1">
+      <dt>
+        <h3>Capitulo 1</h3>
+      </dt>
+      <dd>Alfabeto e Datilogia em libras</dd>
+      <dd>Sinais e Pronomes Pessoais</dd>
+      <dd>Saudações/Cumprimentos</dd>
+      <dd>Sinais de Numerais</dd>
+      <dd>Diálogos</dd>
     </div>
-          <div class="Conteudo" style="text-align:justify">
-              <h3>Conteudo</h3>
-                  <div class="Capitulo1">
-                  <dt><h3>Capitulo 1</h3></dt>
-                      <dd>Alfabeto e Datilogia em libras</dd>
-                      <dd>Sinais e Pronomes Pessoais</dd>
-                      <dd>Saudações/Cumprimentos</dd>
-                      <dd>Sinais de Numerais</dd>
-                      <dd>Diálogos</dd>
-                  </div>
-                  <div class="Capitulo2">
-                      <dt><h3>Capitulo</h3></dt>
-                      <dd>Sinais de calendario e dias da semana em libras </dd>
-                      <dd>Sinais de Advérbios de tempo</dd>
-                      <dd>Sinais de Expressões faciais e tipos de frases em libras</dd>
-                      <dd>Diálogos</dd>
-                  </div>
-                  <div class="Unidade 3">
-                      <dt><h3>Unidade 3</h3></dt>
-                      <dd>Gramática</dd>
-                      <dd>Sinais de relações de parentesco/família</dd>
-                  </div>
-                  <div class="Unidade 4">
-                      <dt><h3>Unidade 4</h3></dt>
-                      <dd>Sinais de sentimentos e Antônomias</dd>
-                  </div>
-                  <div class="Unidade 5">
-                      <dt><h3>Unidade 5</h3></dt>
-                      <dd>Valores monetários</dd>
-                      <dd>Sinais de Operações Aritméticos</dd>
-                  </div>
-                  <div class="Unidade 6">
-                      <dt><h3>Unidade 6</h3></dt>
-                      <dd>Sinais de cores e adjetivos</dd>
-                  </div>
-                  <div class="Unidade 7">
-                      <dt><h3>Unidade 7</h3></dt>
-                      <dd>Sinais de transporte</dd>
-                      <dd>Sinais de comuniação</dd>
-                      <dd>Sinais de materiasi escolares</dd>
-                  </div>
-                  <div class="Unidade 8">
-                      <dt><h3>Unidade 8</h3></dt>
-                      <dd>Sinais de estados do Brasil</dd>
-                      <dd>Sinais de pontos turisticos</dd>
-                  </div>
-                  <div class="Unidade 9">
-                      <dt><h3>Unidade 9</h3></dt>
-                      <dd>Sinais de alimentos</dd>
-                  </div>
-                  <div class="Unidade10">
-                      <dt><h3>Unidade 10</h3></dt>
-                      <dd>Sinais de animais</dd>
-                  </div>
-                  <div class="Unidade 11">
-                      <dt><h3>Unidade 11</h3></dt>
-                      <dd>Sinais de saúde</dd>
-                  </div>
-          </div>
+    <div class="Capitulo2">
+      <dt>
+        <h3>Capitulo</h3>
+      </dt>
+      <dd>Sinais de calendario e dias da semana em libras </dd>
+      <dd>Sinais de Advérbios de tempo</dd>
+      <dd>Sinais de Expressões faciais e tipos de frases em libras</dd>
+      <dd>Diálogos</dd>
+    </div>
+    <div class="Unidade 3">
+      <dt>
+        <h3>Unidade 3</h3>
+      </dt>
+      <dd>Gramática</dd>
+      <dd>Sinais de relações de parentesco/família</dd>
+    </div>
+    <div class="Unidade 4">
+      <dt>
+        <h3>Unidade 4</h3>
+      </dt>
+      <dd>Sinais de sentimentos e Antônomias</dd>
+    </div>
+    <div class="Unidade 5">
+      <dt>
+        <h3>Unidade 5</h3>
+      </dt>
+      <dd>Valores monetários</dd>
+      <dd>Sinais de Operações Aritméticos</dd>
+    </div>
+    <div class="Unidade 6">
+      <dt>
+        <h3>Unidade 6</h3>
+      </dt>
+      <dd>Sinais de cores e adjetivos</dd>
+    </div>
+    <div class="Unidade 7">
+      <dt>
+        <h3>Unidade 7</h3>
+      </dt>
+      <dd>Sinais de transporte</dd>
+      <dd>Sinais de comuniação</dd>
+      <dd>Sinais de materiasi escolares</dd>
+    </div>
+    <div class="Unidade 8">
+      <dt>
+        <h3>Unidade 8</h3>
+      </dt>
+      <dd>Sinais de estados do Brasil</dd>
+      <dd>Sinais de pontos turisticos</dd>
+    </div>
+    <div class="Unidade 9">
+      <dt>
+        <h3>Unidade 9</h3>
+      </dt>
+      <dd>Sinais de alimentos</dd>
+    </div>
+    <div class="Unidade10">
+      <dt>
+        <h3>Unidade 10</h3>
+      </dt>
+      <dd>Sinais de animais</dd>
+    </div>
+    <div class="Unidade 11">
+      <dt>
+        <h3>Unidade 11</h3>
+      </dt>
+      <dd>Sinais de saúde</dd>
+    </div>
+  </div>
 
-    <!-- footer -->
-    <footer>
-      <div class="class">
-        fale conosco
+  <!-- footer -->
+  <footer>
+    <div class="footer">
+      <div class="footer-botoes">
+        <a href="#" class="btn-ft-1">
+          Fale conosco
+        </a>
+        <a href="#" class="btn-ft-2">
+          Rede Socias
+        </a>
+        <a href="#" class="btn-ft-3">
+          Sobre Nós
+        </a>
       </div>
-      <div class="class">
-        Rede Socias
-      </div>
-      <div class="class">
-        Sobre Nós
-      </div>
-    </footer>
-    
-    <!-- responsividade da navbar -->
-    <script src="/web/js/mobile-navbar.js"></script>
+    </div>
+  </footer>
 
-  </body>
+  <!-- responsividade da navbar -->
+  <script src="/web/js/mobile-navbar.js"></script>
+  <script src="/web/js/hide-show-content.js"></script>
+</body>
+
 </html>
