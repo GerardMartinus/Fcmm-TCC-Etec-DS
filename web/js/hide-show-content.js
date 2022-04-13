@@ -18,9 +18,9 @@ function hideSobre(){
 
 function hideConteudo(){
     var intro = document.getElementById("conteudo");
-    if (intro.style.display === "none"){
-        intro.style.display = "block";
-    } else {
+    if (intro.style.display === "block"){
         intro.style.display = "none";
+    } else {
+        intro.style.display = "block";
     }
 }

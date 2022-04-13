@@ -10,6 +10,17 @@
 
 /* Header */
 
+.acessibilidade{
+  background-color: #eee;
+  padding: 15px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.acessibilidade1{
+  justify-content: space-between;
+}
+
 .logo {
   color: #fff;
   font-size: 24px;
@@ -55,28 +66,35 @@
 
 /* Main */
 h1{
+  font-size: 45px;
   padding: 10px;
   color: #21629E;
   user-select: none; 
+  cursor: pointer;
 }
-
+  
 h2 {
+  font-size: 35px;
   padding: 10px;
   color: #21629E;
   user-select: none; 
+  cursor: pointer;
 }
 
 h3{
+  font-size: 25px;
   padding: 10px;
   color: #21629E;
   user-select: none; 
 }
 
 p {
+  font-size: 25px;
   padding: 10px;
 }
 
 dd {
+  font-size: 25px;
   padding: 10px;
 }
 
@@ -86,6 +104,7 @@ dd {
 
 
 /* rodapé */
+
 .footer{
   background-color: #21629E;
   padding: 15px 20px;
