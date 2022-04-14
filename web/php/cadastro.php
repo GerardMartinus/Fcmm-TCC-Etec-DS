@@ -26,7 +26,7 @@
                   <li><input type="email" placeholder="E-mail" name="email" /></li>
                   <li><input type="password" placeholder="Senha" name="senha" /></li>
                   <li><button type="submit" class="btn">Cadastrar</button></li>
-                  <li><p>Já possui um cadastro? <a href="login.html">Faça Login</a></p></li>                  
+                  <li><p>Já possui um cadastro? <a href="login.php">Faça Login</a></p></li>                  
                 </ul>
               </fieldset>
             </form>

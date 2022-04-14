@@ -6,7 +6,7 @@ $apelido = mysqli_real_escape_string($conexao, $_POST['apelido']);
 $email = mysqli_real_escape_string($conexao, $_POST['email']);
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
-$sql = "select count(*) as total from cadastro where apelido = '$email'";
+$sql = "select count(*) as total from cadastro where email = '$email'";
 $result = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($result);
 
