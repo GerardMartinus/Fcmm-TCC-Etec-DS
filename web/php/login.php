@@ -18,7 +18,7 @@
     <div class="container">
         <div class="center">
           <div class="form">
-            <h1><a href="index.html">Fala com a minha mão</a></h1>
+            <h1><a href="../html/index.html">Fala com a minha mão</a></h1>
             <form action="logar.php">
               <fieldset>
                 <ul>
