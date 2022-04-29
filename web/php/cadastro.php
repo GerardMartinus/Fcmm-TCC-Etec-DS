@@ -1,3 +1,23 @@
+<?php
+ if(isset($_POST['submit']))
+ {
+  //  print_r('Nome: ' . $_POST['nome']);
+  //  print_r('<br>');
+  //  print_r('Email: ' . $_POST['email']);
+  //  print_r('<br>');
+  //  print_r('Senha: ' . $_POST['senha']);
+  
+  include_once('config.php');
+
+  $nome = $_POST['nome'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+
+  $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha)
+  VALUES ('$nome', '$email', '$senha')");
+ }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,14 +38,14 @@
         <div class="center">
           <div class="form">
             <h1><a href="../html/index.html">Fala com a minha mão</a></h1>
-            <form action="../php/cadastrar.php" method="POST">
+            <form action="cadastro.php" method="POST">
               <fieldset>
                 <ul>
                   <h2>Cadastre-se</h2>
                   <li><input type="text" placeholder="Nome" name="nome" /></li>
                   <li><input type="email" placeholder="E-mail" name="email" /></li>
                   <li><input type="password" placeholder="Senha" name="senha" /></li>
-                  <li><button type="submit" class="btn">Cadastrar</button></li>
+                  <li><input type="submit" name="submit" id="submit"></li>
                   <li><p>Já possui um cadastro? <a href="login.php">Faça Login</a></p></li>                  
                 </ul>
               </fieldset>
