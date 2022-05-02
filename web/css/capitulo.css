@@ -1,0 +1,35 @@
+.alfabeto{
+    position: relative;
+    left: 25%;
+}
+.alfabeto.video1{
+    position: relative;
+    left: 25%;
+}
+
+.pronome{
+    position: relative;
+    left: 25%;
+}
+.pronome.video2{
+    position: relative;
+    left: 25%;
+}
+
+.cumprimentos{
+    position: relative;
+    left: 25%;
+}
+.cumprimentos.video3{
+    position: relative;
+    left: 25%;
+}
+
+.numerais{
+    position: relative;
+    left: 25%;
+}
+.numerais.video4{
+    position: relative;
+    left: 25%;
+}
