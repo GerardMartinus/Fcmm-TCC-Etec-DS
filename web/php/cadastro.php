@@ -7,12 +7,15 @@
   //  print_r('<br>');
   //  print_r('Senha: ' . $_POST['senha']);
   
+  /*CONETANDO CONFIG.PHP COM O CADASTRO*/
   include_once('config.php');
 
+  /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
 
+  /*INSERINDO OS DADOS NO BANCO DE DADOS.*/
   $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha)
   VALUES ('$nome', '$email', '$senha')");
  }
@@ -34,6 +37,8 @@
     <title>Cadatro</title>
 </head>
 <body>
+  <h2><a href="../html/index.html">Voltar</a></h2>
+    
     <div class="container">
         <div class="center">
           <div class="form">

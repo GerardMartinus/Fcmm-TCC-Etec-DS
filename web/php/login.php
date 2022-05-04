@@ -15,17 +15,18 @@
 </head>
 
 <body>
+  <h2><a href="../html/index.html">Voltar</a></h2>
     <div class="container">
         <div class="center">
           <div class="form">
             <h1><a href="../html/index.html">Fala com a minha mão</a></h1>
-            <form action="../php/logar.php">
+            <form action="testlogin.php" method="POST">
               <fieldset>
                 <ul>
                   <h2>Login</h2>
-                  <li><input type="email" placeholder="Email" /></li>
-                  <li><input type="password" placeholder="Senha" /></li>
-                  <li><a href="index.html"><input type="submit" class="btn"/></a></li>
+                  <li><input type="email" placeholder="Email" name="email" /></li>
+                  <li><input type="password" placeholder="Senha" name="senha" /></li>
+                  <li><input type="submit" class="btn" name="submit"/></li>
                   <li><p>Não possui cadastro? <a href="cadastro.html">Registre-se</a></p></li>                  
                 </ul>
               </fieldset>
