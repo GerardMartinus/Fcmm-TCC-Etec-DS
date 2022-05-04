@@ -1,3 +1,5 @@
+
+/* Cpaitulo1 */
 .alfabeto{
     position: relative;
     left: 25%;
@@ -33,3 +35,40 @@
     position: relative;
     left: 25%;
 }
+
+/* Capitulo2 */
+.semana{
+    position: relative;
+    left: 25%;
+}
+
+.semana.video4{
+    position: relative;
+    left: 25%;
+}
+
+.meses{
+    position: relative;
+    left: 25%;
+}
+
+.meses.video5{
+    position: relative;
+    left: 25%;
+}
+
+.tempo{
+    position: relative;
+    left: 25%;
+}
+
+.tempo.video6{
+    position: relative;
+    left: 25%;
+}
+
+.expressao{
+    position: relative;
+    left: 25%;
+}
+
