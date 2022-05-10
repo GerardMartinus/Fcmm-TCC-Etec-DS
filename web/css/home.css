@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body{
+  font-size: 16px;
+}
+
 /* Header */
 
 .acessibilidade{
@@ -22,6 +26,7 @@
 }
 
 .logo {
+  z-index: 1;
   color: #fff;
   font-size: 24px;
   text-transform: uppercase;
@@ -63,10 +68,13 @@
   margin-left: 32px;
 }
 
+.mobile-menu{
+  z-index: 1;
+}
+
 
 /* Main */
 h1{
-  font-size: 45px;
   padding: 10px;
   color: #21629E;
   user-select: none; 
@@ -74,7 +82,6 @@ h1{
 }
   
 h2 {
-  font-size: 35px;
   padding: 10px;
   color: #21629E;
   user-select: none; 
@@ -82,24 +89,17 @@ h2 {
 }
 
 h3{
-  font-size: 25px;
   padding: 10px;
   color: #21629E;
   user-select: none; 
 }
 
 p {
-  font-size: 25px;
   padding: 10px;
 }
 
 dd {
-  font-size: 25px;
   padding: 10px;
-}
-
-#conteudo{
-  display: none;
 }
 
 
