@@ -47,9 +47,9 @@
               <fieldset>
                 <ul>
                   <h2>Cadastre-se</h2>
-                  <li><input type="text" placeholder="Nome" name="nome" /></li>
-                  <li><input type="email" placeholder="E-mail" name="email" /></li>
-                  <li><input type="password" placeholder="Senha" name="senha" /></li>
+                  <li><input type="text" placeholder="Nome" name="nome" required /></li>
+                  <li><input type="email" placeholder="E-mail" name="email" required /></li>
+                  <li><input type="password" placeholder="Senha" name="senha"  required /></li>
                   <li><input type="submit" name="submit" id="submit"></li>
                   <li><p>Já possui um cadastro? <a href="login.php">Faça Login</a></p></li>                  
                 </ul>
