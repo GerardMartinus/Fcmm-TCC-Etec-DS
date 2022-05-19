@@ -10,7 +10,10 @@
 
 body{
   font-size: 16px;
-  background-color: #fff;
+}
+
+article{
+  background-color: #ccc;
 }
 
 /* Header */
@@ -126,7 +129,7 @@ h1{
   user-select: none; 
 }
   
-h2 {
+h2{
   padding: 10px;
   color: #21629E;
   user-select: none; 
@@ -139,11 +142,17 @@ h3{
 }
 
 p {
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
 }
 
 dd {
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
 }
 
 
@@ -155,26 +164,8 @@ dd {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-.botoes-footer{
-  justify-content: space-between;
-}
-.botao-footer1{
-  padding: 20px;
   color: #fff;
-  text-decoration: none;
 }
-.botao-footer2{
-  padding: 20px;
-  color: #fff;
-  text-decoration: none;
-}
-.botao-footer3{
-  padding: 20px;
-  color: #fff;
-  text-decoration: none;
-}
-
 
 
 /* responsividade */

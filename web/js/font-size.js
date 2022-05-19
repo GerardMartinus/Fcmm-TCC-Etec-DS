@@ -9,13 +9,19 @@ window.onload = function() {
 
     // Evento de click para aumentar a fonte
     elementBtnIncreaseFont.addEventListener('click', function(event) {
+        console.log(fontSize);
         fontSize = fontSize + increaseDecrease;
         elementBody.style.fontSize = fontSize + '%';
     });
 
     // Evento de click para diminuir a fonte
     elementBtnDecreaseFont.addEventListener('click', function(event) {
+        console.log(fontSize);
         fontSize = fontSize - increaseDecrease;
         elementBody.style.fontSize = fontSize + '%';
+
+        if (fontSize <= 50){
+            
+        }
     });
 }
