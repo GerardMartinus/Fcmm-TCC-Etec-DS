@@ -37,26 +37,26 @@
     <title>Cadatro</title>
 </head>
 <body>
-  <h2><a href="../html/index.html">Voltar</a></h2>
+
+  
     
-    <div class="container">
-        <div class="center">
-          <div class="form">
-            <h1><a href="../html/index.html">Fala com a minha mão</a></h1>
-            <form action="cadastro.php" method="POST">
-              <fieldset>
-                <ul>
-                  <h2>Cadastre-se</h2>
-                  <li><input type="text" placeholder="Nome" name="nome" required /></li>
-                  <li><input type="email" placeholder="E-mail" name="email" required /></li>
-                  <li><input type="password" placeholder="Senha" name="senha"  required /></li>
-                  <li><input type="submit" name="submit" id="submit"></li>
-                  <li><p>Já possui um cadastro? <a href="login.php">Faça Login</a></p></li>                  
-                </ul>
-              </fieldset>
-            </form>
-          </div>
+  <div id="login-container">
+        <h1>Bem-vindo de volta!</h1>
+        <form action="">
+            <input type="text" name="text" id="nome" placeholder="Nome" >
+            <input type="email" name="email" id="email" placeholder="E-mail" >
+            <input type="password" name="senha" id="senha" placeholder="Senha">
+            <input type="submit" value="Entrar">
+            <br>
+            <a href="../html/index.html" class="voltar">Voltar</a>
+            
+        </form>
+            <h2> OU </h2>
+            <br>
+        <div id="naopossuiconta">
+            <p>Já possui conta? </p>
+            <a href="login.php" id="login">Logar</a>
         </div>
-      </div>
+    </div>
 </body>
 </html>
