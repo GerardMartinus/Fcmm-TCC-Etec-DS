@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link rel="manifest" href="../manifest.json">
-  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  
   <script src="http://kit.fontawsome.com/a076d05399.js"></script>
 </head>
 
@@ -17,20 +18,21 @@
       <div class="btn-container">
         <label class="label-1">Contraste:</label>
         <!-- Site claro -->
-        <button name="white-style" id="white-style" title="Site Normal" onclick="document.body.style.backgroundColor = '#fff'; 
-        document.body.style.color = '#000';
-        document.getElementById('logo').style.color = '#fff';  
-        
-        document.querySelector('.botao-footer1').setAttribute('style', 'color: #fff');
-        document.querySelector('.botao-footer2').setAttribute('style', 'color: #fff');
-        document.querySelector('.botao-footer3').setAttribute('style', 'color: #fff');">-</button>
+        <button name="white-style" id="white-style" title="Site Normal"
+        onclick="document.querySelector('article').style.backgroundColor = '#ccc'; 
+        document.getElementById('logo').style.color = '#fff'; 
+        document.querySelector('h1').style.color = '#21629E';
+        document.querySelector('h2').style.color = '#21629E';
+        document.querySelector('h3').style.color = '#21629E';
+        document.body.style.color = '#000';">-</button>
         <!-- Site escuro -->
-        <button name="black-style" id="black-style" title="Alto contraste" onclick="document.body.style.backgroundColor = '#000'; 
-        document.body.style.color = '#fff';
-        document.getElementById('logo').style.color = 'yellow';
-        document.querySelector('.botao-footer1').setAttribute('style', 'color: yellow');
-        document.querySelector('.botao-footer2').setAttribute('style', 'color: yellow');
-        document.querySelector('.botao-footer3').setAttribute('style', 'color: yellow');">-</button>
+        <button name="black-style" id="black-style" title="Alto contraste" 
+        onclick="document.querySelector('article').style.backgroundColor = '#202124'; 
+        document.getElementById('logo').style.color = '#F5E321'; 
+        document.querySelector('h1').style.color = '#78B3EB';
+        document.querySelector('h2').style.color = '#78B3EB';
+        document.querySelector('h3').style.color = '#78B3EB';
+        document.body.style.color = '#fff';">-</button>
 
         <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
         <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
@@ -47,11 +49,8 @@
       </div>
       <ul class="nav-list">
         <li><a href="index.html">Início</a></li>
-        <li><a href="/web/html/Unidade1.html">Unidade 1</a></li>
-        <li><a href="unidade2.html">Unidade 2</a></li>
-        <li><a href="unidade3.html">Unidade 3</a></li>
-        <li><a href="../php/login.php">Login</a></li>
-        <li><a href="../php/cadastro.php">Cadastro</a></li>
+        <li><a href="unidade1.html">Sobre nós</a></li>
+        <li><a href="unidade2.html">Fale conosco</a></li>
       </ul>
     </nav>
   </header>
@@ -107,7 +106,7 @@
         <dd>Gramática</dd>
         <dd>Sinais de relações de parentesco/família</dd>
       </div>
-      <div class="Unidade 4">
+      <div class="Unidade 4">                
         <dt>
           <h3>Unidade 4</h3>
         </dt>
@@ -164,22 +163,11 @@
 
   <!-- footer -->
   <footer id="footer">
-    <div class="botoes-footer">
-      <a class="botao-footer1" href="#">
-        Fale conosco
-      </a>
-      <a class="botao-footer2" href="#">
-        Rede Socias
-      </a>
-      <a class="botao-footer3" href="#">
-        Sobre Nós
-      </a>
-    </div>
+      Fale com a minha mão &copy; 2022
   </footer>
 
   <!-- responsividade da navbar -->
   <script src="../js/mobile-navbar.js"></script>
-  <script src="../js/hide-show-content.js"></script>
   <script src="../js/font-size.js"></script>
 </body>
 

@@ -1,74 +1,9 @@
-
-/* Cpaitulo1 */
-.alfabeto{
-    position: relative;
-    left: 25%;
-}
-.alfabeto.video1{
-    position: relative;
-    left: 25%;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    text-align: justify;
+    box-sizing: border-box;
 }
 
-.pronome{
-    position: relative;
-    left: 25%;
-}
-.pronome.video2{
-    position: relative;
-    left: 25%;
-}
-
-.cumprimentos{
-    position: relative;
-    left: 25%;
-}
-.cumprimentos.video3{
-    position: relative;
-    left: 25%;
-}
-
-.numerais{
-    position: relative;
-    left: 25%;
-}
-.numerais.video4{
-    position: relative;
-    left: 25%;
-}
-
-/* Capitulo2 */
-.semana{
-    position: relative;
-    left: 25%;
-}
-
-.semana.video4{
-    position: relative;
-    left: 25%;
-}
-
-.meses{
-    position: relative;
-    left: 25%;
-}
-
-.meses.video5{
-    position: relative;
-    left: 25%;
-}
-
-.tempo{
-    position: relative;
-    left: 25%;
-}
-
-.tempo.video6{
-    position: relative;
-    left: 25%;
-}
-
-.expressao{
-    position: relative;
-    left: 25%;
-}
 
