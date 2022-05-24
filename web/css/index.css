@@ -13,7 +13,17 @@ body{
 }
 
 article{
-  background-color: #ccc;
+  background-color: #fff;
+}
+section{
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+}
+h1{
+  text-align: center;
+  font-size: 30px;
 }
 
 /* Header */
