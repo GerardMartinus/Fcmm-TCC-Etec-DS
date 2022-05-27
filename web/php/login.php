@@ -27,7 +27,8 @@
                   <li><input type="email" placeholder="Email" name="email" /></li>
                   <li><input type="password" placeholder="Senha" name="senha" /></li>
                   <li><input type="submit" class="btn" name="submit"/></li>
-                  <li><p>Não possui cadastro? <a href="cadastro.html">Registre-se</a></p></li>                  
+                  <li><p>Não possui cadastro? <a href="cadastro.php">Registre-se</a></p></li>       
+                  <a href="esqueceusenha.php">Esqueci minha senha</a>           
                 </ul>
               </fieldset>
             </form>
