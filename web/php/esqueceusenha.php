@@ -11,7 +11,7 @@
 
         $sql_code = "SELECT senha, nome FROM usuario WHERE email = '$_SESSION[email]'";
         $sql_query = $mysqli->query($sql_code) or die ($mysqli->error);
-        $dado = $sql_query->fetch_assosc();
+        $dado = $sql_query->fetch_assosc(); 
         $total = $sql_query->num_rows;
 
         if($total == 0)
@@ -42,6 +42,18 @@
         <input type="email" placeholder="Digite seu email" name="email">
         <input type="submit" value="Enviar" name="ok">
     </form>
+
+      <!-- Adicionando o VLibras -->  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
 </body>
 </html>
