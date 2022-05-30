@@ -5,27 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <!-- navbar -->
-    <header>
-      <nav>
-        <a class="logo" href="/">Fale com Minha Mão</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="/home.html">Início</a></li>
-          <li><a href="/Unidade1.html">Unidade 1</a></li>
-          <li><a href="/unidade2.html">Unidade 2</a></li>
-          <li><a href="/unidade3.html">Unidade 3</a></li>
-        </ul>
-      </nav>
+  <div class="acessibilidade">
+    <div class="btn-container">
+      <label class="label-1">Contraste:</label>
+      <!-- Site claro -->
+      <button name="white-style" id="white-style" title="Site Normal"
+      onclick="document.querySelector('article').style.backgroundColor = '#fff'; 
+      document.getElementById('logo').style.color = '#fff'; 
+      document.querySelector('h1').style.color = '#21629E';
+      document.querySelector('h2').style.color = '#21629E';
+      document.querySelector('h3').style.color = '#21629E';
+      document.body.style.color = '#000';">-</button>
+      <!-- Site escuro -->
+      <button name="black-style" id="black-style" title="Alto contraste" 
+      onclick="document.querySelector('article').style.backgroundColor = '#202124'; 
+      document.getElementById('logo').style.color = '#F5E321'; 
+      document.querySelector('h1').style.color = '#78B3EB';
+      document.querySelector('h2').style.color = '#78B3EB';
+      document.querySelector('h3').style.color = '#78B3EB';
+      document.body.style.color = '#fff';">-</button>
+
+      <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+      <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav id="nav-header">
+    <a id="logo" href="index.html">Fale com Minha Mão</a>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="unidade1.html">Sobre nós</a></li>
+      <li><a href="unidade2.html">Fale conosco</a></li>
+      <li><a href="../php/login.php">Login</a></li>
+      <li><a href="../php/cadastro.php">Cadastro</a></li>
+    </ul>
+  </nav>
     </header>
+
     <!-- Conteudo -->
+    <article>
+      <h1>capitulo3</h1>
+      <section>
+          
+      </section>
+    </article>
     <div class="gramatica">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/lkZoPHiB5VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>

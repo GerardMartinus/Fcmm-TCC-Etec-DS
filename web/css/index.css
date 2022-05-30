@@ -25,6 +25,10 @@ h1{
   text-align: center;
   font-size: 30px;
 }
+h2{
+  text-align: center;
+  font-size: 30px;
+}
 .btn{
   background: #069cc2; 
   border-radius: 6px; 
