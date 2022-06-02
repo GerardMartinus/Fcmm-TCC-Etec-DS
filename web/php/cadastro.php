@@ -1,11 +1,11 @@
 <?php
  if(isset($_POST['submit']))
  {
-  //  print_r('Nome: ' . $_POST['nome']);
-  //  print_r('<br>');
-  //  print_r('Email: ' . $_POST['email']);
-  //  print_r('<br>');
-  //  print_r('Senha: ' . $_POST['senha']);
+/*    print_r('Nome: ' . $_POST['nome']);
+   print_r('<br>');
+   print_r('Email: ' . $_POST['email']);
+   print_r('<br>');
+   print_r('Senha: ' . $_POST['senha']); */
   
   /*CONETANDO CONFIG.PHP COM O CADASTRO*/
   include_once('config.php');
@@ -16,7 +16,7 @@
   $senha = $_POST['senha'];
 
   /*INSERINDO OS DADOS NO BANCO DE DADOS.*/
-  $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha)
+  $result = mysqli_query($conexao, "INSERT INTO usuarios (nome,email,senha)
   VALUES ('$nome', '$email', '$senha')");
  }
 ?>
@@ -42,11 +42,11 @@
     
   <div id="login-container">
         <h1>Bem-vindo de volta!</h1>
-        <form action="">
-            <input type="text" name="text" id="nome" placeholder="Nome" >
+        <form action="cadastro.php" method="POST">
+            <input type="text" name="nome" id="nome" placeholder="Nome" >
             <input type="email" name="email" id="email" placeholder="E-mail" >
             <input type="password" name="senha" id="senha" placeholder="Senha">
-            <input type="submit" value="Entrar">
+            <input type="submit" value="Cadastrar" name="submit">
             <br>
             <a href="../html/index.html" class="voltar">Voltar</a>
             

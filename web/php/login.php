@@ -1,3 +1,46 @@
+<?php
+    session_start();
+
+    /* print_r($_REQUEST); */
+    if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']))
+    {
+        //Acessa sistema.
+        include_once('config.php');
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        // print_r('Email: ' . $email);
+        // print_r('<br>');
+        // print_r('Senha: ' . $senha);
+
+        $sql = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$senha'";
+
+        $result = $conexao -> query($sql);
+
+        // print_r($sql);
+        // print_r($result);
+
+        if(mysqli_num_rows($result) < 1)
+        {
+            unset($_SESSION['email']);
+            unset($_SESSION['senha']);
+            header('Location: login.php');
+        }
+        else
+        {
+            $_SESSION['email'] = $email;
+            $_SESSION['senha'] = $senha;
+            header('Location: sistema.php');
+        }
+    }
+    else
+    {
+        //Não acessa sistema.
+
+        header("Location: login.php");  
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,7 +63,7 @@
         <div class="center">
           <div class="form">
             <h1><a href="../html/index.html">Fala com a minha mão</a></h1>
-            <form action="testlogin.php" method="POST">
+            <form action="login.php" method="POST">
               <fieldset>
                 <ul>
                   <h2>Login</h2>
