@@ -1,4 +1,11 @@
+
+
 <?php
+
+  /*CONETANDO CONFIG.PHP COM O CADASTRO*/
+  include_once('config.php');
+
+
  if(isset($_POST['submit']))
  {
 /*    print_r('Nome: ' . $_POST['nome']);
@@ -7,13 +14,33 @@
    print_r('<br>');
    print_r('Senha: ' . $_POST['senha']); */
   
-  /*CONETANDO CONFIG.PHP COM O CADASTRO*/
-  include_once('config.php');
+
 
   /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
-  $nome = $_POST['nome'];
-  $email = $_POST['email'];
-  $senha = $_POST['senha'];
+  $nome = mysqli_real_escape_string($conexao, $_POST['name']);
+  $email = mysqli_real_escape_string($conexao, $_POST['email']);
+  $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+  $cpassword = mysqli_real_escape_string($conexao, $_POST['cpassword']);
+  
+  /* Vendo se a senha e confirma senha estão iguais */
+  if($password !== $cpassword){
+    /* Devolvendo erro caso a senha e confirma senha estiverem diferentes */
+    $errors['password'] = "Confirmação de senha está errada!";
+  } 
+  
+  /* Solicitando o email no banco de dados */
+  $email_check = "SELECT * FROM usertable WHERE email = '$email' ";
+
+  /* Coletando a informação e armazenando na variavél res */
+  $res = mysqli_query($conexao, $email_check);
+
+  /* Verificando se email existe no banco de dados ou não */
+  if(mysqli_num_rows($res) > 0){
+    $errors['email'] = "O E-mail utilizado já existe!";
+  }
+  if(count($erros) === 0){
+    $encpass = password_hash($password)
+  }
 
   /*INSERINDO OS DADOS NO BANCO DE DADOS.*/
   $result = mysqli_query($conexao, "INSERT INTO usuarios (nome,email,senha)
@@ -34,18 +61,19 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com">
     <link rel="stylesheet" href="http://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Roboto=wght@100;300;400;500;700&display=swap">
-    <title>Cadatro</title>
+    <title>Cadastro</title>
 </head>
 <body>
 
   
     
   <div id="login-container">
-        <h1>Bem-vindo de volta!</h1>
+        <h1>Cadastre-se</h1>
         <form action="cadastro.php" method="POST">
             <input type="text" name="nome" id="nome" placeholder="Nome" >
             <input type="email" name="email" id="email" placeholder="E-mail" >
             <input type="password" name="senha" id="senha" placeholder="Senha">
+            <input type="password" name="cpassword" id="cpassword" placeholder="Confirmar Senha">
             <input type="submit" value="Cadastrar" name="submit">
             <br>
             <a href="../html/index.html" class="voltar">Voltar</a>
