@@ -17,19 +17,20 @@
 
 
   /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
-  $nome = mysqli_real_escape_string($conexao, $_POST['name']);
+  $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
   $email = mysqli_real_escape_string($conexao, $_POST['email']);
   $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
   $cpassword = mysqli_real_escape_string($conexao, $_POST['cpassword']);
   
   /* Vendo se a senha e confirma senha estão iguais */
-  if($password !== $cpassword){
+  if($senha !== $cpassword){
     /* Devolvendo erro caso a senha e confirma senha estiverem diferentes */
     $errors['password'] = "Confirmação de senha está errada!";
+    die();
   } 
   
   /* Solicitando o email no banco de dados */
-  $email_check = "SELECT * FROM usertable WHERE email = '$email' ";
+  $email_check = "SELECT * FROM usuarios WHERE email = '$email' ";
 
   /* Coletando a informação e armazenando na variavél res */
   $res = mysqli_query($conexao, $email_check);
@@ -38,8 +39,35 @@
   if(mysqli_num_rows($res) > 0){
     $errors['email'] = "O E-mail utilizado já existe!";
   }
-  if(count($erros) === 0){
-    $encpass = password_hash($password)
+
+  /* Conferindo se não existe erros */
+  if(count($errors) === 0){
+
+    /* Atribuindo vlaor para as variavéis. */
+    $encpass = password_hash($password, PASSWORD_BCRYPT);
+    $code = rand(999999, 111111);
+    $status = "naoverificado";
+    /* Inserindo dados no banco */
+    $insertdata = "INSERT INTO usuarios (nome, email, senha, codigo, status)
+    VALUES ('$name', '$email', '$encpass', '$code', '$status' ";
+    $data_check = mysqli_query($conexao, $insertdata);
+    
+    if ($data_check){
+      $subject = "Código de verificação de E-mail";
+      $message = "Seu código é: $code";
+      $sender = "From: $email";
+    }
+    if (mail($email, $subject, $message, $sender)){
+      $info = "Enviamos um código de verificação para seu e-mail - $email";
+      $_SESSION['info'] = $info;
+      $_SESSION['email'] = $email;
+      $_SESSION['senha'] = $senha;
+      header('location: teste.php');
+      exit();
+    } else {
+      $errors ['db-error'] = "Falha ao realizar o cadastro.";
+    }
+
   }
 
   /*INSERINDO OS DADOS NO BANCO DE DADOS.*/
@@ -69,6 +97,7 @@
     
   <div id="login-container">
         <h1>Cadastre-se</h1>
+        <?php echo"<p>$errors</p>" ?>
         <form action="cadastro.php" method="POST">
             <input type="text" name="nome" id="nome" placeholder="Nome" >
             <input type="email" name="email" id="email" placeholder="E-mail" >
