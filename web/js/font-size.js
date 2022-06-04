@@ -1,27 +1,25 @@
-window.onload = function() {
-    var elementBody = document.querySelector('body');
-    var elementBtnIncreaseFont = document.getElementById('increase-font');
-    var elementBtnDecreaseFont = document.getElementById('decrease-font');
-    // Padrão de tamanho, equivale a 100% do valor definido no Body
-    var fontSize = 100;
-    // Valor de incremento ou decremento, equivale a 10% do valor do Body
-    var increaseDecrease = 10;
-
-    // Evento de click para aumentar a fonte
-    elementBtnIncreaseFont.addEventListener('click', function(event) {
-        console.log(fontSize);
-        fontSize = fontSize + increaseDecrease;
-        elementBody.style.fontSize = fontSize + '%';
-    });
-
-    // Evento de click para diminuir a fonte
-    elementBtnDecreaseFont.addEventListener('click', function(event) {
-        console.log(fontSize);
-        fontSize = fontSize - increaseDecrease;
-        elementBody.style.fontSize = fontSize + '%';
-
-        if (fontSize <= 50){
-            
+$(document).ready(function(){
+    let fonte = 14;
+    let fontesection = 24;
+    $('#increase-font').click(function(){
+        if(fonte<26){
+            fonte++
+            $('body').css({'font-size': fonte+'px'});
         }
-    });
-}
+        if (fontesection < 34){
+            fontesection++
+            $('section').css({'font-size': fontesection+'px'});
+        }
+    })
+    $('#decrease-font').click(function(){
+        if(fonte>14){
+            fonte--
+            $('body').css({'font-size': fonte+'px'});
+        }
+        if (fontesection > 24){
+            fontesection--
+            $('section').css({'font-size': fontesection+'px'});
+        }
+    })
+
+});

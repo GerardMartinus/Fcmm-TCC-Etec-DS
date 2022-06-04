@@ -23,7 +23,7 @@
   $cpassword = mysqli_real_escape_string($conexao, $_POST['cpassword']);
   
   /* Vendo se a senha e confirma senha estão iguais */
-  if($senha !== $cpassword){
+  if($senha != $cpassword){
     /* Devolvendo erro caso a senha e confirma senha estiverem diferentes */
     $errors['password'] = "Confirmação de senha está errada!";
     die();
@@ -44,12 +44,12 @@
   if(count($errors) === 0){
 
     /* Atribuindo vlaor para as variavéis. */
-    $encpass = password_hash($password, PASSWORD_BCRYPT);
+    $senha = password_hash($password, PASSWORD_BCRYPT);
     $code = rand(999999, 111111);
     $status = "naoverificado";
     /* Inserindo dados no banco */
-    $insertdata = "INSERT INTO usuarios (nome, email, senha, codigo, status)
-    VALUES ('$name', '$email', '$encpass', '$code', '$status' ";
+    $insertdata = "INSERT INTO usuarios (nome, email, senha)
+    VALUES ('$nome', '$email', '$senha'";
     $data_check = mysqli_query($conexao, $insertdata);
     
     if ($data_check){
@@ -97,7 +97,6 @@
     
   <div id="login-container">
         <h1>Cadastre-se</h1>
-        <?php echo"<p>$errors</p>" ?>
         <form action="cadastro.php" method="POST">
             <input type="text" name="nome" id="nome" placeholder="Nome" >
             <input type="email" name="email" id="email" placeholder="E-mail" >
