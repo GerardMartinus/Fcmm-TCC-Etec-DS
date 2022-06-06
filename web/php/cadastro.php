@@ -29,6 +29,7 @@ if (isset($_POST['submit'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Bruno Martins de Morais Silva, Arthur Souto, Gabriel Santos, Ana Luisa, Igor">
   <meta name="keywords" content="">
+  <script src="../js/validar.js"></script>
   <link rel="stylesheet" href="../css/cadastro.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com">
   <link rel="stylesheet" href="http://fonts.gstatic.com" crossorigin>
@@ -43,10 +44,11 @@ if (isset($_POST['submit'])) {
 
   <div id="login-container">
     <h1>Bem-Vindo</h1>
-    <form action="">
-      <input type="text" name="text" id="nome" placeholder="Nome">
+    <form name="cadastro" id="cadastro" method="POST">
+      <input type="text" name="nome" id="nome" placeholder="Nome">
       <input type="email" name="email" id="email" placeholder="E-mail">
       <input type="password" name="senha" id="senha" placeholder="Senha">
+      <input type="password" name="confirmar" id="confirmar" placeholder="Confirmar Senha">
       <input type="submit" value="Entrar">
       <br>
       <a href="../html/index.html" class="voltar">Voltar</a>
