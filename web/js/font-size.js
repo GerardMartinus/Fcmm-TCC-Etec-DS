@@ -16,7 +16,7 @@ $(document).ready(function(){
             fonte--
             $('body').css({'font-size': fonte+'px'});
         }
-        if (fontesection > 24){
+        if (fontesection > 18){
             fontesection--
             $('section').css({'font-size': fontesection+'px'});
         }
