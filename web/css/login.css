@@ -1,60 +1,154 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-decoration: 0;
+/*geral*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #323232;
+  border: none;
+
+}
+
+html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,255,255,1) 35%, 100%);
+  overflow: hidden;
+}
+
+.ocean { 
+  height: 2%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #08558b;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -158px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
   }
-  .container{
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  100% {
+    margin-left: -1600px;
   }
-  .center{
-    background-color: #21629e;
-    position: absolute;
-    width: 50%;
-    height: 70%;
-    top: 15%;
-    left: 25%;
-    border-radius: 20px;
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
   }
-  .form{
-    position: absolute;
-    text-align: center;
-    top: 15%;
-    left: 25%;
-    width: 50%;
-    height: 70%;
+  50% {
+    transform: translate3d(0,5px,0);
   }
-  .form ul{
-    padding: 10%;
-    list-style: none;
-  }
-  .form ul li{
-    padding: 5%;
-  }
-  .form input{
-    height: 40px;
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
-  }
-  .form p{
-      color: #fff;
-  }
-  .form a{
-      color: orange;
-  }
-  .form a:visited{
-      color: orange;
-  }
-  .btn{
-    background-color: orange;
-    color: #fff;
-  }
-  h1{
-    color: #fff;
-  }
-  h2{
-      color: #fff;
-  }
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+#voltar{
+  margin-top: 1%;
+  margin-left: 1%;
+  width: 100px;
+}
+
+a {
+  font-size: .8rem;
+}
+
+a:hover {
+  color: #08558b;
+}
+
+/* login-container */
+#login-container {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  margin-top: 25vh;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba( 200, 200, 200, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+/*formulário*/
+
+form {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+input:focus {
+  border-bottom: 2px solid #323232;
+}
+
+input[type="submit"] {
+  text-align:center;
+  font-weight:bold;
+  border:none;
+  height:40px;
+  border-radius:10px;
+  color: #fff;
+  background-color:#08558B;
+  cursor:pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #18223C;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#esqueceuasenha {
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-bottom: #323232;
+}
+
+
+#cadastre-se {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+#naopossuiconta {
+  display: flex;
+  justify-content: space-between;
+}

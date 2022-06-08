@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/index.css" />
   
   <script src="http://kit.fontawsome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,6 +18,7 @@
     <div class="acessibilidade">
       <div class="btn-container">
         <label class="label-1">Contraste:</label>
+
         <!-- Site claro -->
         <button name="white-style" id="white-style" title="Site Normal"
         onclick="document.querySelector('article').style.backgroundColor = '#fff'; 
@@ -25,6 +27,7 @@
         document.querySelector('h2').style.color = '#21629E';
         document.querySelector('h3').style.color = '#21629E';
         document.body.style.color = '#000';">-</button>
+        
         <!-- Site escuro -->
         <button name="black-style" id="black-style" title="Alto contraste" 
         onclick="document.querySelector('article').style.backgroundColor = '#202124'; 

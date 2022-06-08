@@ -1,16 +1,18 @@
 <?php
     include("config.php");
+    
+    if(isset($_POST["submit"])){
 
-    if(isset($_POST["ok"])){
-      $email = $_POST['email'];
+      $email = $conexao ->escape_string($_POST['email']);
+
 
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             $erro[] = "E-mail inválido";
         
 
-        $sql_code = "SELECT * FROM usuario WHERE email = '$email'";
-        $sql_query = $mysqli->query($sql_code) or die ($mysqli->error);
-        $dado = $sql_query->fetch_assosc(); 
+        $sql_code = "SELECT * FROM usuarios WHERE email = '$email'";
+        $sql_query = $conexao->query($sql_code) or die ($conexao->error);
+        $dado = $sql_query->fetch_assoc(); 
         $total = $sql_query->num_rows;
 
         if($total == 0){
@@ -46,11 +48,14 @@
     <title>Esqueci minha senha</title>
 </head>
 <body>
+
   <div id="login-container">
+
     <h2>Digite seu email para a alteração da senha</h2>
+
     <form action="esqueceusenha.php" method="POST">
-        <input value="<?php echo $_POST['$email']; ?>"  type="email" placeholder="Digite seu email" name="email">
-        <input type="submit" value="Enviar" name="ok">
+        <input value=""  type="email" placeholder="Digite seu email" name="email">
+        <input type="submit" value="Enviar" name="submit">
     </form>
   </div>
 
