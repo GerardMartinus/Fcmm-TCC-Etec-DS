@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
   <link rel="stylesheet" href="http://fonts.googleapis.com">
   <link rel="stylesheet" href="http://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Roboto=wght@100;300;400;500;700&display=swap">
-  <title>Cadatro</title>
+  <title>Cadastro</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
 
   <div id="login-container">
     <h1>Bem-Vindo</h1>
-    <form name="cadastro" id="cadastro" method="POST">
+    <form name="cadastro" id="cadastro" method="POST" onsubmit="return validarCampos()">
       <input type="text" name="nome" id="nome" placeholder="Nome">
       <input type="email" name="email" id="email" placeholder="E-mail">
       <input type="password" name="senha" id="senha" placeholder="Senha">
@@ -77,6 +77,12 @@ if (isset($_POST['submit'])) {
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/fonte.js"></script>
+  <script src="../js/contraste-views.js"></script>
+  <script src="../js/validador.js"></script>
 </body>
 
 </html>

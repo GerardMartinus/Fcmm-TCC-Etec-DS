@@ -29,6 +29,16 @@ h2{
   text-align: center;
   font-size: 30px;
 }
+img{
+  width: 500px;
+    margin:0 auto;
+    display: block;
+}
+iframe{
+  width: 500px;
+    margin:0 auto;
+    display: block;
+}
 .btn{
   background: #069cc2; 
   border-radius: 6px; 

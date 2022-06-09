@@ -28,7 +28,7 @@ let alternativas = document.querySelector('#alternativas')
 
 const q0 = {
     numQuestao   : 0,
-    imagem       : '0.png',  // ADICIONE
+    imagem       : '../img/quiz/0.jpeg',  // ADICIONE
     pergunta     : "Pergunta",
     alternativaA : "Alternativa A",
     alternativaB : "Alternativa B",
@@ -38,43 +38,43 @@ const q0 = {
 }
 const q1 = {
     numQuestao   : 1,
-    imagem       : '1.jpeg',  // ADICIONE
-    pergunta     : "Boreal é o mesmo que...",
-    alternativaA : "Sul",
-    alternativaB : "Leste",
-    alternativaC : "Norte",
-    alternativaD : "Oeste",
-    correta      : "Norte",
+    imagem       : '../../img/quiz/1.jpeg',  // ADICIONE
+    pergunta     : "Traduza a imagem acima",
+    alternativaA : "Oi",
+    alternativaB : "Bom dia!",
+    alternativaC : "Boa tarde!",
+    alternativaD : "Boa noite!",
+    correta      : "Oi",
 }
 const q2 = {
     numQuestao   : 2,
-    imagem       : '2.png',  // ADICIONE
-    pergunta     : "Qual é a capital do Brasil?",
-    alternativaA : "Rio de Janeiro",
-    alternativaB : "Brasília",
-    alternativaC : "Salvador",
-    alternativaD : "Lisboa",
-    correta      : "Brasília",
+    imagem       : '../../img/quiz/4.jpg',  // ADICIONE
+    pergunta     : "Traduza a imagem acima",
+    alternativaA : "Oi",
+    alternativaB : "Bom dia!",
+    alternativaC : "Boa tarde!",
+    alternativaD : "Boa noite!",
+    correta      : "Boa tarde!",
 }
 const q3 = {
     numQuestao   : 3,
-    imagem       : '3.png',  // ADICIONE
-    pergunta     : "Austral é o mesmo que...",
-    alternativaA : "Oeste",
-    alternativaB : "Leste",
-    alternativaC : "Norte",
-    alternativaD : "Sul",
-    correta      : "Sul",
+    imagem       : '../../img/quiz/5.jpg',  // ADICIONE
+    pergunta     : "Traduza a imagem acima",
+    alternativaA : "Oi",
+    alternativaB : "Bom dia!",
+    alternativaC : "Boa tarde!",
+    alternativaD : "Boa noite!",
+    correta      : "Boa noite!",
 }
 const q4 = {
     numQuestao   : 4,
-    imagem       : '4.png',  // ADICIONE
-    pergunta     : "A linha do Equador divide a Terra em...",
-    alternativaA : "Leste e Oeste",
-    alternativaB : "Norte e Sul",
-    alternativaC : "Verão e Inverno",
-    alternativaD : "Solstícios e Eclipses",
-    correta      : "Norte e Sul",
+    imagem       : '../../img/quiz/3.jpg',  // ADICIONE
+    pergunta     : "Traduza a imagem acima",
+    alternativaA : "Oi",
+    alternativaB : "Bom dia!",
+    alternativaC : "Boa tarde!",
+    alternativaD : "Boa noite!",
+    correta      : "Bom dia!",
 }
 const q5 = {
     numQuestao   : 5,
@@ -263,25 +263,46 @@ function verificarSeAcertou(nQuestao, resposta) {
 
 function fimDoJogo() {
 
-    somAplausos.play()
+    if (pontos >= 70){
+        let s = 's'
+        pontos == 0 ? s = '' : s = s
+        instrucoes.textContent = "Fim de Jogo! Você conseguiu " + pontos + " ponto"+ s
 
-    let s = 's'
-    pontos == 0 ? s = '' : s = s
-    instrucoes.textContent = "Fim de Jogo! Você conseguiu " + pontos + " ponto"+ s
+        instrucoes.classList.add('placar')
 
-    instrucoes.classList.add('placar')
+        
+
 
     // OCULTAR O ARTICLE DA QUESTAO
-    articleQuestoes.style.display = 'none'
+        articleQuestoes.style.display = 'none'
+    } else {
+        let s = 's'
+        pontos == 0 ? s = '' : s = s
+        instrucoes.textContent = "Que pena! Você conseguiu apenas " + pontos + " ponto"+ s + ", tente novamente."
 
-    setTimeout(function() {
-        pontos = 0 // zerar placar
-        //location.reload();
-        instrucoes.classList.remove('placar')
-        // REINICIAR O JOGO
-        articleQuestoes.style.display = 'block'
-        proximaQuestao(1)
-        instrucoes.textContent = 'Leia a questão e clique na resposta correta'
-    }, 8000)
+        instrucoes.classList.add('placar')
+        
+    // OCULTAR O ARTICLE DA QUESTAO
+        articleQuestoes.style.display = 'none'
+    }
+    
+    somAplausos.play()
+
+    
+
+
+
+
+    // setTimeout(function() {
+    //     pontos = 0 // zerar placar
+    //     //location.reload();
+    //     instrucoes.classList.remove('placar')
+    //     // REINICIAR O JOGO
+    //     articleQuestoes.style.display = 'block'
+    //     proximaQuestao(1)
+    //     instrucoes.textContent = 'Leia a questão e clique na resposta correta'
+    // }, 8000)
+
+    
 
 }
