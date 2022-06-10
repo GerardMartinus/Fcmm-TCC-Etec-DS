@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
   <link rel="stylesheet" href="http://fonts.googleapis.com">
   <link rel="stylesheet" href="http://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Roboto=wght@100;300;400;500;700&display=swap">
-  <title>Cadatro</title>
+  <title>Login</title>
 </head>
 
 <body>

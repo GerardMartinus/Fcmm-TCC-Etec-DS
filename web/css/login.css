@@ -13,6 +13,7 @@ html, body { height: 100%; }
 body {
   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,255,255,1) 35%, 100%);
   overflow: hidden;
+  font-size: 16px;
 }
 
 .ocean { 
@@ -69,7 +70,7 @@ textarea:focus, input:focus {
 }
 
 a {
-  font-size: .8rem;
+  font-size: 16px;
 }
 
 a:hover {
@@ -107,7 +108,7 @@ input {
   border: none;
   background-color: #fff;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   margin-bottom: 20px;
   border-radius: 10px;
 }
@@ -135,7 +136,7 @@ input[type="submit"]:hover {
 
 #esqueceuasenha {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 16px;
   border: none;
   border-bottom: #323232;
 }
@@ -144,7 +145,7 @@ input[type="submit"]:hover {
 #cadastre-se {
   text-align: right;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 
