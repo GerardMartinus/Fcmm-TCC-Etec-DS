@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/capitulo.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <header>
+    <div class="acessibilidade">
+      <div class="btn-container">
+        <label class="label-1">Contraste:</label>
+        <!-- Site claro -->
+        <button name="white-style" id="white-style" title="Site Normal" onclick="document.body.style.backgroundColor = '#fff'; 
+          document.body.style.color = '#000';
+          document.getElementById('logo').style.color = '#fff';  
+          
+          document.querySelector('.botao-footer1').setAttribute('style', 'color: #fff');
+          document.querySelector('.botao-footer2').setAttribute('style', 'color: #fff');
+          document.querySelector('.botao-footer3').setAttribute('style', 'color: #fff');">-</button>
+        <!-- Site escuro -->
+        <button name="black-style" id="black-style" title="Alto contraste" onclick="document.body.style.backgroundColor = '#202124'; 
+          document.body.style.color = '#fff';
+          document.getElementById('logo').style.color = 'yellow';
+          document.querySelector('.botao-footer1').setAttribute('style', 'color: yellow');
+          document.querySelector('.botao-footer2').setAttribute('style', 'color: yellow');
+          document.querySelector('.botao-footer3').setAttribute('style', 'color: yellow');">-</button>
+
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
+
+    <nav id="nav-header">
+      <a id="logo" href="index.html">Fale com Minha Mão</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="unidade1.html">Sobre nós</a></li>
+        <li><a href="unidade2.html">Fale conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- conteúdo -->
+  <article>
+    <section>
+      <h1>Capitulo 1</h1>
+      <h2>Alfabeto</h2>
+      <img src="https://www.lojaapoio.com.br/lojas/00045394/prod/carimboAlfabetoLibras.JPG" alt="alfabeto em libras">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/EZxkymw426U" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>  
+    </section>
+
+    <section>
+      <h2>Pronomes</h2>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt70D5TpNh1XleArFH471rVkHRtfwnwMk8Pg&usqp=CAU" alt="Pronomes pessoais em libras">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5FHqai1wT-o" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>Cumprimentos</h2>
+      <img src="https://1.bp.blogspot.com/-M5-loMCQf0M/WFCGajCY4rI/AAAAAAAAHI0/4-ZPCpmJ6zsevXDf-BZtifaeJMvNlDQHACLcB/s1600/cumprimentos.png" alt="Cumprimentos em Libras">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ckvOUO4044g" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>Numerais</h2>
+      <img src="https://conexaoeducacional.com.br/wp-content/uploads/2021/03/imagem-11.jpg" alt="Numerais em Libras">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CKmN_I05qYk" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>Atividades</h2>
+    </section>
+
+    <section>
+      <a href="quiz.html"><button class="btn">Iniciar quiz</button></a>
+    </section>
+  </article>
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="botoes-footer">
+      <a class="botao-footer1" href="#">
+        Fale conosco
+      </a>
+      <a class="botao-footer2" href="#">
+        Rede Socias
+      </a>
+      <a class="botao-footer3" href="#">
+        Sobre Nós
+      </a>
+    </div>
+  </footer>
+
+  <!-- responsividade da navbar -->
+  <main></main>
+  <script src="../js/mobile-navbar.js"></script>
+  <script src="../js/font-size.js"></script>
+
+    <!-- Adicionando o VLibras -->  
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>
