@@ -1,23 +1,63 @@
 <?php
-if (isset($_POST['submit'])) {
-  //  print_r('Nome: ' . $_POST['nome']);
-  //  print_r('<br>');
-  //  print_r('Email: ' . $_POST['email']);
-  //  print_r('<br>');
-  //  print_r('Senha: ' . $_POST['senha']);
+include_once('config.php');
+$erro = array();
+if (isset($_POST['cadastrar'])) {
+    /* print_r('Nome: ' . $_POST['nome']);
+    print_r('<br>');
+    print_r('Email: ' . $_POST['email']);
+    print_r('<br>');
+    print_r('Senha: ' . $_POST['senha']); */
 
   /*CONETANDO CONFIG.PHP COM O CADASTRO*/
-  include_once('config.php');
+  
 
   /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
+  $email_check = "SELECT * FROM usuarios WHERE email = '$email'";
+  $res = mysqli_query ($conexao, $email_check);
+  if (mysqli_num_rows($res) > 0) {
+    echo "<script language='javascript' type='text/javascript'>
+      Swal.fire({
+      icon: 'error',
+      title: 'Email já cadastrado',
+      text: 'Por favor, use outro email'
+  }) </script>";
+  } else{
+    echo "<script language='javascript' type='text/javascript'>
+    let timerInterval
+    Swal.fire({
+        color: '#04631d',
+        title: 'Cadastro realizado com sucesso!',
+        timer: 2000,
+        didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+            }, 100)
+        },
+        willClose: () => {
+            clearInterval(timerInterval)
+        }
+    }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+    }
+    }) </script>";
+    $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')");
+  }
+
+    }
+
+
 
   /*INSERINDO OS DADOS NO BANCO DE DADOS.*/
-  $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha)
-  VALUES ('$nome', '$email', '$senha')");
-}
+/*   $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha)
+  VALUES ('$nome', '$email', '$senha')"); */
+
 ?>
 
 <!DOCTYPE html>
@@ -38,18 +78,14 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-
-  
-
-
   <div id="login-container">
     <h1>Bem-Vindo</h1>
-    <form name="cadastro" id="cadastro" method="POST" onsubmit="return validarCampos()">
+    <form onsubmit="return validarCampos()" name="cadastro" id="cadastro" method="POST"  action="cadastro.php">
       <input type="text" name="nome" id="nome" placeholder="Nome">
       <input type="email" name="email" id="email" placeholder="E-mail">
       <input type="password" name="senha" id="senha" placeholder="Senha">
       <input type="password" name="confirmar" id="confirmar" placeholder="Confirmar Senha">
-      <input type="submit" value="Entrar">
+      <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
       <br>
       <a href="../html/index.html" class="voltar">Voltar</a>
 
@@ -82,7 +118,7 @@ if (isset($_POST['submit'])) {
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/fonte.js"></script>
   <script src="../js/contraste-views.js"></script>
-  <script src="../js/validador.js"></script>
+
 </body>
 
 </html>
