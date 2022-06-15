@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-vr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Contato</title>
+
+</head>
+<body>
+    <header>
+        <div class="acessibilidade">
+          <div class="btn-container">
+            <label class="label-1">Contraste:</label>
+    
+            <!-- Site Normal -->
+            <button name="white-style" id="white-style" title="Site Normal">-</button>
+    
+            <!-- Site Auto Contraste -->
+            <button name="black-style" id="black-style" title="Alto contraste">-</button>
+    
+            <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+            <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+          </div>
+        </div>
+    
+        <!-- navbar -->
+        <nav id="nav-header">
+          <a id="logo" href="index.html">Fale com Minha Mão</a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="unidade1.html">Sobre nós</a></li>
+            <li><a href="faleconosco.html">Fale conosco</a></li>
+            <li><a href="../php/login.php">Login</a></li>
+            <li><a href="../php/cadastro.php">Cadastro</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <article>
+        <section class="content">
+            <div class="contato">=
+                <h3>Formulário de contato</h3>
+                <form class="form" method="POST" action="arquivo.php">
+                    <input class="field" name="name" placeholder="nome">
+                    <input class="field" name="email" placeholder=" email">
+                    <textarea class="field" name="mesage" placeholder="Digite sua mensagem"></textarea>
+                    <input class="field" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </article>
+</body>
+</html>
