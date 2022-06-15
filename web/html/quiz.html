@@ -6,23 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz capitulo 1</title>
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="../css/quiz.css" />
+    <link rel="stylesheet" href="../css/index.css" />
 </head>
 <body>
 
     <main class="tela-principal">
-
         <section class='conteudos'>
-
             <h1>Quiz Unidade 1</h1>
-
             <article class='centro' id='instrucoes'>
-                Leia a questão e clique na resposta correta
+                Traduza a imagem abaixo
             </article>
-
             <article class='questoes'>
-                
                 <figure class='imagemDaQuestao'>
                     <img src="" alt="Img da questao" width="200px"/>
                 </figure>   
@@ -47,7 +41,7 @@
                 name="progresso" id="progresso" disabled/> <br>
                 <span id='numero'></span> de <span id='total'></span> <br>
                 <button onclick="fimDeJogo()" id="fimBotao" class="fim"></button> 
-                <button onclick="retornar()" class="voltar">Voltar</button> 
+                <button onclick="retornar()" id="voltarBotao" class="voltar">Voltar</button> 
             </article>
         
             <footer id='autoria' class='centro'>Fale com minha mão &copy; 2022</footer>
@@ -58,7 +52,7 @@
 <audio preload src="assets/positive.mp3" id='somAcerto'></audio>
 <audio preload src="assets/negative.mp3" id='somErro'></audio>
 <audio preload src="assets/aplausos.mp3" id='somAplausos'></audio>
-<!-- JS externo -->
+
 <script src="../js/quiz.js"></script>
 
 </body>

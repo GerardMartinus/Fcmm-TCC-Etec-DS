@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
   <meta name="author" content="Bruno Martins de Morais Silva, Arthur Souto, Gabriel Santos, Ana Luisa, Igor">
   <meta name="keywords" content="">
   <script src="../js/validar.js"></script>
-  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com">
   <link rel="stylesheet" href="http://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Roboto=wght@100;300;400;500;700&display=swap">
@@ -83,6 +83,7 @@ if (isset($_POST['submit'])) {
   <script src="../js/fonte.js"></script>
   <script src="../js/contraste-views.js"></script>
   <script src="../js/validador.js"></script>
+  <script src="../js/if-login.js"></script>
 </body>
 
 </html>
