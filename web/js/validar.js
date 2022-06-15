@@ -9,7 +9,7 @@ function validarCampos(){
         Swal.fire({
             icon:'error',
             title: 'Campo nome vazio',
-            text: 'Por favor, preencha o campo "Nome" corretamente.'
+            text: 'Por favor, preencha o campo "nome" corretamente.'
         })
         nome.focus();
         return false;
@@ -19,32 +19,10 @@ function validarCampos(){
         Swal.fire({
             icon: 'error',
             title: 'Campo email vazio',
-            text: 'Por favor, preencha o campo "Email" corretamente.'
+            text: 'Por favor, preencha o campo "e-mail" corretamente.'
         })
         email.focus();
         return false;
-    }
-
-    if (senha.value == ""){
-        Swal.fire ({
-            icon: 'error',
-            title: 'Campo senha vazio',
-            text: 'Por favor, preencha o campo "Senha" corretamente.'
-        })
-        senha.focus();
-        return  false;
-
-    }
-
-    if (confirmar.value == ""){
-        Swal.fire ({
-            icon: 'error',
-            title: 'Campo confirmar senha vazio',
-            text: 'Por favor, preencha o campo "Confirmar senha" corretamente.'
-        })
-        confirmar.focus();
-        return  false;
-
     }
 
     if (confirmar.value != senha.value){
@@ -68,4 +46,25 @@ function validarCampos(){
         return false
     }
 
+    let timerInterval
+    Swal.fire({
+        color: '#04631d',
+        title: 'Cadastro realizado com sucesso!',
+        timer: 2000,
+        didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+            }, 100)
+        },
+        willClose: () => {
+            clearInterval(timerInterval)
+        }
+    }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+    }
+    })
 }
