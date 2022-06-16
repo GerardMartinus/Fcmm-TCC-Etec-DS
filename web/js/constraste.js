@@ -1,4 +1,4 @@
-var link_css = "../css/index.css";
+var link_css = "../css/arquivo.css";
 				
 if(getCookie2() == "contraste"){
     link_css = "../css/contraste.css"; // se o valor do cookie capturado pela function getCookie2 for contraste, a variável link_css recebe como valor a folha de estilo contraste.css
@@ -53,4 +53,3 @@ if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
 return undefined;
 
 }
-

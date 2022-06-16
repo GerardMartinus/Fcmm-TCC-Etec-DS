@@ -10,6 +10,7 @@
   
   body {
     font-size: 14px;
+    color: #FFF;
   }
   
   article {
@@ -21,6 +22,7 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 24px;
+    color: #FFF;
   }
   
   h1 {
@@ -43,6 +45,10 @@
     width: 500px;
     margin: 0 auto;
     display: block;
+  }
+
+  p {
+    color: #FFF;
   }
 
   a {
@@ -148,6 +154,7 @@
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #000;
     height: 8vh;
+    color: #FFF;
   }
   
   .nav-list {
@@ -407,6 +414,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: #FFF;
   }
   
   h1 {
