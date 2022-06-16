@@ -75,7 +75,7 @@ iframe {
   font-size: 15px;
 }
 
-#white-style {
+#semcontraste {
   text-align: center;
   color: #fff;
   background-color: #fff;
@@ -86,7 +86,7 @@ iframe {
   width: 20px;
 }
 
-#black-style {
+#contraste {
   margin-right: 40px;
   text-align: center;
   background-color: #000;
