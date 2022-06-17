@@ -13,6 +13,7 @@ let somAplausos = document.querySelector('#somAplausos')
 // PERGUNTA
 let numQuestao = document.querySelector('#numQuestao')
 let imgQuestao = document.querySelector('.imagemDaQuestao img')  // ADICIONE
+let imgPergunta = document.querySelector('.imagemDaPergunta img')
 let pergunta   = document.querySelector('#pergunta')
 
 // ALTERNATIVAS
@@ -40,7 +41,7 @@ const q1 = {
     numQuestao   : 1,
     imagem       : '../../img/quiz/1.jpeg',  // ADICIONE
     pergunta     : "Traduza a imagem acima",
-    alternativaA : "Oi",
+    alternativaA : 'Oi',
     alternativaB : "Bom dia!",
     alternativaC : "Boa tarde!",
     alternativaD : "Boa noite!",

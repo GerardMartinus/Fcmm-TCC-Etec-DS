@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/constraste.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <script src="http://kit.fontawsome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../js/constraste.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="acessibilidade">
+      <div class="btn-container">
+        <label class="label-1">Contraste:</label>
+
+        <!-- Site Normal -->
+        <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
+
+        <!-- Site Auto Contraste -->
+        <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
+
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav id="nav-header">
+      <a id="logo" href="index.html">Fale com Minha Mão</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="unidade1.html">Sobre nós</a></li>
+        <li><a href="faleconosco.html">Fale conosco</a></li>
+        <li><a href="../php/login.php">Login</a></li>
+        <li><a href="../php/cadastro.php">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- conteudo da home -->
+
+  <article id="conteudo">
+    <section>
+        
+    </section>
+  </article>
+
+  <!-- footer -->
+  <footer id="footer">
+    Fale com a minha mão &copy; 2022
+  </footer>
+
+
+
+
+  <!-- responsividade da navbar -->
+  <script src="../js/mobile-navbar.js"></script>
+  
+  <!-- Altera tamanho da fonte -->
+  <script src="../js/font-size.js"></script>
+  
+  <!-- Adicionando o VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>
