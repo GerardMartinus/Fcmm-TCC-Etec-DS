@@ -476,11 +476,11 @@ input[type="submit"]:hover {
 
 main {
     width: 100%;
-    height: 100vh;
+    height: 10px;
 }
 
 section {
-  top: 8vw;
+  top: 6rem;
   position: relative;
   width: 100vw;
   display: flex;
@@ -500,7 +500,6 @@ section {
 .questao {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 1rem;
 }
 

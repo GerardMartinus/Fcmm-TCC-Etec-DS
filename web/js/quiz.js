@@ -29,7 +29,7 @@ let alternativas = document.querySelector('#alternativas')
 
 const q0 = {
     numQuestao   : 0,
-    imagem       : '../img/quiz/0.jpeg',  // ADICIONE
+    imagem       : '../img/quiz/0.jpeg',  // Adicionar imagem
     pergunta     : "Pergunta",
     alternativaA : "Alternativa A",
     alternativaB : "Alternativa B",
@@ -39,103 +39,103 @@ const q0 = {
 }
 const q1 = {
     numQuestao   : 1,
-    imagem       : '../../img/quiz/1.jpeg',  // ADICIONE
-    pergunta     : "Traduza a imagem acima",
-    alternativaA : 'Oi',
-    alternativaB : "Bom dia!",
-    alternativaC : "Boa tarde!",
-    alternativaD : "Boa noite!",
-    correta      : "Oi",
+    imagem       : '../../img/quiz/1.png',  // Imagem do alfabeto
+    pergunta     : "Esses sinais representam...",
+    alternativaA : 'Números',
+    alternativaB : "Cores",
+    alternativaC : "Animais",
+    alternativaD : "Alfabeto",
+    correta      : "Alfabeto",
 }
 const q2 = {
     numQuestao   : 2,
-    imagem       : '../../img/quiz/4.jpg',  // ADICIONE
-    pergunta     : "Traduza a imagem acima",
-    alternativaA : "Oi",
-    alternativaB : "Bom dia!",
-    alternativaC : "Boa tarde!",
-    alternativaD : "Boa noite!",
-    correta      : "Boa tarde!",
+    imagem       : '../../img/quiz/2.png',  // Imagem com um sinal se referindo a um pássaro
+    pergunta     : "A que animal se refere?",
+    alternativaA : "Pássaro",
+    alternativaB : "Leão",
+    alternativaC : "Cobra",
+    alternativaD : "Macaco",
+    correta      : "Pássaro",
 }
 const q3 = {
     numQuestao   : 3,
-    imagem       : '../../img/quiz/5.jpg',  // ADICIONE
-    pergunta     : "Traduza a imagem acima",
-    alternativaA : "Oi",
-    alternativaB : "Bom dia!",
-    alternativaC : "Boa tarde!",
-    alternativaD : "Boa noite!",
-    correta      : "Boa noite!",
+    imagem       : '../../img/quiz/3.png',  // Imagem com sinal de Palmas
+    pergunta     : "O sinal se refere a...",
+    alternativaA : "Palmas",
+    alternativaB : "Abraço",
+    alternativaC : "Saudação",
+    alternativaD : "Despedida",
+    correta      : "Palmas",
 }
 const q4 = {
     numQuestao   : 4,
-    imagem       : '../../img/quiz/3.jpg',  // ADICIONE
-    pergunta     : "Traduza a imagem acima",
-    alternativaA : "Oi",
-    alternativaB : "Bom dia!",
-    alternativaC : "Boa tarde!",
-    alternativaD : "Boa noite!",
-    correta      : "Bom dia!",
+    imagem       : '../../img/quiz/4.png',  // imagem que faz sinal de apresentação: eu e vc
+    pergunta     : "Os sinais acima faz alusão ao que?",
+    alternativaA : "Sinais de sol e lua",
+    alternativaB : "Sinais de hoje e ontem",
+    alternativaC : "Sinais de agora e depois",
+    alternativaD : "Sinais de eu e você",
+    correta      : "Sinais de eu e você",
 }
 const q5 = {
     numQuestao   : 5,
-    imagem       : '5.png',  // ADICIONE
-    pergunta     : "Nascente é o mesmo que...",
-    alternativaA : "Lado que o sol nasce",
-    alternativaB : "Abaixo do Equador",
-    alternativaC : "Lado que o sol se põe",
-    alternativaD : "Acima do Equador",
-    correta      : "Lado que o sol nasce",
+    imagem       : '../../img/quiz/5.png',  // Imagem com sinais de pronomes masculino e feminino
+    pergunta     : "As imagens acima se referem a quais pronomes?",
+    alternativaA : "Ele/Dele",
+    alternativaB : "Ele/Dele e Ela/Dela",
+    alternativaC : "Ela/Dela e Ele/Dele",
+    alternativaD : "Ela/Dela",
+    correta      : "Ele/Dele e Ela/Dela",
 }
 const q6 = {
     numQuestao   : 6,
-    imagem       : '6.png',  // ADICIONE
-    pergunta     : "Qual é o clima predominante do Brasil?",
-    alternativaA : "Polar",
-    alternativaB : "Tropical",
-    alternativaC : "Desértico",
-    alternativaD : "Temperado do Norte",
-    correta      : "Tropical",
+    imagem       : '../../img/quiz/6.png',  // Imagem com saudação de oi e boa noite
+    pergunta     : "Ao que os sinais acima se referem?",
+    alternativaA : "Oi, Boa noite",
+    alternativaB : "Oi, Bom dia",
+    alternativaC : "Olá, Boa tarde",
+    alternativaD : "Olá, Boa noite",
+    correta      : "Oi, Boa noite",
 }
 const q7 = {
     numQuestao   : 7,
-    imagem       : '7.png',  // ADICIONE
-    pergunta     : "Poente é o mesmo que...",
-    alternativaA : "Lado onde o sol se põe",
-    alternativaB : "Lado onde o sol nasce",
-    alternativaC : "Abaixo do Equador",
-    alternativaD : "Acima do Equador",
-    correta      : "Lado onde o sol se põe",
+    imagem       : '../../img/quiz/7.png',  // Imagem perguntando qual o seu nome
+    pergunta     : "A qual pergunta se refere a imagem acima?",
+    alternativaA : "Qual sua idade?",
+    alternativaB : "Qual seu signo?",
+    alternativaC : "Qual seu apelido?",
+    alternativaD : "Qual seu nome?",
+    correta      : "Qual seu nome?",
 }
 const q8 = {
     numQuestao   : 8,
-    imagem       : '8.png',  // ADICIONE
-    pergunta     : "O Brasil se localiza em qual continente?",
-    alternativaA : "África",
-    alternativaB : "Europa",
-    alternativaC : "Oceania",
-    alternativaD : "América",
-    correta      : "América",
+    imagem       : '../../img/quiz/8.png',  // Imagens com números: 1,3,5,7 e 9
+    pergunta     : "Quais os números descritos acima?",
+    alternativaA : "1, 2, 3, 4 e 5",
+    alternativaB : "2, 4, 6, 8 e 10",
+    alternativaC : "1, 3, 5, 7 e 9",
+    alternativaD : "9, 6, 7, 3 e 1",
+    correta      : "1, 3, 5, 7 e 9",
 }
 const q9 = {
     numQuestao   : 9,
-    imagem       : '9.png',  // ADICIONE
-    pergunta     : "Qual é a única capital do Brasil cortada pela linha do Equador?",
-    alternativaA : "Belém",
-    alternativaB : "São Luís",
-    alternativaC : "Macapá",
-    alternativaD : "Boa Vista",
-    correta      : "Macapá",
+    imagem       : '../../img/quiz/9.png',  // Imagem com numerais formando 2002
+    pergunta     : "A qual ano se refere a imagem acima?",
+    alternativaA : "2004",
+    alternativaB : "2002",
+    alternativaC : "2020",
+    alternativaD : "2022",
+    correta      : "2002",
 }
 const q10 = {
     numQuestao   : 10,
-    imagem       : '10.png',  // ADICIONE
-    pergunta     : "Considerando a extensão territorial o Brasil é o ...",
-    alternativaA : "3º maior",
-    alternativaB : "2º maior",
-    alternativaC : "4º maior",
-    alternativaD : "5º maior",
-    correta      : "5º maior",
+    imagem       : '../../img/quiz/10.png',  // Imagem com os números de 1 a 10
+    pergunta     : "Esses sinais representam...",
+    alternativaA : "Cores",
+    alternativaB : "Alfabeto",
+    alternativaC : "Números",
+    alternativaD : "Animais",
+    correta      : "Números",
 }
 
 // CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
