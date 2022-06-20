@@ -30,8 +30,16 @@ h2 {
   font-size: 30px;
 }
 
-img {
+#logo img{
   width: 60px;
+}
+
+#about img{
+  width: 60px;
+}
+
+img {
+  width: 500px;
   margin: 0 auto;
   display: block;
 }
@@ -98,6 +106,11 @@ iframe {
   text-align: center;
   background-color: #000;
   border-color: #000;
+<<<<<<< HEAD
+=======
+  background-color: #ffffff;
+  border-color: #000000;
+>>>>>>> 4130064a54a0d4d8d7ca9bc1a5fe83ef369fdfba
   border-radius: 50%;
   border-width: 1px;
   height: 20px;
@@ -229,18 +242,22 @@ iframe {
   background-image: url(../img/home/3.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
+  
 }
 
 #home-content section:nth-child(3) {
   background-image: url(../img/home/4.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 #home-content section:nth-child(5) {
   background-image: url(../img/home/5.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 .saber-mais{
@@ -392,6 +409,10 @@ footer h3{
     justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+  }
+
+  @media (max-width: 500px){
+
   }
 
   .nav-list li {
