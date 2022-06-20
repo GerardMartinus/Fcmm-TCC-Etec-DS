@@ -1,4 +1,6 @@
+
 /* Reset CSS */
+
 
 * {
   margin: 0;
@@ -27,9 +29,13 @@ h2 {
 }
 
 img {
-  width: 500px;
+  width: 60px;
   margin: 0 auto;
   display: block;
+}
+
+.imagemDaQuestao img{
+  width: 250px;
 }
 
 iframe {
@@ -46,7 +52,13 @@ iframe {
   color: #fff;
   border: none;
   font-size: 16px;
+  margin-bottom: 220px;
 }
+
+
+
+
+
 
 /* Header */
 
@@ -61,6 +73,7 @@ iframe {
   width: 100vw;
   height: 50px;
   font-size: medium;
+  z-index: 1;
 }
 
 .label-1 {
@@ -79,16 +92,16 @@ iframe {
   width: 20px;
 }
 
-#contraste {
-  margin-right: 40px;
+.contraste {
   text-align: center;
-  background-color: #000;
-  border-color: #fff;
+  background-color: #ffffff;
+  border-color: #000000;
   border-radius: 50%;
   border-width: 1px;
   height: 20px;
   width: 20px;
 }
+
 
 #increase-font {
   text-align: center;
@@ -117,6 +130,10 @@ iframe {
   text-decoration: none;
 }
 
+
+
+
+
 /* navbar */
 
 #logo a:hover {
@@ -144,10 +161,11 @@ iframe {
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #21629E;
-  height: 8vh;
+  height: 12vh;
   top: 50px;
   position: fixed;
   width: 100vw;
+  z-index: 1;
 }
 
 .nav-list {
@@ -165,12 +183,86 @@ iframe {
 }
 
 
-/* Main */
 
-#conteudo{
+
+
+/* Home */
+
+#home-content section {
+  height: 100vh;
+  padding: 2vw;
+  font-size: 4vw;
+}
+
+#home-content p {
+  text-align: center;
+  font-size: 2vw;
+}
+
+#home-content section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#home-content section:first-of-type {
+  text-transform: uppercase;
+  font-size: 7vw;
+}
+
+#home-content section {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#home-content section:nth-of-type(odd) {
+  color: #fff;
+  background-color: #000;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+#home-content section:nth-child(1) {
+  background-image: url(../img/home/3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#home-content section:nth-child(3) {
+  background-image: url(../img/home/4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#home-content section:nth-child(5) {
+  background-image: url(../img/home/5.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.saber-mais{
+  text-align: center;
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:var(--secundaria);
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+/* Sobre o curso */
+
+#conteudo-sobre-o-curso {
   position: relative;
-  top: 10vw;
+  top: 2vw;
   z-index: -1;
+}
+#conteudo-sobre-o-curso:last-child(1){
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -206,19 +298,65 @@ dd {
 }
 
 
-/* rodapé */
 
-#footer {
-  position: relative;
-  top: 100%;
+
+
+
+/* === FOOTER === */
+
+footer{
   width: 100vw;
+  height: 50vw;
+  text-align: center;
+  align-items: center;
   background-color: #21629E;
   padding: 20px 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   color: #fff;
+  z-index: 1;
 }
+
+footer h3{
+    color: #fff;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: aqua;
+}
+
+
+
 
 
 /* responsividade */
@@ -379,6 +517,10 @@ a:hover {
   color: #08558b;
 }
 
+
+
+
+
 /* login-container */
 #login-container {
   width: 400px;
@@ -395,6 +537,12 @@ a:hover {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+
+
+
+
+
 
 /*formulário*/
 
@@ -459,28 +607,31 @@ input[type="submit"]:hover {
 
 
 
+
+
+
 /* Quiz */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 /* vermelho #f44336 ou #d50000 verde #4caf50 ou #1b5e20  */
 :root {
-    --principal: #03a9f4;
-    --secundaria: #21629E;
-    --azul-escuro: #0d47a1;
-    --cinza-escuro: #222;
-    --branco: #fff;
-    --verde: #4caf50;
-    --vermelho: #f44336;
+  --principal: #03a9f4;
+  --secundaria: #21629E;
+  --azul-escuro: #0d47a1;
+  --cinza-escuro: #222;
+  --branco: #fff;
+  --verde: #4caf50;
+  --vermelho: #f44336;
 }
 
 main {
-    width: 100%;
-    height: 10px;
+  width: 100%;
+  height: 10px;
 }
 
 section {
-  top: 6rem;
+  top: 8rem;
   position: relative;
   width: 100vw;
   display: flex;
@@ -488,40 +639,39 @@ section {
   justify-content: center;
   align-items: center;
   color: #000;
-  z-index: -1;
 }
 
 /* classe para centralizar textos, paragrafos */
 .centro {
-    text-align: center;
+  text-align: center;
 }
 
 /* div class questao com numero da questao e pergunta */
 .questao {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 #numQuestao {
-    text-align: center;
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    background: var(--secundaria);
-    color: #fff;
-    padding: 6px 10px 4px 8px;
-    border-radius: 50%;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background: var(--secundaria);
+  color: #fff;
+  padding: 6px 10px 4px 8px;
+  border-radius: 50%;
 }
 
 #pergunta {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .imagemDaQuestao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .imagemDaPergunta {
@@ -532,135 +682,157 @@ section {
 
 /* article que acomoda a questao completa */
 .questoes {
-    user-select: none;
-    background: #fff;
+  user-select: none;
+  background: #fff;
 
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
-    border: 1px solid #ececec;
-    border-radius: 5px;
-    margin-bottom: 0.625rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  margin-bottom: 0.625rem;
 }
 
 .questoes ol li {
-    border: 1px solid var(--secundaria);
-    display: block;
-    margin-bottom: 0.625rem;
-    padding: 1rem;
-    border-radius: 8px;
+  border: 1px solid var(--secundaria);
+  display: block;
+  margin-bottom: 0.625rem;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .questoes ol li:hover {
-    background: var(--secundaria);
-    cursor: pointer;
+  background: var(--secundaria);
+  cursor: pointer;
 }
 
 .bloqueado {
-    display: none;
+  display: none;
 }
 
 .bloqueado li:hover {
-    display: none;
+  display: none;
 }
 
 #instrucoes {
-    font-size: 1rem;
-    color: #191919;
-    padding: 0.625rem;
-    border-radius: 8px;
+  font-size: 1rem;
+  color: #191919;
+  padding: 0.625rem;
+  border-radius: 8px;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #aviso {
-    color: var(--secundaria);
+  color: var(--secundaria);
 }
 
 #autoria {
-    margin-top: 0.625rem;
-    font-size: 0.75rem;
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
 }
 
 /* ANIMACAO */
 
 /* Animar o input */
 @keyframes piscar {
-    0% {
-        filter: drop-shadow(0 0 15px var(--principal));
-        -webkit-filter: drop-shadow(0 0 15px var(--principal));
-        -moz-filter: drop-shadow(0 0 15px var(--principal));
-        -o-filter: drop-shadow(0 0 15px var(--principal));
-        -ms-filter: drop-shadow(0 0 15px var(--principal));
-    }
-    100% {
-    }
+  0% {
+    filter: drop-shadow(0 0 15px var(--principal));
+    -webkit-filter: drop-shadow(0 0 15px var(--principal));
+    -moz-filter: drop-shadow(0 0 15px var(--principal));
+    -o-filter: drop-shadow(0 0 15px var(--principal));
+    -ms-filter: drop-shadow(0 0 15px var(--principal));
+  }
+
+  100% {}
 }
 
 .animar {
-    animation: piscar .75s infinite alternate;
+  animation: piscar .75s infinite alternate;
 }
 
 .aparecer {
-    animation: aparecer .5s infinite alternate;
+  animation: aparecer .5s infinite alternate;
 }
 
 @keyframes aparecer {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .acertou {
-    background: var(--verde);
-    animation: aparecer 0.1s infinite alternate;
+  background: var(--verde);
+  animation: aparecer 0.1s infinite alternate;
 }
 
 .errou {
-    background: var(--vermelho);
-    animation: aparecer 0.1s infinite alternate;
+  background: var(--vermelho);
+  animation: aparecer 0.1s infinite alternate;
 }
 
 .placar {
-    padding: 1rem;
-    border-radius: 8px;
-    background:#03a9f4;
-    font-size: 2rem;
-}
-.fim{
-    display: none;
-    background-color: var(--secundaria);
-    color: var(--branco);
-    margin-bottom: 0.625rem;
-    margin-left: 28px;
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    border:none;
-}
-.voltar{
-    background-color: var(--secundaria);
-    color: var(--branco);
-    margin-bottom: 0.625rem;
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    border:none;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #03a9f4;
+  font-size: 2rem;
 }
 
-@media (max-width: 540px){
- .videos{
-   width: 300px;
-   height: 200px;
- }
-
- .imagem{
-  width: 500px;
-  height: 200px;
- }
+.fim {
+  display: none;
+  background-color: var(--secundaria);
+  color: var(--branco);
+  margin-bottom: 0.625rem;
+  margin-left: 28px;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
 }
+
+.voltar {
+  background-color: var(--secundaria);
+  color: var(--branco);
+  margin-bottom: 0.625rem;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 540px) {
+  .videos {
+    width: 300px;
+    height: 200px;
+  }
+
+  .imagem {
+    width: 500px;
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

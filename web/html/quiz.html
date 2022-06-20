@@ -30,7 +30,9 @@
 
         <!-- navbar -->
         <nav id="nav-header">
-            <a id="logo" href="index.html">Fale com Minha Mão</a>
+            <a id="logo" href="index.html">
+                <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
+            </a>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -47,9 +49,7 @@
     <main id="tela-principal-quiz">
         <section id='content-quiz'>
             <h1 id="quiz-titulo">Quiz</h1>
-            <article class='centro' id='instrucoes'>
-                Traduza a imagem abaixo
-            </article>
+            
             <article class='questoes'>
                 <figure class='imagemDaQuestao'>
                     <img src="" alt="Img da questao" width="200px" />
@@ -70,6 +70,9 @@
                 </div>
             </article>
 
+            <article class='centro' id='instrucoes'>
+            </article>
+
             <article id='aviso' class='centro'>
                 <input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /> <br>
                 <span id='numero'></span> de <span id='total'></span> <br>
@@ -78,12 +81,22 @@
             </article>
 
             <!-- footer -->
-            <footer id="footer">
-                Fale com a minha mão &copy; 2022
-            </footer>
+  <footer id="footer">
+    <h3>Fale com a minha mão &copy; 2022</h3>
+    <p>Site criado para projeto de Tcc</p>
+    <ul class="socials">
+      <li>Início</li>
+      <li>Sobre Nós</li>
+      <li>Login</li>
+      <li>Cadastro</li>
+   </ul>
+   <p><a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web"><img src="../img/sobre-o-curso/github.svg" height="60px"; width="60px"></a></p>
+  </footer>
         </section>
 
     </main>
+
+
     <audio preload src="assets/positive.mp3" id='somAcerto'></audio>
     <audio preload src="assets/negative.mp3" id='somErro'></audio>
     <audio preload src="assets/aplausos.mp3" id='somAplausos'></audio>

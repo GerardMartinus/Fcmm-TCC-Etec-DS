@@ -43,18 +43,52 @@
         </nav>
       </header>
 
-    <article>
-        <section class="content">
-            <div class="contato"> 
-                <h3>Formulário de contato</h3>
-                <form class="form" method="POST" action="arquivo.php">
-                    <input class="field" name="name" placeholder="nome">
-                    <input class="field" name="email" placeholder=" email">
-                    <textarea class="field" name="mesage" placeholder="Digite sua mensagem"></textarea>
-                    <input class="field" type="submit" value="Enviar">
-                </form>
-            </div>
-        </section>
-    </article>
+
+        <div class="form-image">
+            <img src="../img/form.svg">
+        </div>
+        <div class="form">
+            <h1>Fale Conosco</h1>
+            <input type="text" placeholder="Nome">
+            <br><br>
+            <input type="text" name="name" placeholder="Email">
+            <br><br>
+            <textarea id="textspace" name="textspace" rows="5" cols="33">Deixe aqui sua opinião...</textarea>
+            <button class="send">Confirmar</button>
+        </div>
+      
+
+
+    <!-- footer -->
+  <footer id="footer">
+    <h3>Fale com a minha mão &copy; 2022</h3>
+    <p>Site criado para projeto de Tcc</p>
+    <ul class="socials">
+      <li>Início</li>
+      <li>Sobre Nós</li>
+      <li>Login</li>
+      <li>Cadastro</li>
+   </ul>
+   <p><a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web"><img src="../img/github.svg" height="60px"; width="60px"></a></p>
+  </footer>
+
+
+
+  <!-- responsividade da navbar -->
+  <script src="../js/mobile-navbar.js"></script>
+  <script src="../js/font-size.js"></script>
+
+  <!-- Adicionando o VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
 </body>
 </html>
