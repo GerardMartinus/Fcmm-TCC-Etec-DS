@@ -106,11 +106,8 @@ iframe {
   text-align: center;
   background-color: #000;
   border-color: #000;
-<<<<<<< HEAD
-=======
   background-color: #ffffff;
   border-color: #000000;
->>>>>>> 4130064a54a0d4d8d7ca9bc1a5fe83ef369fdfba
   border-radius: 50%;
   border-width: 1px;
   height: 20px;
@@ -257,7 +254,7 @@ iframe {
   background-image: url(../img/home/5.jpg);
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center;       
 }
 
 .saber-mais{
