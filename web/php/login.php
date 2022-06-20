@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['logar'])) {
 
   /*CONETANDO CONFIG.PHP COM O CADASTRO*/
   include_once('config.php');
@@ -88,7 +88,7 @@ else{
     <form name="login" id="login" onsubmit="return validarLogin()" action="login.php" method="POST" >
       <input type="email" name="email" id="email" placeholder="E-mail">
       <input type="password" name="senha" id="senha" placeholder="Senha">
-      <input type="submit" value="Entrar">
+      <input type="submit" value="Entrar" name="logar" id="logar">
       <br>
       <a href="../html/index.html" class="voltar">Voltar</a>
 

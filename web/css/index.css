@@ -10,6 +10,8 @@
 
 body {
   font-size: 14px;
+  color: #000;
+  background-color: #FFF;
 }
 
 article {
@@ -83,7 +85,7 @@ iframe {
   margin-right: 40px;
   text-align: center;
   background-color: #000;
-  border-color: #fff;
+  border-color: #000;
   border-radius: 50%;
   border-width: 1px;
   height: 20px;

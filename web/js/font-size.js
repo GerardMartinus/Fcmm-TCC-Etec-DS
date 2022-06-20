@@ -10,6 +10,11 @@ $(document).ready(function(){
             fontesection++
             $('section').css({'font-size': fontesection+'px'});
         }
+
+        if (fontenav < 34){
+            fontenav++
+            $('nav-list').css({'font-size': fontenav+'px'});
+        }
     })
     $('#decrease-font').click(function(){
         if(fonte>14){
@@ -19,6 +24,10 @@ $(document).ready(function(){
         if (fontesection > 18){
             fontesection--
             $('section').css({'font-size': fontesection+'px'});
+        }
+        if (fontenav > 18){
+            fontenav--
+            $('nav-list').css({'font-size': fontenav+'px'});
         }
     })
 
