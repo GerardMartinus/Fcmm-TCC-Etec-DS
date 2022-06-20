@@ -55,28 +55,6 @@ function validarCampos(){
         senha.focus()
         return false
     }
-
-    let timerInterval
-    Swal.fire({
-        color: '#04631d',
-        title: 'Cadastro realizado com sucesso!',
-        timer: 2000,
-        didOpen: () => {
-            Swal.showLoading()
-            const b = Swal.getHtmlContainer().querySelector('b')
-            timerInterval = setInterval(() => {
-            b.textContent = Swal.getTimerLeft()
-            }, 100)
-        },
-        willClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then((result) => {
-    /* Read more about handling dismissals below */
-    if (result.dismiss === Swal.DismissReason.timer) {
-        console.log('I was closed by the timer')
-    }
-    })
 }
 
 function validarLogin(){

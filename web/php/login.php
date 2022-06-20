@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_POST['logar'])) {
+if (isset($_POST['email'])) {
 
   /*CONETANDO CONFIG.PHP COM O CADASTRO*/
   include_once('config.php');
@@ -10,48 +10,51 @@ if (isset($_POST['logar'])) {
   $email = $_POST['email'];
   $senha = $_POST['senha'];
 
-  $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+  $sql = "SELECT * FROM usuarios WHERE email = '$email' LIMIT 1";
+  $sql_exec = $mysqli->query($sql) or die ($mysqli->error);
 
-  $res = $conexao -> query($sql);
+  $usuario = $sql_exec -> fetch_assoc(); 
 
-  if(mysqli_num_rows($res) < 1) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
+  
+  if(password_verify($senha, $usuario['senha'])){
+    /* $_SESSION['email'] = $email;
+    $_SESSION['senha'] = $senha;
     $erro = "<script language='javascript' type='text/javascript'>
+    let timerInterval
     Swal.fire({
-    icon: 'error',
-    title: 'Login inválido',
-    text: 'Insira os dados corretamente ou cadastre-se'
-}) </script>";
-    header("location: login.php");
+        color: '#04631d',
+        title: 'Login realizado com sucesso!',
+        timer: 2000,
+        didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+            }, 100)
+        },
+        willClose: () => {
+            clearInterval(timerInterval)
+        }
+    }).then((result) => {
+    if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+    }
+    }) </script>";
+    header('location: sistema.php'); */
+    echo "usuario logado";
+
 }
 
 else{
-  $_SESSION['email'] = $email;
-  $_SESSION['senha'] = $senha;
+  /* unset($_SESSION['email']);
+  unset($_SESSION['senha']);
   $erro = "<script language='javascript' type='text/javascript'>
-  let timerInterval
   Swal.fire({
-      color: '#04631d',
-      title: 'Login realizado com sucesso!',
-      timer: 2000,
-      didOpen: () => {
-          Swal.showLoading()
-          const b = Swal.getHtmlContainer().querySelector('b')
-          timerInterval = setInterval(() => {
-          b.textContent = Swal.getTimerLeft()
-          }, 100)
-      },
-      willClose: () => {
-          clearInterval(timerInterval)
-      }
-  }).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-      console.log('I was closed by the timer')
-  }
-  }) </script>";
-  header('location: sistema.php');
+  icon: 'error',
+  title: 'Login inválido',
+  text: 'Insira os dados corretamente ou cadastre-se'
+}) </script>"; */
+  echo "não logado";
 }
 
 
@@ -83,7 +86,7 @@ else{
 
 
   <div id="login-container">
-  <?php echo "$erro"; ?>
+  <?php echo $erro; ?>
     <h1>Bem-vindo de volta!</h1>
     <form name="login" id="login" onsubmit="return validarLogin()" action="login.php" method="POST" >
       <input type="email" name="email" id="email" placeholder="E-mail">

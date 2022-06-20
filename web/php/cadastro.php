@@ -1,4 +1,5 @@
 <?php
+$erro;
 include_once('config.php');
 if (isset($_POST['cadastrar'])) {
     /* print_r('Nome: ' . $_POST['nome']);
@@ -13,21 +14,27 @@ if (isset($_POST['cadastrar'])) {
   /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
   $nome = $_POST['nome'];
   $email = $_POST['email'];
-  $senha = $_POST['senha'];
+  $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+
   $email_check = "SELECT * FROM usuarios WHERE email = '$email'";
   $res = mysqli_query ($conexao, $email_check);
+  
+  
   if (mysqli_num_rows($res) > 0) {
     $erro = "<script language='javascript' type='text/javascript'>
-      Swal.fire({
+    Swal.fire({
       icon: 'error',
-      title: 'Email já cadastrado',
-      text: 'Por favor, use outro email.'
-  }) </script>";
+      title: 'Email já cadastrado' 
+  })
+  nome.focus();
+  return false;
+    }) </script>";
   } else{
     $erro = "<script language='javascript' type='text/javascript'>
     let timerInterval
     Swal.fire({
-        color: '#04631d',
+        icon: 'success'
         title: 'Cadastro realizado com sucesso!',
         timer: 2000,
         didOpen: () => {
