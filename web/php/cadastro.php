@@ -47,6 +47,8 @@ if (isset($_POST['cadastrar'])) {
     }
     }) </script>";
     $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')");
+    header('location: sistema.php');
+    
   }
 
     }
@@ -83,7 +85,8 @@ if (isset($_POST['cadastrar'])) {
 
   <div id="login-container">
     <h1>Bem-Vindo</h1>
-    <form name="cadastro" id="cadastro" method="POST" onsubmit="return validarCampos()">
+    <?php echo "$erro"; ?>
+    <form name="cadastro" id="cadastro"  onsubmit="return validarCampos()" action="cadastro.php" method="POST">
       <input type="text" name="nome" id="nome" placeholder="Nome">
       <input type="email" name="email" id="email" placeholder="E-mail">
       <input type="password" name="senha" id="senha" placeholder="Senha">
@@ -121,7 +124,6 @@ if (isset($_POST['cadastrar'])) {
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/fonte.js"></script>
   <script src="../js/contraste-views.js"></script>
-  <script src="../js/validador.js"></script>
   <script src="../js/if-login.js"></script>
 </body>
 
