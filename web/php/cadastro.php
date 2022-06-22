@@ -1,7 +1,9 @@
 <?php
-$erro;
+$erro = 1;
 include_once('config.php');
 if (isset($_POST['cadastrar'])) {
+
+
     /* print_r('Nome: ' . $_POST['nome']);
     print_r('<br>');
     print_r('Email: ' . $_POST['email']);
@@ -14,22 +16,30 @@ if (isset($_POST['cadastrar'])) {
   /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
   $nome = $_POST['nome'];
   $email = $_POST['email'];
+
+  /* CRIPTOGRAFANDO SENHA */
   $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
 
-  $email_check = "SELECT * FROM usuarios WHERE email = '$email'";
+  /* CHECANDO SE O EMAIL EXISTE OU NÃO */
+  $email_check = "SELECT * FROM usuarios WHERE email = '$email' ";
+  
+  /* RODANDO A QUERY DO $EMAIL_CHECK */
   $res = mysqli_query ($conexao, $email_check);
+
+
+  
+  
   
   
   if (mysqli_num_rows($res) > 0) {
-    $erro = "<script language='javascript' type='text/javascript'>
-    Swal.fire({
-      icon: 'error',
-      title: 'Email já cadastrado' 
-  })
-  nome.focus();
-  return false;
-    }) </script>";
+    $erro = "<script> 
+      Swal.fire({
+        icon: 'error',
+        title: 'Email já cadastrado'
+      })
+    </script>";
+
   } else{
     $erro = "<script language='javascript' type='text/javascript'>
     let timerInterval
@@ -54,7 +64,6 @@ if (isset($_POST['cadastrar'])) {
     }
     }) </script>";
     $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')");
-    header('location: sistema.php');
     
   }
 
@@ -78,7 +87,9 @@ if (isset($_POST['cadastrar'])) {
   <meta name="author" content="Bruno Martins de Morais Silva, Arthur Souto, Gabriel Santos, Ana Luisa, Igor">
   <meta name="keywords" content="">
   <script src="../js/validar.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="../css/index.css">
+  
   <link rel="stylesheet" href="http://fonts.googleapis.com">
   <link rel="stylesheet" href="http://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Roboto=wght@100;300;400;500;700&display=swap">
@@ -128,7 +139,6 @@ if (isset($_POST['cadastrar'])) {
   </script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/fonte.js"></script>
   <script src="../js/contraste-views.js"></script>
   <script src="../js/if-login.js"></script>
