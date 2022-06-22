@@ -22,7 +22,7 @@ if (isset($_POST['email'])) {
 
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
-    $erro = "<script language='javascript' type='text/javascript'>
+    echo "<script language='javascript' type='text/javascript'>
     let timerInterval
     Swal.fire({
         color: '#04631d',
