@@ -1,5 +1,7 @@
 <?php
 session_start();
+$erro;
+$mysqli;
 
 if (isset($_POST['email'])) {
 
@@ -11,13 +13,14 @@ if (isset($_POST['email'])) {
   $senha = $_POST['senha'];
 
   $sql = "SELECT * FROM usuarios WHERE email = '$email' LIMIT 1";
-  $sql_exec = $mysqli->query($sql) or die ($mysqli->error);
+  $sql_exec = $conexao->query($sql) or die ($conexao->error);
 
   $usuario = $sql_exec -> fetch_assoc(); 
 
   
   if(password_verify($senha, $usuario['senha'])){
-    /* $_SESSION['email'] = $email;
+
+    $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
     $erro = "<script language='javascript' type='text/javascript'>
     let timerInterval
@@ -40,21 +43,19 @@ if (isset($_POST['email'])) {
         console.log('I was closed by the timer')
     }
     }) </script>";
-    header('location: sistema.php'); */
-    echo "usuario logado";
+    header('location: sistema.php');
 
 }
 
 else{
-  /* unset($_SESSION['email']);
+  unset($_SESSION['email']);
   unset($_SESSION['senha']);
   $erro = "<script language='javascript' type='text/javascript'>
   Swal.fire({
   icon: 'error',
   title: 'Login inválido',
   text: 'Insira os dados corretamente ou cadastre-se'
-}) </script>"; */
-  echo "não logado";
+}) </script>";
 }
 
 

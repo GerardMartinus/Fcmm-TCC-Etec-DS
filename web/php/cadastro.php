@@ -1,5 +1,5 @@
 <?php
-$erro = 1;
+$erro;
 include_once('config.php');
 if (isset($_POST['cadastrar'])) {
 
@@ -64,6 +64,7 @@ if (isset($_POST['cadastrar'])) {
     }
     }) </script>";
     $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')");
+    header("location: login.php");
     
   }
 
