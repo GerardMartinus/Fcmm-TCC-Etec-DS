@@ -21,23 +21,11 @@ article {
   background-color: #fff;
 }
 
-h1 {
-  text-align: center;
-  font-size: 30px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 30px;
-}
 
 #logo img{
   width: 60px;
 }
 
-#about img{
-  width: 60px;
-}
 
 img {
   width: 500px;
@@ -63,8 +51,9 @@ iframe {
   color: #fff;
   border: none;
   font-size: 16px;
-  margin-bottom: 220px;
-}
+  margin-top: 55px;
+  margin-bottom: 60px;
+  }
 
 
 
@@ -505,6 +494,8 @@ iframe {
   padding-top: 120px;
 }
 
+
+
 h1 {
   padding: 20px;
   color: #21629E;
@@ -523,20 +514,15 @@ h3 {
   user-select: none;
 }
 
-p {
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+
+.imgabout{ /* arrumar media */
+  width: 450px;
+  height: 300px;
 }
 
-dd {
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+.about1{
+  text-align: left;
 }
-
 
 
 
@@ -883,7 +869,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   color: #000;
 }
 
