@@ -1,5 +1,6 @@
 <?php
     session_start();
+    /* print_r($_SESSION); */
     include_once('config.php');
 
     if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
@@ -9,6 +10,20 @@
         header('Location: login.php');
     }
     $logado = $_SESSION['email'];
+
+    $sql = "SELECT nome FROM usuarios WHERE email = '$logado' ";
+    $res = mysqli_query($conexao, $sql);
+
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nome = "Olá, " . $row["nome"];
+      }
+    }
+
+
+    
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,11 +31,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Home</title>
 </head>
 <body>
-
-    <h1>TELA DO USUARIO</h1>
+    <div id ="teste">
+      <?php echo $nome; 
+        echo "<script> console.log('HELLO WORLD!') </script>";
+      ?>
+    </div>
+    
     
   <!-- Adicionando o VLibras -->  
   <div vw class="enabled">
