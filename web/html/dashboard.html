@@ -1,52 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
-    <main>
-        <section class="glass">
-            
-            <div class="dashboard">
+  <header>
+    <div class="acessibilidade">
+      <div class="btn-container">
+        <label class="label-1">Contraste:</label>
 
-                <div class="user">
-                    <img src="/web/img/avatar.png" alt="avatar do usuario">
-                    <h3>Usuario</h3>
-                </div>
+        <!-- Site Normal -->
+        <button id="semcontraste" class="semcontraste" title="Site Normal">-</button>
 
-                <div class="links">
-                    <a href="/web/html/Unidade1.html">Capitulo 1</a>
-                    <a href="/web/html/unidade2.html">Capitulo 2</a>
-                    <a href="/web/html/unidade3.html">Capitulo 3</a>
-                    <a href="/web/html/unidade4.html">Capitulo 4</a>
-                    <a href="/web/html/unidade5.html">Capitulo 5</a>
-                    <a href="/web/html/unidade6.html">Capitulo 6</a>
-                    <a href="/web/html/unidade7.html">Capitulo 7</a>
-                    <a href="/web/html/unidade8.html">Capitulo 8</a>
-                    <a href="/web/html/unidade9.html">Capitulo 9</a>
-                    <a href="/web/html/unidade10.html">Capitulo 10</a>
-                    <a href="/web/html/unidade11.html">Capitulo 11</a>
-                </div>
-            </div>
+        <!-- Site Auto Contraste -->
+        <button id="contraste" class="contraste" title="Alto contraste">-</button>
 
-            <div class="cap">
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      </div>
+    </div>
 
-                <div class="status">
+    <!-- navbar -->
+    <nav>
+      <a id="logo" href="index.html">Fale com Minha Mão</a>
+    <nav id="nav-header">
+      <a id="logo" href="index.html">
+        <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
+      </a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="faleconosco.html">Fale conosco</a></li>
+        <li><a href="../php/login.php">Login</a></li>
+        <li><a href="../php/cadastro.php">Cadastro</a></li>
+        <li><a href="../php/cadastro.php"></a></li>
+      </ul>
+    </nav>
+  </header>
 
-                </div>
+  <!-- Dashboard Esquerda -->
+  <nav class="main-menu">
+    <ul>
+      <li>
+        <a href="/Fcmm-simples/web/html/dashboard.html">
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">
+            Perfil
+          </span>
+        </a>
 
-                <div class="cards">
+      </li>
+      <li>
+        <a href="/Fcmm-simples/web/html/dashboard.html">
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">
+            Dashboard
+          </span>
+        </a>
 
-                </div>
-                </div>
-            </div>
-        </section> 
-    </main>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-bar-chart-o fa-2x"></i>
+          <span class="nav-text">
+            Gráficos
+          </span>
+        </a>
+      </li>
+    </ul>
+    
 
-      <!-- Adicionando o VLibras -->  
+    <ul class="logout">
+      <li>
+        <a href="#">
+          <i class="fa fa-power-off fa-2x"></i>
+          <span class="nav-text">
+            Logout
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Centro -->
+
+  <div class="main-dashboard">
+    <h1>Dashboard</h1>
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="../img/home/3.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 1</h2>
+            <p class="card_text">
+              Alfabeto e Datilogia em libras <br>
+              Sinais e Pronomes Pessoais <br>
+              Saudações/Cumprimentos <br>
+              Sinais de Numerais <br>
+            <button class="btn_dashboard card_btn">Iniciar</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="../img/home/4.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 2</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Iniciar</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="../img/home/5.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 3</h2>
+            <p class="card_text"></p>
+            <button class="btn_dashboard card_btn">Iniciar</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="../img/Dashboard/6.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 4</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="../img/Dashboard/8.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 5</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="../img/Dashboard/9.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 6</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="../img/Dashboard/10.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 7</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 8</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 9</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 10</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+          <div class="card_content">
+            <h2 class="card_title">Capitulo 11</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn_dashboard card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <!-- Adicionando o VLibras -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -57,5 +229,8 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+  <!-- responsividade da navbar -->
+  <script src="../js/mobile-navbar.js"></script>
 </body>
+
 </html>
