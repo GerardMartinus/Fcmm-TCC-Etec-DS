@@ -43,7 +43,7 @@ if (isset($_POST['email'])) {
         console.log('I was closed by the timer')
     }
     }) </script>";
-    header('location: sistema.php');
+    header('location: dashboard.php');
 
 }
 
