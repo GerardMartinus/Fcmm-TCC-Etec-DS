@@ -53,9 +53,8 @@ iframe {
   font-size: 16px;
   margin-top: 55px;
   margin-bottom: 60px;
+  margin-left: 50px;
   }
-
-
 
 
 
@@ -490,32 +489,28 @@ iframe {
 }
 
 /* ===  SOBRE O CURSO === */
+.sobreocurso h1, .sobreocurso h2{
+  font-size: 25px;
+  color: #21629E;
+  user-select: none;
+}
+
+.sobreocurso h3{
+  font-size: 20px;
+  color: #21629E;
+  user-select: none;
+}
+
 .intro{
   padding-top: 120px;
 }
 
 
-
-h1 {
-  padding: 20px;
-  color: #21629E;
-  user-select: none;
+.intro1 p, .intro1 h1{
+  text-align: center;
 }
 
-h2 {
-  padding: 15px;
-  color: #21629E;
-  user-select: none;
-}
-
-h3 {
-  padding: 13px;
-  color: #21629E;
-  user-select: none;
-}
-
-
-.imgabout{ /* arrumar media */
+.imgabout{ /* arrumar media 521 */
   width: 450px;
   height: 300px;
 }
@@ -523,6 +518,29 @@ h3 {
 .about1{
   text-align: left;
 }
+
+.about{
+  gap: 15px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.about1{
+  grid-column: 3;
+}
+
+.textpsobre{
+  grid-column: 2;
+}
+
+.about1, .textpsobre{
+  padding-left: 30px;
+}
+
+.btn{
+  justify-content: center;
+}
+
 
 
 
