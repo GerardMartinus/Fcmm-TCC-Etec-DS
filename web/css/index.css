@@ -74,6 +74,7 @@ iframe {
 /* Header */
 
 .acessibilidade {
+  top: 0;
   position: fixed;
   background-color: #eee;
   display: flex;
@@ -814,20 +815,21 @@ input:focus {
 }
 
 input[type="submit"] {
-  text-align: center;
-  font-weight: bold;
-  border: none;
-  height: 40px;
-  border-radius: 10px;
   color: #fff;
-  background-color: #08558B;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0d47a1;
 }
 
 input[type="submit"]:hover {
-  background-color: #18223C;
-  transition: .5s;
-  cursor: pointer;
+  background-color: #5fa2db;
 }
 
 #esqueceuasenha {

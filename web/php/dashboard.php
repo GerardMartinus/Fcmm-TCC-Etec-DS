@@ -1,3 +1,27 @@
+<?php
+  session_start();
+  /* print_r($_SESSION); */
+  include_once('config.php');
+
+
+  if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+  {
+      unset($_SESSION['email']);
+      unset($_SESSION['senha']);
+      header('Location: login.php');
+  }
+  $logado = $_SESSION['email'];
+
+  $sql = "SELECT nome FROM usuarios WHERE email = '$logado' ";
+  $res = mysqli_query($conexao, $sql);
+
+  if(mysqli_num_rows($res) > 0){
+    while($row = mysqli_fetch_assoc($res)){
+      $nome = "Olá, " . $row["nome"];
+    }
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,9 +66,8 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="sobrenos.html">Sobre nós</a></li>
         <li><a href="faleconosco.html">Fale conosco</a></li>
-        <li><a href="../php/login.php">Login</a></li>
-        <li><a href="../php/cadastro.php">Cadastro</a></li>
-        <li><a href="../php/cadastro.php"></a></li>
+        <li><a href="faleconosco.html"></a></li>
+
       </ul>
     </nav>
   </header>
@@ -56,7 +79,7 @@
         <a href="/Fcmm-simples/web/html/dashboard.html">
           <i class="fa fa-home fa-2x"></i>
           <span class="nav-text">
-            Perfil
+          <?php echo $nome; ?>
           </span>
         </a>
 
@@ -108,7 +131,7 @@
               Sinais e Pronomes Pessoais <br>
               Saudações/Cumprimentos <br>
               Sinais de Numerais <br>
-            <button class="btn_dashboard card_btn">Iniciar</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -118,7 +141,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 2</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Iniciar</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -128,7 +151,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 3</h2>
             <p class="card_text"></p>
-            <button class="btn_dashboard card_btn">Iniciar</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -138,7 +161,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 4</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -148,7 +171,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 5</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -158,7 +181,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 6</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -168,7 +191,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 7</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -178,7 +201,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 8</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -188,7 +211,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 9</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -198,7 +221,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 10</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -208,7 +231,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 11</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <button class="btn_dashboard card_btn">Read More</button>
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
           </div>
         </div>
       </li>
