@@ -1,70 +1,4 @@
-<?php
-  session_start();
-  $erro;
-  /* print_r($_SESSION); */
-  include_once('config.php');
 
-
-  if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
-  {
-      unset($_SESSION['email']);
-      unset($_SESSION['senha']);
-      header('Location: login.php');
-  }
-  $logado = $_SESSION['email'];
-
-  $sql = "SELECT nome, email, nivel FROM usuarios WHERE email = '$logado' ";
-  $res = mysqli_query($conexao, $sql);
-
-  if(mysqli_num_rows($res) > 0){
-    while($row = mysqli_fetch_assoc($res)){
-      $nome = $row["nome"]; 
-      $email = $row["email"];
-      $nivel = $row["nivel"] ;
-    }
-  }
-
-  if(isset($_POST['Nivel1'])){
-    $sql = "SELECT nivel FROM usuarios WHERE email = '$logado'";
-    $res = (mysqli_query($conexao, $sql));
-
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nivel = $row["nivel"];
-      }
-      if($nivel >= 1){
-        header ("Location: quiz1.php");
-      } else {
-        $erro = "<script> Swal.fire({
-          icon: 'error',
-          title: 'Você não está nesse nível ainda!'
-      })</script>";
-      }
-    }
-
-  }
-
-  if(isset($_POST['Nivel2'])){
-    $sql = "SELECT nivel FROM usuarios WHERE email = '$logado'";
-    $res = (mysqli_query($conexao, $sql));
-
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nivel = $row["nivel"];
-      }
-      if($nivel >= 2){
-        header ("Location: quiz1.php");
-      } else {
-        $erro = "<script> Swal.fire({
-          icon: 'error',
-          title: 'Você não está nesse nível ainda!'
-      })</script>";
-      }
-    }
-
-  }
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,6 +10,7 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>Dashboard</title>
   <link rel="stylesheet" href="../css/index.css">
+  <script src="https://kit.fontawesome.com/5d16dedfaf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -123,7 +58,7 @@
     <ul>
       <li>
         <a href="/Fcmm-simples/web/html/dashboard.html">
-          <i class="fa fa-home fa-2x"></i>
+          <i class=""></i>
           <span class="nav-text">
           <?php echo "Olá," . $nome . "<br>" . $email . "<br> Nível atual: " .$nivel; ?>
           </span>
@@ -132,7 +67,7 @@
       </li>
       <li>
         <a href="/Fcmm-simples/web/html/dashboard.html">
-          <i class="fa fa-home fa-2x"></i>
+        <i class="fa fa-home fa-1x"></i>
           <span class="nav-text">
             Dashboard
           </span>
@@ -141,7 +76,7 @@
       </li>
       <li>
         <a href="#">
-          <i class="fa fa-bar-chart-o fa-2x"></i>
+          <i class="fa fa-bar-chart-o fa-1x"></i>
           <span class="nav-text">
             Gráficos
           </span>
@@ -153,7 +88,7 @@
     <ul class="logout">
       <li>
         <a href="#">
-          <i class="fa fa-power-off fa-2x"></i>
+        <i class="fa fa-power-off fa-1x"></i>
           <span class="nav-text">
             Logout
           </span>
@@ -165,7 +100,7 @@
   <!-- Dashboard Centro -->
 
   <div class="main-dashboard">
-    <h1>Dashboard</h1>
+    <h1 class="title-dashboard">Dashboard</h1>
     <ul class="cards">
       <li class="cards_item">
         <div class="card">
