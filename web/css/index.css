@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  text-align: justify;
   box-sizing: border-box;
 }
 
@@ -1083,7 +1082,7 @@ section {
 
 body {
   box-sizing: border-box;
-  background: linear-gradient(to right bottom, #000046, #5B86E5);
+  background: linear-gradient(to left bottom, #5B86E5, #21629E);
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -1093,7 +1092,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper {
+#wrapper {
   height: 620px;
   width: 460px;
   background-color: white;
@@ -1101,10 +1100,10 @@ body {
   overflow: hidden;
 }
 
-.header {
+#header {
   width: 100%;
   height: 32%;
-  background-image: url(https://images.unsplash.com/photo-1506305269769-53a5714a93be?ixlib=rb-1.2.1&auto=format&fit=crop&w=645&q=80);
+  background-image: url(https://www.cmbh.mg.gov.br/sites/default/files/noticias_destaques/2022/04/libras-creditos-freepik.jpg);
   background-size: cover;
   background-position: center;
   color: white;
@@ -1118,16 +1117,17 @@ h1 {
   font-size: 60px;
 }
 
-p {
+p #txtcontato{
   margin: 0;
   padding: 0 24px;
   font-size: 16px;
   width: 360px;
   opacity: 0.8;
   margin: 0 auto;
+  justify-content: center;
 }
 
-form {
+#contato {
   display: flex;
   flex-direction: column;
   margin: 8px auto;
@@ -1145,8 +1145,8 @@ h4 {
 input,
 textarea {
   border: solid 1px #cbcbcb; 
-  border-radius: 6px;
-  width: 92%;
+  border-radius: 12px;
+  width: 40vh;
   padding: 6px 12px;
   outline: none;
   margin: 4px auto;
@@ -1161,12 +1161,15 @@ textarea {
 }
 
 button {
-  height: 42px;
-  width: 60%;
-  margin: 24px auto;
-  border-radius: 6px;
+  height: 40px;
+  width: 12vh;
+  margin: 10px auto;
+  border-radius: 16px;
   border: none;
   color: white;
-  background: linear-gradient(to left bottom, #000046, #5B86E5);
+  background: linear-gradient(to left bottom, #5B86E5, #21629E);
   cursor: pointer;
+}
+#btnvoltar{
+  width: 12vh;
 }
