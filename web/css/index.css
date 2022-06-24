@@ -1125,7 +1125,7 @@ section {
 /* formulario de contato */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
-body {
+#tutu-burrao {
   box-sizing: border-box;
   background: linear-gradient(to left bottom, #5B86E5, #21629E);
   height: 100vh;
