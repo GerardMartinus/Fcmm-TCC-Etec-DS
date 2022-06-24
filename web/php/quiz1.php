@@ -1,3 +1,47 @@
+<?php
+    session_start();
+    $erro;
+    /* print_r($_SESSION); */
+    include_once('config.php');
+  
+  
+    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
+    $logado = $_SESSION['email'];
+  
+    $sql = "SELECT nome, email, nivel FROM usuarios WHERE email = '$logado' ";
+    $res = mysqli_query($conexao, $sql);
+  
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nome = $row["nome"]; 
+        $email = $row["email"];
+        $nivel = $row["nivel"] ;
+      }
+    }
+
+    if (isset($_POST['finalizar'])){
+        if($nivel >= 1){
+            $sql = "UPDATE usuarios SET nivel = '2' WHERE email = '$logado'";
+            $res = mysqli_query($conexao, $sql);
+            $erro = "<script> Swal.fire({
+                icon: 'success',
+                title: 'Você subiu de nível!'
+            })</script>";
+        }
+        else{
+            $erro = "<script> Swal.fire({
+                icon: 'success',
+                title: 'Revisão feita!'
+            })</script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +55,7 @@
 </head>
 
 <body>
-
+<?php echo $erro; ?>
     <header>
         <div class="acessibilidade">
             <div class="btn-container">
@@ -73,12 +117,16 @@
             <article class='centro' id='instrucoes'>
             </article>
 
-            <article id='aviso' class='centro'>
-                <input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /> <br>
-                <span id='numero'></span> de <span id='total'></span> <br>
-                <button onclick="fimDeJogo()" id="fimBotao" class="fim"></button>
-                <button onclick="retornar()" id="voltarBotao" class="voltar">Voltar</button>
-            </article>
+            <form action="quiz1.php" method="POST">
+                <article id='aviso' class='centro'>
+                    <input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /> <br>
+                    <span id='numero'></span> de <span id='total'></span> <br>
+                    <input type="submit" onclick="fimDeJogo()" id="fimBotao" class="fim" value="Finalizar" name="finalizar">
+                    <input type="submit" onclick="retornar()" id="voltarBotao" class="voltar" value="Voltar" name="voltar">
+                    <button onclick="fimDeJogo()" id="fimBotao" class="fim"></button>
+                    <button onclick="retornar()" id="voltarBotao" class="voltar">Voltar</button>
+                </article>
+            </form>
 
             <!-- footer -->
   <footer id="footer">

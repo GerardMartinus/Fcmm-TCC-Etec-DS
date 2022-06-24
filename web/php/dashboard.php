@@ -25,9 +25,6 @@
   }
 
   if(isset($_POST['Nivel1'])){
-    $sql = "SELECT nivel FROM usuarios WHERE email = '$logado'";
-    $res = (mysqli_query($conexao, $sql));
-
     if(mysqli_num_rows($res) > 0){
       while($row = mysqli_fetch_assoc($res)){
         $nivel = $row["nivel"];
@@ -45,15 +42,29 @@
   }
 
   if(isset($_POST['Nivel2'])){
-    $sql = "SELECT nivel FROM usuarios WHERE email = '$logado'";
-    $res = (mysqli_query($conexao, $sql));
-
     if(mysqli_num_rows($res) > 0){
       while($row = mysqli_fetch_assoc($res)){
         $nivel = $row["nivel"];
       }
       if($nivel >= 2){
-        header ("Location: quiz1.php");
+        header ("Location: quiz2.php");
+      } else {
+        $erro = "<script> Swal.fire({
+          icon: 'error',
+          title: 'Você não está nesse nível ainda!'
+      })</script>";
+      }
+    }
+
+  }
+
+  if(isset($_POST['Nivel3'])){
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nivel = $row["nivel"];
+      }
+      if($nivel >= 2){
+        header ("Location: quiz3.php");
       } else {
         $erro = "<script> Swal.fire({
           icon: 'error',
@@ -182,11 +193,13 @@
               <?php if($nivel >= 1){
                 echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="Iniciar" action>';
               } 
+              elseif($nivel > 1){
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="Revisar" action>';
+              }
               else{
-                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="NÃO DISPONIVEL" action>';
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="Não disponível" action>';
               } 
               ?>
-                <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="Iniciar" action>
               </form>
           </div>
         </div>
@@ -199,9 +212,17 @@
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
             <form action="dashboard.php" method="POST">
 
-              <input type="submit" class="btn_dashboard card_btn" name="Nivel2" value= "Iniciar">
-
-            </form>
+              <?php if($nivel >= 2){
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel2" value="Iniciar" action>';
+              } 
+              elseif($nivel > 2){
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel2" value="Revisar" action>';
+              }
+              else{
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel2" value="Não disponível" action>';
+              } 
+              ?>
+              </form>
           </div>
         </div>
       </li>
@@ -212,8 +233,18 @@
             <h2 class="card_title">Capitulo 3</h2>
             <p class="card_text"></p>
             <form action="dashboard.php" method="POST">
-              <input type="submit" class="btn_dashboard card_btn" name="Nivel3" value= "Iniciar">
-            </form>
+
+              <?php if($nivel >= 3){
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel3" value="Iniciar" action>';
+              } 
+              elseif($nivel > 3){
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel3" value="Revisar" action>';
+              }
+              else{
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel3" value="Não disponível" action>';
+              } 
+              ?>
+              </form>
           </div>
         </div>
       </li>
@@ -224,8 +255,15 @@
             <h2 class="card_title">Capitulo 4</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
             <form action="dashboard.php" method="POST">
-              <input type="submit" class="btn_dashboard card_btn" name="Nivel4" value= "Iniciar">
-            </form>
+
+              <?php if($nivel >= 4){
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel4" value="Iniciar" action>';
+              } 
+              else{
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel" value="NÃO DISPONIVEL" action>';
+              } 
+              ?>
+              </form>
           </div>
         </div>
       </li>
