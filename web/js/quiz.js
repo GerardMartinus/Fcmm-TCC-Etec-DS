@@ -1,31 +1,31 @@
-let titulo     = document.querySelector('h1')
-let instrucoes = document.querySelector('#instrucoes')
-let aviso      = document.querySelector('#aviso')
-let progresso  = document.querySelector('#progresso')
+let titulo     = document.querySelector('h1');
+let instrucoes = document.querySelector('#instrucoes');
+let aviso      = document.querySelector('#aviso');
+let progresso  = document.querySelector('#progresso');
 let pontos = 0 // pontos para o placar
 let placar = 0 // placar
 
 // AUDIO
-let somAcerto   = document.querySelector('#somAcerto')
-let somErro     = document.querySelector('#somErro')
-let somAplausos = document.querySelector('#somAplausos')
+let somAcerto   = document.querySelector('#somAcerto');
+let somErro     = document.querySelector('#somErro');
+let somAplausos = document.querySelector('#somAplausos');
 
 // PERGUNTA
-let numQuestao = document.querySelector('#numQuestao')
-let imgQuestao = document.querySelector('.imagemDaQuestao img')  // ADICIONE
-let imgPergunta = document.querySelector('.imagemDaPergunta img')
-let pergunta   = document.querySelector('#pergunta')
+let numQuestao = document.querySelector('#numQuestao');
+let imgQuestao = document.querySelector('.imagemDaQuestao img');  // ADICIONE
+let imgPergunta = document.querySelector('.imagemDaPergunta img');
+let pergunta   = document.querySelector('#pergunta');
 
 // ALTERNATIVAS
-let a = document.querySelector('#a')
-let b = document.querySelector('#b')
-let c = document.querySelector('#c')
-let d = document.querySelector('#d')
+let a = document.querySelector('#a');
+let b = document.querySelector('#b');
+let c = document.querySelector('#c');
+let d = document.querySelector('#d');
 
 // article com a class questoes
-let articleQuestoes = document.querySelector('.questoes')
+let articleQuestoes = document.querySelector('.questoes');
 // ol li com as alternativas
-let alternativas = document.querySelector('#alternativas')
+let alternativas = document.querySelector('#alternativas');
 
 const q0 = {
     numQuestao   : 0,
@@ -141,23 +141,23 @@ const q10 = {
 // CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
 const questoes = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
 
-let numero = document.querySelector('#numero')
-let total  = document.querySelector('#total')
+let numero = document.querySelector('#numero');
+let total  = document.querySelector('#total');
 
-numero.textContent = q1.numQuestao
+numero.textContent = q1.numQuestao;
 
-let totalDeQuestoes = (questoes.length)-1
-console.log("Total de questões " + totalDeQuestoes)
-total.textContent = totalDeQuestoes
+let totalDeQuestoes = (questoes.length)-1;
+console.log("Total de questões " + totalDeQuestoes);
+total.textContent = totalDeQuestoes;
 
 // MONTAR A 1a QUESTAO COMPLETA, para iniciar o Quiz
-numQuestao.textContent = q1.numQuestao
-imgQuestao.setAttribute('src', 'images/'+q1.imagem)  // ADICIONE
-pergunta.textContent   = q1.pergunta
-a.textContent = q1.alternativaA
-b.textContent = q1.alternativaB
-c.textContent = q1.alternativaC
-d.textContent = q1.alternativaD
+numQuestao.textContent = q1.numQuestao;
+imgQuestao.setAttribute('src', 'images/'+q1.imagem);  // ADICIONE
+pergunta.textContent   = q1.pergunta;
+a.textContent = q1.alternativaA;
+b.textContent = q1.alternativaB;
+c.textContent = q1.alternativaC;
+d.textContent = q1.alternativaD;
 
 // CONFIGURAR O VALUE INICIAL DA 1a QUESTAO COMPLETA
 a.setAttribute('value', '1A')

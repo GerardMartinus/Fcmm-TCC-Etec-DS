@@ -1,79 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
-  if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
-  {
-      unset($_SESSION['email']);
-      unset($_SESSION['senha']);
-      header('Location: login.php');
-  }
-  $logado = $_SESSION['email'];
-
-  $sql = "SELECT nome, email, nivel FROM usuarios WHERE email = '$logado' ";
-  $res = mysqli_query($conexao, $sql);
-
-  if(mysqli_num_rows($res) > 0){
-    while($row = mysqli_fetch_assoc($res)){
-      $nome = $row["nome"]; 
-      $email = $row["email"];
-      $nivel = $row["nivel"] ;
-    }
-  }
-
-  if(isset($_POST['Nivel1'])){
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nivel = $row["nivel"];
-      }
-      if($nivel >= 1){
-        header ("Location: quiz1.php");
-      } else {
-        $erro = "<script> Swal.fire({
-          icon: 'error',
-          title: 'Você não está nesse nível ainda!'
-      })</script>";
-      }
-    }
-
-  }
-
-  if(isset($_POST['Nivel2'])){
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nivel = $row["nivel"];
-      }
-      if($nivel >= 2){
-        header ("Location: quiz2.php");
-      } else {
-        $erro = "<script> Swal.fire({
-          icon: 'error',
-          title: 'Você não está nesse nível ainda!'
-      })</script>";
-      }
-    }
-
-  }
-
-  if(isset($_POST['Nivel3'])){
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nivel = $row["nivel"];
-      }
-      if($nivel >= 2){
-        header ("Location: quiz3.php");
-      } else {
-        $erro = "<script> Swal.fire({
-          icon: 'error',
-          title: 'Você não está nesse nível ainda!'
-      })</script>";
-      }
-    }
-
-  }
-
-?>
->>>>>>> 0e79242725df3ae7b5eb4649dcbd91e1ee068081
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,6 +15,7 @@
 
 <body>
   <?php echo $erro; ?>
+  
   <header>
     <div class="acessibilidade">
       <div class="btn-container">

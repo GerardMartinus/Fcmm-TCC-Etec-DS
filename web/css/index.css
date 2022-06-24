@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+/* Cores */
+:root {
+  --principal: #03a9f4;
+  --secundaria: #21629E;
+  --azul-escuro: #0d47a1;
+  --cinza-escuro: #222;
+  --branco: #fff;
+  --verde: #4caf50;
+  --vermelho: #f44336;
+}
+
 /* Reset CSS */
 
 
@@ -388,8 +404,7 @@ iframe {
   /* Dashboard Centro */
 
 
-  /* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
 
 /* Design */
 *,
@@ -903,23 +918,10 @@ input[type="submit"]:hover {
 
 /* Quiz */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 /* vermelho #f44336 ou #d50000 verde #4caf50 ou #1b5e20  */
-:root {
-  --principal: #03a9f4;
-  --secundaria: #21629E;
-  --azul-escuro: #0d47a1;
-  --cinza-escuro: #222;
-  --branco: #fff;
-  --verde: #4caf50;
-  --vermelho: #f44336;
-}
 
-main {
-  width: 100%;
-  height: 10px;
-}
+
 
 section {
   top: 6rem;
@@ -1117,102 +1119,3 @@ section {
 
 }
 
-/* formulario de contato */
-
-/* AE TUTU FILHO DA PUTA, DA CLASSE NAS PORRA CARALHO */
-
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
-#tutu-burrao {
-  box-sizing: border-box;
-  background: linear-gradient(to left bottom, #5B86E5, #21629E);
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#wrapper {
-  height: 620px;
-  width: 460px;
-  background-color: white;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-#header {
-  width: 100%;
-  height: 32%;
-  background-image: url(https://www.cmbh.mg.gov.br/sites/default/files/noticias_destaques/2022/04/libras-creditos-freepik.jpg);
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  padding: 34px 24px 12px;
-  font-weight: 300;
-  font-size: 60px;
-}
-
-p #txtcontato{
-  margin: 0;
-  padding: 0 24px;
-  font-size: 16px;
-  width: 360px;
-  opacity: 0.8;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-#contato {
-  display: flex;
-  flex-direction: column;
-  margin: 8px auto;
-  width: 76%;
-}
-
-h4 {
-  color: #666;
-  margin: 16px 0 6px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  
-}
-
-input,
-textarea {
-  border: solid 1px #cbcbcb; 
-  border-radius: 12px;
-  width: 40vh;
-  padding: 6px 12px;
-  outline: none;
-  margin: 4px auto;
-}
-
-input {
-  height: 28px;
-}
-
-textarea {
-  height: 62px;
-}
-
-.button-voltar {
-  height: 40px;
-  width: 12vh;
-  margin: 10px auto;
-  border-radius: 16px;
-  border: none;
-  color: white;
-  background: linear-gradient(to left bottom, #5B86E5, #21629E);
-  cursor: pointer;
-}
-#btnvoltar{
-  width: 12vh;
-} */
