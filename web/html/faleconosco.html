@@ -9,103 +9,26 @@
 
 </head>
 <body>
-    <header>
-        <div class="acessibilidade">
-          <div class="btn-container">
-            <label class="label-1">Contraste:</label>
-    
-            <!-- Site Normal -->
-            <button name="white-style" id="white-style" title="Site Normal">-</button>
-    
-            <!-- Site Auto Contraste -->
-            <button name="black-style" id="black-style" title="Alto contraste">-</button>
-    
-            <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-            <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-          </div>
-        </div>
-    
-        <!-- navbar -->
-        <nav id="nav-header">
-          <a id="logo" href="index.html">Fale com Minha Mão</a>
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-          <ul class="nav-list">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="unidade1.html">Sobre nós</a></li>
-            <li><a href="faleconosco.html">Fale conosco</a></li>
-            <li><a href="../php/login.php">Login</a></li>
-            <li><a href="../php/cadastro.php">Cadastro</a></li>
-          </ul>
-        </nav>
-      </header>
 
       <!-- formulario de contato -->
-      <section class="contact">
-        <div class="content">
-          <h2>Nos contate</h2>
-          <p>Se você está reportando um problema, inclua o máximo de informações possível. 
-            Por favor, inclua quaisquer capturas de tela ou vídeos dos problemas, pois isso 
-            também nos ajudará a resolver os problemas muito mais rápido. Depois que sua 
-            solicitação for enviada, um membro de nossa equipe de suporte responderá o mais 
-            rápido possível.</p>
+      
+      
+      <div id="wrapper">
+        <div id="header">
+          <h1 id="">Contate-Nos</h1>
+          <p id="txtcontato">Você tem alguma dúvida ou uma reclamção? nos envie uma mensagem e responderemos o mais breve possível.</p>
         </div>
-        <div class="container">
-          <div class="contactInfo">
-            <div class="box">
-              <div class="icon">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-              </div>
-              <div class="text">
-                <h3>Address</h3>
-                <p>Your Address<br>12000 City, Country</p>
-              </div>
-            </div>
-            <div class="box">
-              <div class="icon">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-              </div>
-              <div class="text">
-                <h3>Phone</h3>
-                <p>123-456-7890</p>
-              </div>
-            </div>
-            <div class="box">
-              <div class="icon">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              </div>
-              <div class="text">
-                <a href="https://www.flaticon.com/br/icones-gratis/enviar" title="enviar ícones">Enviar ícones criados por Freepik - Flaticon</a>
-                <h3>Email</h3>
-                <p>your@email.com</p>
-              </div>
-            </div>
-          </div>
-          <div class="contactForm">
-            <form action="">
-              <h2>Send Message</h2>
-              <div class="inputBox">
-                <input type="text" required="required">
-                <span>Full Name</span>
-              </div>
-              <div class="inputBox">
-                <input type="email" required="required">
-                <span>Email</span>
-              </div>
-              <div class="inputBox">
-                <textarea required="required"></textarea>
-                <span>Your Message...</span>
-              </div>
-              <div class="inputBox">
-                <input type="submit" value="Send">
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+        <form id="contato">
+          <h4>Nome</h4>
+          <input type="text" name="nome" value="Ensira seu nome">
+          <h4>Email</h4>
+          <input type="text" name="email">
+          <h4>Mensagem</h4>
+          <textarea></textarea>
+          <button>Enviar</button>
+          <button id="btnvoltar">Voltar</button>
+        </form>
+      </div>
 
   <!-- responsividade da navbar -->
   <script src="../js/mobile-navbar.js"></script>

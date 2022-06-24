@@ -63,7 +63,7 @@ if (isset($_POST['cadastrar'])) {
         console.log('I was closed by the timer')
     }
     }) </script>";
-    $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')");
+    $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, nivel) VALUES ('$nome', '$email', '$senha', '1')");
     header("location: login.php");
     
   }

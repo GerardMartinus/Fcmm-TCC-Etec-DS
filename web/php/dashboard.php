@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $erro;
   /* print_r($_SESSION); */
   include_once('config.php');
 
@@ -12,13 +13,55 @@
   }
   $logado = $_SESSION['email'];
 
-  $sql = "SELECT nome FROM usuarios WHERE email = '$logado' ";
+  $sql = "SELECT nome, email, nivel FROM usuarios WHERE email = '$logado' ";
   $res = mysqli_query($conexao, $sql);
 
   if(mysqli_num_rows($res) > 0){
     while($row = mysqli_fetch_assoc($res)){
-      $nome = "Olá, " . $row["nome"];
+      $nome = $row["nome"]; 
+      $email = $row["email"];
+      $nivel = $row["nivel"] ;
     }
+  }
+
+  if(isset($_POST['Nivel1'])){
+    $sql = "SELECT nivel FROM usuarios WHERE email = '$logado'";
+    $res = (mysqli_query($conexao, $sql));
+
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nivel = $row["nivel"];
+      }
+      if($nivel >= 1){
+        header ("Location: quiz1.php");
+      } else {
+        $erro = "<script> Swal.fire({
+          icon: 'error',
+          title: 'Você não está nesse nível ainda!'
+      })</script>";
+      }
+    }
+
+  }
+
+  if(isset($_POST['Nivel2'])){
+    $sql = "SELECT nivel FROM usuarios WHERE email = '$logado'";
+    $res = (mysqli_query($conexao, $sql));
+
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nivel = $row["nivel"];
+      }
+      if($nivel >= 2){
+        header ("Location: quiz1.php");
+      } else {
+        $erro = "<script> Swal.fire({
+          icon: 'error',
+          title: 'Você não está nesse nível ainda!'
+      })</script>";
+      }
+    }
+
   }
 
 ?>
@@ -29,11 +72,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/validar.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>Dashboard</title>
   <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
+  <?php echo $erro; ?>
   <header>
     <div class="acessibilidade">
       <div class="btn-container">
@@ -79,7 +125,7 @@
         <a href="/Fcmm-simples/web/html/dashboard.html">
           <i class="fa fa-home fa-2x"></i>
           <span class="nav-text">
-          <?php echo $nome; ?>
+          <?php echo "Olá," . $nome . "<br>" . $email . "<br> Nível atual: " .$nivel; ?>
           </span>
         </a>
 
@@ -131,7 +177,17 @@
               Sinais e Pronomes Pessoais <br>
               Saudações/Cumprimentos <br>
               Sinais de Numerais <br>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+              <form action="dashboard.php" method="POST">
+
+              <?php if($nivel >= 1){
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="Iniciar" action>';
+              } 
+              else{
+                echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="NÃO DISPONIVEL" action>';
+              } 
+              ?>
+                <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value="Iniciar" action>
+              </form>
           </div>
         </div>
       </li>
@@ -141,7 +197,11 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 2</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <form action="dashboard.php" method="POST">
+
+              <input type="submit" class="btn_dashboard card_btn" name="Nivel2" value= "Iniciar">
+
+            </form>
           </div>
         </div>
       </li>
@@ -151,7 +211,9 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 3</h2>
             <p class="card_text"></p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <form action="dashboard.php" method="POST">
+              <input type="submit" class="btn_dashboard card_btn" name="Nivel3" value= "Iniciar">
+            </form>
           </div>
         </div>
       </li>
@@ -161,7 +223,9 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 4</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <form action="dashboard.php" method="POST">
+              <input type="submit" class="btn_dashboard card_btn" name="Nivel4" value= "Iniciar">
+            </form>
           </div>
         </div>
       </li>
@@ -171,7 +235,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 5</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel5" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -181,7 +245,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 6</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel6" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -191,7 +255,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 7</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel7" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -201,7 +265,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 8</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel8" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -211,7 +275,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 9</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel9" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -221,7 +285,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 10</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel10" value= "Iniciar">
           </div>
         </div>
       </li>
@@ -231,7 +295,7 @@
           <div class="card_content">
             <h2 class="card_title">Capitulo 11</h2>
             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-            <input type="submit" class="btn_dashboard card_btn" name="Nivel1" value= "Iniciar">
+            <input type="submit" class="btn_dashboard card_btn" name="Nivel11" value= "Iniciar">
           </div>
         </div>
       </li>
