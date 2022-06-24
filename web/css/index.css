@@ -414,6 +414,13 @@ iframe {
   vertical-align: middle;
 }
 
+.card-image-sobre-nos img {
+  height: 50px;
+  border-radius: 50%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
 .btn_dashboard {
   text-align: center;
   color: #fff;
