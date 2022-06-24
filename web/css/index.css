@@ -251,16 +251,6 @@ iframe {
   background-position: center;       
 }
 
-.saber-mais{
-  text-align: center;
-  width: 300px;
-  height: 40px;
-  border-radius: 20px;
-  background-color:var(--secundaria);
-  color: #fff;
-  cursor: pointer;
-}
-
 
 
 /* Dashboard */
@@ -272,11 +262,12 @@ iframe {
   .fa {
   position: relative;
   display: table-cell;
-  width: 60px;
-  height: 36px;
+  width: 33px;
+  height: 30px;
   text-align: center;
   vertical-align: middle;
   font-size:20px;
+  margin-right: 20px;
   }
   
   
@@ -409,8 +400,12 @@ iframe {
 
 .main-dashboard{
   margin-top: 20px;
-  max-width: 1200px;
-  margin: 112px auto auto 61px;
+  max-width: 100vw;
+  margin: 100px 45px auto 61px;
+}
+
+.title-dashboard{
+  text-align: center;
 }
 
 .card-image img {
@@ -420,8 +415,8 @@ iframe {
 }
 
 .btn_dashboard {
+  text-align: center;
   color: #fff;
-  padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
   border-radius: 4px;
@@ -507,6 +502,8 @@ footer{
   justify-content: center;
   color: #fff;
   z-index: 1;
+  margin-top: 96px;
+
 }
 
 footer h3{
@@ -766,17 +763,15 @@ input:focus {
 }
 
 input[type="submit"] {
-  color: #fff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
+  background: #069cc2;
+  border-radius: 6px;
+  height: 30%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #0d47a1;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  margin-top: 55px;
+  margin-bottom: 60px;
 }
 
 input[type="submit"]:hover {
@@ -1026,9 +1021,12 @@ section {
 }
 
 /* formulario de contato */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
-body {
+/* AE TUTU FILHO DA PUTA, DA CLASSE NAS PORRA CARALHO */
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+#tutu-burrao {
   box-sizing: border-box;
   background: linear-gradient(to left bottom, #5B86E5, #21629E);
   height: 100vh;
@@ -1108,7 +1106,7 @@ textarea {
   height: 62px;
 }
 
-button {
+.button-voltar {
   height: 40px;
   width: 12vh;
   margin: 10px auto;
@@ -1120,4 +1118,4 @@ button {
 }
 #btnvoltar{
   width: 12vh;
-}
+} */
