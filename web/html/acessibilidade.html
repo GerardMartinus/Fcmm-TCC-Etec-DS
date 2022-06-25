@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+    <header>
+        <div class="acessibilidade">
+            <div class="btn-container">
+              <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o conteúdo [1]</a></label>
+              <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu [2]</a></label>
+              <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
+              <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
+              <label class="label-1">Contraste:</label>
+      
+              <!-- Site Normal -->
+              <button id="semcontraste" class="semcontraste" title="Site Normal">-</button>
+      
+              <!-- Site Auto Contraste -->
+              <button id="contraste" class="contraste" title="Alto contraste">-</button>
+      
+              <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+              <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      
+            </div>
+          </div>
+      
+          <!-- navbar -->
+          <nav>
+            <a id="logo" href="index.html">Fale com Minha Mão</a>
+          <nav id="nav-header">
+            <a id="logo" href="index.html">
+              <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
+            </a>
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="sobrenos.html">Sobre nós</a></li>
+              <li><a href="faleconosco.html">Fale conosco</a></li>
+              <li><a href="../php/login.php">Login</a></li>
+              <li><a href="../php/cadastro.php">Cadastro</a></li>
+            </ul>
+          </nav>
+    </header>
+    <article>
+        <main id="home-content">
+            <h1 id="titulo">ACESSIBILIDADE</h1>
+            <p>Este site foi desenvolvido para que pessoas com deficiência visual, baixa visão, daltonismo, deficiência auditiva e mobilidade reduzida possam navegar por meio de recursos como alto contraste, aumento de fonte, teclas de atalho, tradução para a Língua Brasileira de Sinais e navegação por teclado.</p>
+    
+            <p>Para aumentar a fonte, é só clicar no símbolo de A+ em nossa barra de acessibilidade. Caso queira voltar ao tamanho de fonte original, é só clicar em A-.</p>
+    
+            <p>Se for necessário, você também pode usar o zoom nativo do seu navegador, pressionando as teclas “Ctrl” e “+” para aumentar todo o site e “Ctrl” e “-“ para diminuir. Para voltar ao padrão, pressione “Ctrl” e “0”.</p>
+    
+            <p>Este site tem melhor acessibilidade quando acessado nas versões mais atualizadas do seu navegador web. Utilize sempre a versão mais recente de seu software.</p>
+    
+            <p>Teclas de atalho por navegadores</p>
+            <p>Internet Explorer e Google Chrome:</p>
+    
+            <p>“Alt” + “1” - ir para o conteúdo</p>
+            <p>“Alt” + “2” - ir para o menu</p>
+            <p>“Alt” + “3” - ir para o rodapé</p>
+            <p>Firefox:</p>
+    
+            <p>“Alt” + “Shift” + “número”</p>
+            <p>Opera:</p>
+    
+            <p>“Shift” + “Escape” + “número”</p>
+            <p>Safari e OmniWeb:</p>
+    
+            <p>“Ctrl” + “número”</p>
+            <p>Navegação por tabulação</p>
+            <p>Use a tecla Tab para navegar por elementos que recebem ação do usuário no site, tais como links, botões, campos de formulário e outros na ordem em que eles são apresentados na página, e Shift + Tab para retornar. Use as setas direcionais para acessar as informações textuais.</p>
+    
+            <p>Sugestões de programas disponíveis para pessoas com deficiência</p>
+            <p>- Nitrous Voice Flux: controla o computador por voz. Gratuito;</p>
+            <p>- NVDA: software livre para ler tela – vários idiomas (Windows);</p>
+            <p>- YeoSoft Text: leitor de tela em inglês e português;</p>
+            <p>- Jaws for Windows: leitor de tela – vários idiomas;</p>
+            <p>- Virtual Vision: leitor de telas em português do Brasil;</p>
+            <p>- DOSVOX: sistema para deficientes visuais (Windows ou Linux).</p>
+            <p>- Talckback: leitor de tela disponível em smartphones Android.</p>
+        <p>Observação: leia no manual do leitor de telas sobre a melhor forma de navegação em páginas web.</p><br>
+            
+            <p>LIBRAS - Língua Brasileira de Sinais</p>
+            <p>Este site é acessível em LIBRAS através do <a href="http://www.vlibras.gov.br/" target="_blank">VLibras</a>.</p>
+            <p>-Do lado direito de cada página do site existe o ícone de um Widget informando que o site é acessível em LIBRAS.</p>
+            <p>-Para traduzir, basta clicar sobre o ícone e selecionar o texto que deseja traduzir.</p>
+        </main>
+    </article>
+
+    <footer id="footer">
+        <h3>Fale com a minha mão &copy; 2022</h3>
+        <p>Site criado para projeto de Tcc</p>
+        <ul class="socials">
+          <li>Início</li>
+          <li>Sobre Nós</li>
+          <li>Login</li>
+          <li>Cadastro</li>
+        </ul>
+        <p><a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+          <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
+        </a></p>
+      </footer>
+</body>
+</html>

@@ -17,7 +17,9 @@
 }
 
 /* Reset CSS */
-
+html{
+  overflow-x: hidden;
+}
 
 * {
   margin: 0;
@@ -74,8 +76,6 @@ iframe {
   border: none;
   font-size: 16px;
   margin-top: 55px;
-  margin-bottom: 60px;
-  margin-left: 50px;
   }
 
 
@@ -100,7 +100,7 @@ iframe {
 
 .label-1 {
   color: #000;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 #semcontraste {
@@ -117,7 +117,11 @@ iframe {
 .contraste {
   text-align: center;
   background-color: #000;
+<<<<<<< HEAD
+  border-color: #000;
+=======
   border-color: #fff;
+>>>>>>> 04e5107de47a9dc0523474d5ae63f370628d8a34
   border-radius: 50%;
   border-width: 1px;
   height: 20px;

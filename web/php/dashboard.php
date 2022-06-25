@@ -1,4 +1,84 @@
+<?php
+  session_start();
+  $erro;
+  /* print_r($_SESSION); */
+  include_once('config.php');
 
+<<<<<<< HEAD
+
+  if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+  {
+      unset($_SESSION['email']);
+      unset($_SESSION['senha']);
+      header('Location: login.php');
+  }
+  $logado = $_SESSION['email'];
+
+  $sql = "SELECT nome, email, nivel FROM usuarios WHERE email = '$logado' ";
+  $res = mysqli_query($conexao, $sql);
+
+  if(mysqli_num_rows($res) > 0){
+    while($row = mysqli_fetch_assoc($res)){
+      $nome = $row["nome"]; 
+      $email = $row["email"];
+      $nivel = $row["nivel"] ;
+    }
+  }
+
+  if(isset($_POST['Nivel1'])){
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nivel = $row["nivel"];
+      }
+      if($nivel >= 1){
+        header ("Location: ../html/unidade1.html");
+      } else {
+        $erro = "<script> Swal.fire({
+          icon: 'error',
+          title: 'Você não está nesse nível ainda!'
+      })</script>";
+      }
+    }
+
+  }
+
+  if(isset($_POST['Nivel2'])){
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nivel = $row["nivel"];
+      }
+      if($nivel >= 2){
+        header ("Location: quiz2.php");
+      } else {
+        $erro = "<script> Swal.fire({
+          icon: 'error',
+          title: 'Você não está nesse nível ainda!'
+      })</script>";
+      }
+    }
+
+  }
+
+  if(isset($_POST['Nivel3'])){
+    if(mysqli_num_rows($res) > 0){
+      while($row = mysqli_fetch_assoc($res)){
+        $nivel = $row["nivel"];
+      }
+      if($nivel >= 2){
+        header ("Location: quiz3.php");
+      } else {
+        $erro = "<script> Swal.fire({
+          icon: 'error',
+          title: 'Você não está nesse nível ainda!'
+      })</script>";
+      }
+    }
+
+  }
+
+?>
+=======
+>>>>>>> 04e5107de47a9dc0523474d5ae63f370628d8a34
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,10 +125,18 @@
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
+<<<<<<< HEAD
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="faleconosco.html">Fale conosco</a></li>
+        <li><a href="#"><?php echo "Olá, " . $nome ?></a></li>
+        <li><a href="faleconosco.html"></a></li>
+=======
         <li><a href="../html/index.html">Inicio</a></li>
         <li><a href="../html/sobrenos.html">Sobre nós</a></li>
         <li><a href="../html/faleconosco.html">Fale conosco</a></li>
         <li><a href=""></a></li>
+>>>>>>> 04e5107de47a9dc0523474d5ae63f370628d8a34
 
       </ul>
     </nav>
