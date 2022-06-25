@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,132 @@
     <link rel="stylesheet" href="../css/index.css">
     <title>Document</title>
 </head>
+
 <body>
-    <!-- sobre nós -->
-    <!-- Ana -->
-    <ul class="cards">
-        <li class="cards_item">
-            
-    <div class="card">
-        <div class="card-image-sobre-nos"><img src="../img/capitulo1/alfabeto.jpg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Capitulo 1</h2>
-          <p class="card_text">
-            Alfabeto e Datilogia em libras <br>
-            Sinais e Pronomes Pessoais <br>
-            Saudações/Cumprimentos <br>
-            Sinais de Numerais <br>
+
+
+    <header>
+        <div class="acessibilidade">
+            <div class="btn-container">
+                <label class="label-1">Contraste:</label>
+
+                <!-- Site Normal -->
+                <button id="semcontraste" class="semcontraste" title="Site Normal">-</button>
+
+                <!-- Site Auto Contraste -->
+                <button id="contraste" class="contraste" title="Alto contraste">-</button>
+
+                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            </div>
         </div>
-    </div>
-        </li>
-        <!--  -->
-        <li class="card-image-sobre-nos" >
-            ,
-        </li>
+
+        <!-- navbar -->
+
+        <nav>
+            <a id="logo" href="index.html">Fale com Minha Mão</a>
+            <nav id="nav-header">
+                <a id="logo" href="index.html">
+                    <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
+                </a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="faleconosco.html">Fale conosco</a></li>
+                    <li><a href="../php/login.php">Login</a></li>
+                    <li><a href="../php/cadastro.php">Cadastro</a></li>
+                    <li><a href="../php/cadastro.php"></a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- sobre nós -->
+    <main id="main-sobre-nos">
+        <!-- Ana -->
+        <ul class="cards_sobre">
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="../img/capitulo1/.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Ana Luisa Goes Barbosa</h2>
+                        <p class="card_text">
+                            Front-end Dev
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <!-- Arthur -->
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="../img/capitulo1/.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Tutu</h2>
+                        <p class="card_text">
+                            Front-end Dev
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <!-- Bruno -->
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="../img/capitulo1/.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Bruno Martins de Morais Silva</h2>
+                        <p class="card_text">
+                            Front-end Dev
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <!-- Gabriel -->
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="../img/capitulo1/.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Deid</h2>
+                        <p class="card_text">
+                            Back-end Dev
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <!-- Higor -->
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="../img/capitulo1/.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Higor</h2>
+                        <p class="card_text">
+                            Front-end Dev
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <!-- footer -->
+  <footer id="footer">
+    <h3>Fale com a minha mão &copy; 2022</h3>
+    <p>Site criado para projeto de Tcc</p>
+    <ul class="socials">
+      <li>
+        <a href="#instagram">Instagram</a>
+      </li>
+      <li>
+        <a href="#facebook">Facebook</a>
+      </li>
     </ul>
+    <p><a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+      <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
+    </a></p>
+  </footer>
 </body>
+
 </html>

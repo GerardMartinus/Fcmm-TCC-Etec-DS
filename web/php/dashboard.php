@@ -36,7 +36,7 @@
     <nav>
       <a id="logo" href="index.html"></a>
     <nav id="nav-header">
-      <a id="logo" href="index.html">
+      <a id="logo" href="../html/index.html">
         <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
       </a>
       <div class="mobile-menu">
@@ -45,10 +45,10 @@
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="sobrenos.html">Sobre nós</a></li>
-        <li><a href="faleconosco.html">Fale conosco</a></li>
-        <li><a href="faleconosco.html"></a></li>
+        <li><a href="../html/index.html">Inicio</a></li>
+        <li><a href="../html/sobrenos.html">Sobre nós</a></li>
+        <li><a href="../html/faleconosco.html">Fale conosco</a></li>
+        <li><a href=""></a></li>
 
       </ul>
     </nav>

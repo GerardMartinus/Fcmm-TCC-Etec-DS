@@ -94,7 +94,7 @@ else{
       <input type="password" name="senha" id="senha" placeholder="Senha">
       <input type="submit" value="Entrar" name="logar" id="logar">
       <br>
-      <a href="../html/index.html" class="voltar">Voltar</a>
+      <a href="../html/index.html" class="btn">Voltar</a>
 
     </form>
     <h2> OU </h2>
