@@ -11,10 +11,18 @@
 
 <body>
 
-
+    <!-- Acessibilidade -->
     <header>
         <div class="acessibilidade">
             <div class="btn-container">
+                <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para
+                        o
+                        conteúdo [1]</a></label>
+                <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu
+                        [2]</a></label>
+                <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé
+                        [3]</a></label>
+                <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
                 <label class="label-1">Contraste:</label>
 
                 <!-- Site Normal -->
@@ -25,11 +33,11 @@
 
                 <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
                 <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+
             </div>
         </div>
 
         <!-- navbar -->
-
         <nav>
             <a id="logo" href="index.html">Fale com Minha Mão</a>
             <nav id="nav-header">
@@ -42,9 +50,8 @@
                     <div class="line3"></div>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="sobrenos.html">Sobre nós</a></li>
                     <li><a href="faleconosco.html">Fale conosco</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
                     <li><a href="../php/login.php">Login</a></li>
                     <li><a href="../php/cadastro.php">Cadastro</a></li>
                 </ul>
@@ -57,60 +64,76 @@
         <ul class="cards_sobre">
             <li class="cards_item_sobre">
                 <div class="card">
-                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/ana.jpeg"></div>
+                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/ana.jpeg" alt="fotografia desenvolvedora Ana"></div>
                     <div class="card_content">
                         <h2 class="card_title">Ana Luisa Goes Barbosa</h2>
                         <p class="card_text">
                             Front-end Dev
                         </p>
+                        <a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+                            <img id="git-icon" src="../img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
+                        
                     </div>
                 </div>
             </li>
             <!-- Arthur -->
             <li class="cards_item_sobre">
                 <div class="card">
-                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/tutu.jpeg"></div>
+                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/tutu.jpeg" alt="fotografia desenvolvedor Arthur"></div>
                     <div class="card_content">
                         <h2 class="card_title">Arthur de Lima Souto</h2>
                         <p class="card_text">
                             Front-end Dev
                         </p>
+                        <a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+                            <img id="git-icon" src="../img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
                     </div>
                 </div>
             </li>
             <!-- Bruno -->
             <li class="cards_item_sobre">
                 <div class="card">
-                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/bruno.jpg"></div>
+                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/bruno.jpg" alt="fotografia desenvolvedor Bruno"></div>
                     <div class="card_content">
                         <h2 class="card_title">Bruno Martins de Morais Silva</h2>
                         <p class="card_text">
                             Front-end Dev
                         </p>
+                        <a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+                            <img id="git-icon" src="../img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
                     </div>
                 </div>
             </li>
             <!-- Gabriel -->
             <li class="cards_item_sobre">
                 <div class="card">
-                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/deid.jpeg"></div>
+                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/deid.jpeg" alt="fotografia desenvolvedor Gabriel"></div>
                     <div class="card_content">
                         <h2 class="card_title">Gabriel da Silva Oliveira dos Santos</h2>
                         <p class="card_text">
                             Back-end Dev
                         </p>
+                        <a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+                            <img id="git-icon" src="../img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
                     </div>
                 </div>
             </li>
             <!-- Higor -->
             <li class="cards_item_sobre">
                 <div class="card">
-                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/igor.jpeg"></div>
+                    <div class="card-image-sobre-nos"><img src="../img/sobre-nos/igor.jpeg" alt="fotografia desenvolvedor Igor"></div>
                     <div class="card_content">
                         <h2 class="card_title">Igor Gustavo da Silva Santos</h2>
                         <p class="card_text">
                             Front-end Dev
                         </p>
+                        <a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+                            <img id="git-icon" src="../img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
                     </div>
                 </div>
             </li>
@@ -118,39 +141,39 @@
     </section>
 
     <!-- footer -->
-  <footer id="footer">
-    <h3>Fale com a minha mão &copy; 2022</h3>
-    <p>Site criado para projeto de Tcc</p>
-    <ul class="socials">
-      <li>
-        <a href="#instagram">Instagram</a>
-      </li>
-      <li>
-        <a href="#facebook">Facebook</a>
-      </li>
-    </ul>
-    <p><a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
-      <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
-    </a></p>
-  </footer>
+    <footer id="footer">
+        <h3>Fale com a minha mão &copy; 2022</h3>
+        <p>Site criado para projeto de Tcc</p>
+        <ul class="socials">
+            <li>
+                <a href="#instagram">Instagram</a>
+            </li>
+            <li>
+                <a href="#facebook">Facebook</a>
+            </li>
+        </ul>
+        <a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+            <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
+        </a>
+    </footer>
 
-  <!-- responsividade da navbar -->
-  <script src="../js/mobile-navbar.js"></script>
-  <script src="../js/font-size.js"></script>
+    <!-- responsividade da navbar -->
+    <script src="../js/mobile-navbar.js"></script>
+    <script src="../js/font-size.js"></script>
 
 
 
-  <!-- Adicionando o VLibras -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <!-- Adicionando o VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

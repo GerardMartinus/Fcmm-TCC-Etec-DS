@@ -112,7 +112,7 @@ if (isset($_POST['cadastrar'])) {
       <input type="password" name="confirmar" id="confirmar" placeholder="Confirmar Senha">
       <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
       <br>
-      <a href="../html/index.html" class="voltar">Voltar</a>
+      <a href="../html/index.html" class="btn">Voltar</a>
 
     </form>
     <h2> OU </h2>

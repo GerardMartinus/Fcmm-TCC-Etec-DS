@@ -1,90 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <title>Contato</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>Contato</title>
 
 </head>
-<body id="tutu-burrao">
-  <!-- navbar -->
-  <nav>
-    <a id="logo" href="index.html">Fale com Minha Mão</a>
-  <nav id="nav-header">
-    <a id="logo" href="index.html">
-      <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
-    </a>
-    <div class="mobile-menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-    <ul class="nav-list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="sobrenos.html">Sobre nós</a></li>
-      <li><a href="faleconosco.html">Fale conosco</a></li>
-      <li><a href="../php/login.php">Login</a></li>
-      <li><a href="../php/cadastro.php">Cadastro</a></li>
-    </ul>
-  </nav>
-</header>
 
+<body>
+  <!-- Acessibilidade -->
+  <header>
+    <div class="acessibilidade">
+      <div class="btn-container">
+        <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o
+            conteúdo [1]</a></label>
+        <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu
+            [2]</a></label>
+        <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
+        <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
+        <label class="label-1">Contraste:</label>
 
-      <!-- formulario de contato -->
-      
-      
-      <div id="wrapper">
-        <div id="header">
-          <h1 id="">Contate-Nos</h1>
-          <p id="txtcontato">Você tem alguma dúvida ou uma reclamção? nos envie uma mensagem e responderemos o mais breve possível.</p>
-        </div>
-        <form id="contato">
-          <h4>Nome</h4>
-          <input type="text" name="nome" value="Ensira seu nome">
-          <h4>Email</h4>
-          <input type="text" name="email">
-          <h4>Mensagem</h4>
-          <textarea></textarea>
-          <button>Enviar</button>
-          <a href="../html/index.html" class="voltar">Voltar</a>
-        </form>
+        <!-- Site Normal -->
+        <button id="semcontraste" class="semcontraste" title="Site Normal">-</button>
+
+        <!-- Site Auto Contraste -->
+        <button id="contraste" class="contraste" title="Alto contraste">-</button>
+
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+
       </div>
-
-
-      <!-- footer -->
-  <footer id="footer">
-    <h3>Fale com a minha mão &copy; 2022</h3>
-    <p>Site criado para projeto de Tcc</p>
-    <ul class="socials">
-      <li>
-        <a href="#instagram">Instagram</a>
-      </li>
-      <li>
-        <a href="#facebook">Facebook</a>
-      </li>
-    </ul>
-    <p><a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
-      <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
-    </a></p>
-  </footer>
-
-  <!-- responsividade da navbar -->
-  <script src="../js/mobile-navbar.js"></script>
-  <script src="../js/font-size.js"></script>
-
-  <!-- Adicionando o VLibras -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
     </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-  
+
+    <!-- navbar -->
+    <nav>
+      <a id="logo" href="index.html">Fale com Minha Mão</a>
+      <nav id="nav-header">
+        <a id="logo" href="index.html">
+          <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
+        </a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="faleconosco.html">Fale conosco</a></li>
+          <li><a href="sobrenos.html">Sobre nós</a></li>
+          <li><a href="../php/login.php">Login</a></li>
+          <li><a href="../php/cadastro.php">Cadastro</a></li>
+        </ul>
+      </nav>
+  </header>
+
+
+  <!-- formulario de contato -->
+  <section id="section-fale-conosco">
+    <div id="wrapper">
+      <div id="header">
+        <h1 id="">Contate-Nos</h1>
+        <p id="txtcontato">Você tem alguma dúvida ou uma reclamção? nos envie uma mensagem e responderemos o mais
+          breve possível.</p>
+      </div>
+      <form action="/formulario-contato" method="post" id="form-fale-conosco">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="texto" id="nome" name="nome_usuario" placeholder="Digite seu nome:">
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email_usuario" placeholder="Digite seu email:">
+        </div>
+        <div>
+            <label for="texto">Texto:</label><br>
+            <textarea id="texto" name="texto_usuario" rows="10" cols="100"></textarea>
+        </div>
+    </form>
+    </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer id="footer">
+      <h3>Fale com a minha mão &copy; 2022</h3>
+      <p>Site criado para projeto de Tcc</p>
+      <ul class="socials">
+        <li>
+          <a href="#instagram">Instagram</a>
+        </li>
+        <li>
+          <a href="#facebook">Facebook</a>
+        </li>
+      </ul>
+      <p><a href="https://github.com/GerardMartinus/Fcmm-simples/tree/main/web">
+          <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
+        </a></p>
+    </footer>
+
+    <!-- responsividade da navbar -->
+    <script src="../js/mobile-navbar.js"></script>
+    <script src="../js/font-size.js"></script>
+
+    <!-- Adicionando o VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 </body>
+
 </html>
