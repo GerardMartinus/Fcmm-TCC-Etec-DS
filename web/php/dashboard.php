@@ -1,6 +1,9 @@
+<?php
+  session_start();
+  $erro;
+  /* print_r($_SESSION); */
+  include_once('config.php');
 
-<<<<<<< HEAD
-=======
 
   if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
   {
@@ -27,7 +30,7 @@
         $nivel = $row["nivel"];
       }
       if($nivel >= 1){
-        header ("Location: quiz1.php");
+        header ("Location: ../html/unidade1.html");
       } else {
         $erro = "<script> Swal.fire({
           icon: 'error',
@@ -73,7 +76,6 @@
   }
 
 ?>
->>>>>>> 0e79242725df3ae7b5eb4649dcbd91e1ee068081
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,6 +124,7 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="sobrenos.html">Sobre nós</a></li>
         <li><a href="faleconosco.html">Fale conosco</a></li>
+        <li><a href="#"><?php echo "Olá, " . $nome ?></a></li>
         <li><a href="faleconosco.html"></a></li>
 
       </ul>
