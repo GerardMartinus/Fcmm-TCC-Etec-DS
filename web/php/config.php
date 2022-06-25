@@ -5,7 +5,7 @@
     $dbPassword =  "";
     $dbName =  "fcmm";
 
-    $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+    // $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
     
     // if ($conexao -> connect_errno)
     // {

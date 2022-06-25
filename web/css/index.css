@@ -271,9 +271,9 @@ iframe {
 /* Sobre nós */
 
 #main-sobre-nos{
-  position: relative;
-  top: 150px;
+  margin-top: 30px;
 }
+
 
 .cards_sobre {
   display: flex;
@@ -291,7 +291,7 @@ iframe {
 }
 
 .card-image-sobre-nos img {
-  height: 250px;
+  height: auto;
   width: 200px;
   border-radius: 50%;
   max-width: 100%;
