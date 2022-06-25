@@ -1,4 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+/* Cores */
+:root {
+  --principal: #03a9f4;
+  --secundaria: #21629E;
+  --azul-escuro: #0d47a1;
+  --cinza-escuro: #222;
+  --branco: #fff;
+  --preto: #000;
+  --verde: #4caf50;
+  --vermelho: #f44336;
+}
+
 /* Reset CSS */
 
 
@@ -50,9 +67,10 @@ iframe {
 .btn {
   background: #069cc2;
   border-radius: 6px;
-  padding: 15px;
+  padding: 25px;
   cursor: pointer;
   color: #fff;
+  text-decoration: none;
   border: none;
   font-size: 16px;
   margin-top: 55px;
@@ -99,7 +117,11 @@ iframe {
 .contraste {
   text-align: center;
   background-color: #000;
+<<<<<<< HEAD
   border-color: #000;
+=======
+  border-color: #fff;
+>>>>>>> 04e5107de47a9dc0523474d5ae63f370628d8a34
   border-radius: 50%;
   border-width: 1px;
   height: 20px;
@@ -250,6 +272,37 @@ iframe {
 }
 
 
+/* Sobre nós */
+
+#main-sobre-nos{
+  position: relative;
+  top: 150px;
+}
+
+.cards_sobre {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards_item_sobre{
+  display: flex;
+  padding: 1rem;
+}
+
+.card-image-sobre-nos img {
+  height: 250px;
+  width: 200px;
+  border-radius: 50%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
 
 /* Dashboard */
 /* Dashboard Esquerda */
@@ -272,6 +325,7 @@ iframe {
   .main-menu:hover,nav.main-menu.expanded {
   width:250px;
   overflow:visible;
+  
   }
   
   .main-menu {
@@ -300,8 +354,9 @@ iframe {
   width:250px;
   }
   
-  .main-menu li>a {
+  .main-menu li > a {
   position:relative;
+  left: 15px;
   display:table;
   border-collapse:collapse;
   border-spacing:0;
@@ -327,6 +382,7 @@ iframe {
   
   .main-menu .nav-text {
   position:relative;
+  left: 50px;
   display:table-cell;
   vertical-align:middle;
   width:190px;
@@ -386,8 +442,7 @@ iframe {
   /* Dashboard Centro */
 
 
-  /* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
 
 /* Design */
 *,
@@ -397,7 +452,8 @@ iframe {
 }
 
 .main-dashboard{
-  margin-top: 20px;
+  position: relative;
+  top: 20px;
   max-width: 100vw;
   margin: 100px 45px auto 61px;
 }
@@ -486,103 +542,6 @@ iframe {
   font-weight: 400;
 }
 
-/* ===  SOBRE O CURSO === */
-
-/*introdução + sobre*/
-.sobreocurso h1, .sobreocurso h2{
-  font-size: 25px;
-  color: #21629E;
-  user-select: none;
-}
-
-.sobreocurso h3{
-  font-size: 20px;
-  color: #21629E;
-  user-select: none;
-}
-
-.intro{
-  padding-top: 120px;
-}
-
-
-.intro1 p, .intro1 h1{
-  text-align: center;
-}
-
-.imgabout{ /* arrumar media 521 */
-  width: 450px;
-  height: 300px;
-}
-
-.about1{
-  text-align: left;
-}
-
-.about{
-  gap: 15px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.about1{
-  grid-column: 3;
-}
-
-.textpsobre{
-  grid-column: 2;
-}
-
-.about1, .textpsobre{
-  padding-left: 30px;
-}
-
-a{
-  margin: 15px 15px 15px 15px;
-}
-
-/*ARRUMAR GRID - MEDIA 665*/
-/*-------------------------------*/
-/*conteúdo*/
-.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
-.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
-.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
-.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
-.slide-controller:nth-child(5):checked ~ .slide-show .slides-list{--selected-item: 4;}
-.slide-controller:nth-child(6):checked ~ .slide-show .slides-list{--selected-item: 5;}
-.slide-controller:nth-child(7):checked ~ .slide-show .slides-list{--selected-item: 6;}
-.slide-controller:nth-child(8):checked ~ .slide-show .slides-list{--selected-item: 7;}
-.slide-controller:nth-child(9):checked ~ .slide-show .slides-list{--selected-item: 8;}
-.slide-controller:nth-child(10):checked ~ .slide-show .slides-list{--selected-item: 9;}
-.slide-controller:nth-child(11):checked ~ .slide-show .slides-list{--selected-item: 10;}
-
-
-.slide-show{
-  padding-top: 120px;
-  overflow: hidden;
-}
-
-.btnslide{
-  margin: 0 auto;
-  max-width: 500px;
-  display: flex;
-}
-
-.slides-list{
-  --selected-item: 0;
-  --total-items: 11;
-  list-style-type: none;
-  margin: 10px 0;
-  padding: 0;
-  position: relative;
-  left: calc(var(--selected-item) * -100%);
-  width: calc(var(--total-items) * 100%);
-  transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
-  
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-}
 
 /* === FOOTER === */
 
@@ -622,8 +581,7 @@ footer h3{
 
 .socials a{
     text-decoration: none;
-    color: #fff;
-    border: 1.1px solid white;
+    color: #fff; 
     padding: 5px;
     border-radius: 50%;
 }
@@ -659,7 +617,7 @@ footer h3{
   transition: 0.3s;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 900px) {
   body {
     overflow-x: hidden;
   }
@@ -678,9 +636,7 @@ footer h3{
     transition: transform 0.3s ease-in;
   }
 
-  @media (max-width: 500px){
-
-  }
+ 
 
   .nav-list li {
     margin-left: 0;
@@ -691,7 +647,13 @@ footer h3{
     display: block;
   }
 }
+@media (max-width: 500px){
+    
+  .nav-list {
+    width: 100vw;
+  }
 
+}
 .nav-list.active {
   transform: translateX(0);
 }
@@ -719,14 +681,6 @@ footer h3{
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
-
-
-
-
-
-
-
-
 
 
 /* Cadastro e Login */
@@ -901,23 +855,7 @@ input[type="submit"]:hover {
 
 /* Quiz */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-/* vermelho #f44336 ou #d50000 verde #4caf50 ou #1b5e20  */
-:root {
-  --principal: #03a9f4;
-  --secundaria: #21629E;
-  --azul-escuro: #0d47a1;
-  --cinza-escuro: #222;
-  --branco: #fff;
-  --verde: #4caf50;
-  --vermelho: #f44336;
-}
-
-main {
-  width: 100%;
-  height: 10px;
-}
 
 section {
   top: 6rem;
@@ -1115,102 +1053,3 @@ section {
 
 }
 
-/* formulario de contato */
-
-/* AE TUTU FILHO DA PUTA, DA CLASSE NAS PORRA CARALHO */
-
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
-#tutu-burrao {
-  box-sizing: border-box;
-  background: linear-gradient(to left bottom, #5B86E5, #21629E);
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#wrapper {
-  height: 620px;
-  width: 460px;
-  background-color: white;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-#header {
-  width: 100%;
-  height: 32%;
-  background-image: url(https://www.cmbh.mg.gov.br/sites/default/files/noticias_destaques/2022/04/libras-creditos-freepik.jpg);
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  padding: 34px 24px 12px;
-  font-weight: 300;
-  font-size: 60px;
-}
-
-p #txtcontato{
-  margin: 0;
-  padding: 0 24px;
-  font-size: 16px;
-  width: 360px;
-  opacity: 0.8;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-#contato {
-  display: flex;
-  flex-direction: column;
-  margin: 8px auto;
-  width: 76%;
-}
-
-h4 {
-  color: #666;
-  margin: 16px 0 6px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  
-}
-
-input,
-textarea {
-  border: solid 1px #cbcbcb; 
-  border-radius: 12px;
-  width: 40vh;
-  padding: 6px 12px;
-  outline: none;
-  margin: 4px auto;
-}
-
-input {
-  height: 28px;
-}
-
-textarea {
-  height: 62px;
-}
-
-.button-voltar {
-  height: 40px;
-  width: 12vh;
-  margin: 10px auto;
-  border-radius: 16px;
-  border: none;
-  color: white;
-  background: linear-gradient(to left bottom, #5B86E5, #21629E);
-  cursor: pointer;
-}
-#btnvoltar{
-  width: 12vh;
-} */

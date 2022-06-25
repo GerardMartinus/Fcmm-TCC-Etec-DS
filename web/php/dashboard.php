@@ -4,6 +4,7 @@
   /* print_r($_SESSION); */
   include_once('config.php');
 
+<<<<<<< HEAD
 
   if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
   {
@@ -76,6 +77,8 @@
   }
 
 ?>
+=======
+>>>>>>> 04e5107de47a9dc0523474d5ae63f370628d8a34
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,6 +95,7 @@
 
 <body>
   <?php echo $erro; ?>
+  
   <header>
     <div class="acessibilidade">
       <div class="btn-container">
@@ -112,7 +116,7 @@
     <nav>
       <a id="logo" href="index.html"></a>
     <nav id="nav-header">
-      <a id="logo" href="index.html">
+      <a id="logo" href="../html/index.html">
         <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
       </a>
       <div class="mobile-menu">
@@ -121,11 +125,18 @@
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
+<<<<<<< HEAD
         <li><a href="index.html">Inicio</a></li>
         <li><a href="sobrenos.html">Sobre nós</a></li>
         <li><a href="faleconosco.html">Fale conosco</a></li>
         <li><a href="#"><?php echo "Olá, " . $nome ?></a></li>
         <li><a href="faleconosco.html"></a></li>
+=======
+        <li><a href="../html/index.html">Inicio</a></li>
+        <li><a href="../html/sobrenos.html">Sobre nós</a></li>
+        <li><a href="../html/faleconosco.html">Fale conosco</a></li>
+        <li><a href=""></a></li>
+>>>>>>> 04e5107de47a9dc0523474d5ae63f370628d8a34
 
       </ul>
     </nav>
