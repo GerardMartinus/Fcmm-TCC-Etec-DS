@@ -1,16 +1,21 @@
-var link_css = "../css/arquivo.css";
+//script contraste	
+			
+	
+var link_css = "css/arquivo.css";
 				
 if(getCookie2() == "contraste"){
-    link_css = "../css/contraste"; // se o valor do cookie capturado pela function getCookie2 for contraste, a variável link_css recebe como valor a folha de estilo contraste.css
+    console.log("CONTRASTE")
+    link_css = "css/contraste.css"; // se o valor do cookie capturado pela function getCookie2 for contraste, a variável link_css recebe como valor a folha de estilo contraste.css
 }else if(getCookie() == "default"){
-    link_css = "../css/index.css";
+    console.log("SEM CONTRASTE")
+    link_css = "css/arquivo.css";
 }
 
 $(document).ready(function(){
     
     $("#contraste").click(function(){
         setCookie("contraste");//contraste é o nome do cookie criado e consequentemente o parâmetro value da function setCookie. Ao clicar no link com id contraste, será setado o valor contraste para o cookie criado e ele irá executar a função getCookie2.
-        location.reload();			
+        location.reload();				
     });
     
     $("#semcontraste").click(function(){
@@ -53,3 +58,6 @@ if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
 return undefined;
 
 }
+
+
+//fim script contraste
