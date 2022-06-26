@@ -30,8 +30,10 @@
             $res = mysqli_query($conexao, $sql);
             $erro = "<script> Swal.fire({
                 icon: 'success',
-                title: 'Você subiu de nível!'
+                title: 'Você subiu de nível!',
+                timer: '3000'
             })</script>";
+            header ('Location dashboard.php');
         }
         else{
             $erro = "<script> Swal.fire({
@@ -50,6 +52,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Quiz capitulo 1</title>
     <link rel="stylesheet" href="../css/index.css" />
 </head>
@@ -74,7 +77,7 @@
 
         <!-- navbar -->
         <nav id="nav-header">
-            <a id="logo" href="index.html">
+            <a id="logo" href="dashboard.php">
                 <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
             </a>
             <div class="mobile-menu">
