@@ -17,7 +17,9 @@
 }
 
 /* Reset CSS */
-
+html{
+  overflow-x: hidden;
+}
 
 * {
   margin: 0;
@@ -74,8 +76,6 @@ iframe {
   border: none;
   font-size: 16px;
   margin-top: 55px;
-  margin-bottom: 60px;
-  margin-left: 50px;
   }
 
 
@@ -269,12 +269,39 @@ iframe {
 }
 
 
+/* Fale conosco */
+
+#section-fale-conosco{
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+#form-fale-conosco input{
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+#wrapper{
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+
+
 /* Sobre nós */
 
 #main-sobre-nos{
-  position: relative;
-  top: 150px;
+  margin-top: 30px;
+  padding-bottom: 30px;
 }
+
 
 .cards_sobre {
   display: flex;
@@ -292,11 +319,15 @@ iframe {
 }
 
 .card-image-sobre-nos img {
-  height: 250px;
+  height: auto;
   width: 200px;
   border-radius: 50%;
   max-width: 100%;
   vertical-align: middle;
+}
+
+.card_content a img{
+  width: auto;
 }
 
 
@@ -553,7 +584,7 @@ footer{
   justify-content: center;
   color: #fff;
   z-index: 1;
-  margin-top: 96px;
+  margin-top: 90px;
 
 }
 
@@ -683,57 +714,61 @@ footer h3{
 /* Cadastro e Login */
 
 
-.ocean {
-  height: 2%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #08558b;
+.ocean { 
+  height: 200px;
+  width:100%;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  z-index: -1;
+}
+
+.ocean.v01 .wave {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  z-index: -1;
+}
+
+.ocean.v01 {
+	transform: rotate(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
   z-index: -1;
 }
 
 .wave {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
   position: absolute;
-  top: -158px;
+  bottom: -25px;
   width: 6400px;
-  height: 198px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  height: 100%;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
   z-index: -1;
 }
 
 .wave:nth-of-type(2) {
-  top: -175px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  bottom: -25px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
   opacity: 1;
-  z-index: -1;
 }
 
 @keyframes wave {
   0% {
     margin-left: 0;
-    z-index: -1;
   }
-
   100% {
     margin-left: -1600px;
-    z-index: -1;
   }
 }
 
 @keyframes swell {
-
-  0%,
-  100% {
-    transform: translate3d(0, -25px, 0);
-    z-index: -1;
+  0%, 100% {
+    transform: translateY(-25px);
   }
-
   50% {
-    transform: translate3d(0, 5px, 0);
-    z-index: -1;
+    transform: translateY(5px);
   }
 }
 
@@ -772,18 +807,11 @@ a:hover {
   border-radius: 10px;
   text-align: center;
   background: rgba(200, 200, 200, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
-
-
-
-
-
 
 /*formulário*/
 
@@ -816,8 +844,8 @@ input[type="submit"] {
   color: #fff;
   border: none;
   font-size: 16px;
-  margin-top: 55px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 19px;
 }
 
 input[type="submit"]:hover {
