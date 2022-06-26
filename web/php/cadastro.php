@@ -97,6 +97,28 @@ if (isset($_POST['cadastrar'])) {
   <title>Cadastro</title>
 </head>
 
+<header>
+    <div class="acessibilidade">
+      <div class="btn-container">
+        <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o conteúdo [1]</a></label>
+        <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu [2]</a></label>
+        <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
+        <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
+        <label class="label-1">Contraste:</label>
+
+        <!-- Site Normal -->
+        <button id="semcontraste" class="semcontraste" title="Site Normal">-</button>
+
+        <!-- Site Auto Contraste -->
+        <button id="contraste" class="contraste" title="Alto contraste">-</button>
+
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+
+      </div>
+    </div>
+  </header>
+
 <body>
 
   
@@ -140,9 +162,9 @@ if (isset($_POST['cadastrar'])) {
   </script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="../js/fonte.js"></script>
   <script src="../js/contraste-views.js"></script>
   <script src="../js/if-login.js"></script>
+  <script src="../js/font-size.js"></script>
 </body>
 
 </html>
