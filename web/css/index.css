@@ -67,11 +67,9 @@ iframe {
 }
 
 .btn {
-  background: #069cc2;
   border-radius: 6px;
   padding: 25px;
   cursor: pointer;
-  color: #fff;
   text-decoration: none;
   border: none;
   font-size: 16px;
@@ -809,13 +807,8 @@ a:hover {
   color: #08558b;
 }
 
-
-
-
-
-/* login-container */
 #login-container {
-  width: 400px;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
