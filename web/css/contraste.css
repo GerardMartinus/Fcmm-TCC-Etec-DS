@@ -17,7 +17,9 @@
 }
 
 /* Reset CSS */
-
+html{
+  overflow-x: hidden;
+}
 
 * {
   margin: 0;
@@ -65,17 +67,13 @@ iframe {
 }
 
 .btn {
-  background: #069cc2;
   border-radius: 6px;
   padding: 25px;
   cursor: pointer;
-  color: #fff;
   text-decoration: none;
   border: none;
   font-size: 16px;
   margin-top: 55px;
-  margin-bottom: 60px;
-  margin-left: 50px;
   }
 
 
@@ -94,38 +92,57 @@ iframe {
   user-select: none;
   width: 100vw;
   height: 50px;
-  font-size: medium;
   z-index: 1;
+  color: #FFF;
+}
+
+.acessibilidade a {
+  font-size: 16px;
+  color: yellow;
+}
+
+.acessibilidade a:hover {
+  color: #000;
+  background-color: yellow;
 }
 
 .label-1 {
-  color: #000;
-  font-size: 14px;
+  color: #fff;
+  font-size: 16px;
 }
 
 #semcontraste {
   text-align: center;
+  border: 1px solid yellow;
   color: #fff;
-  background-color: #000;
-  border-color: #fff;
+  background-color: #fff;
   border-radius: 50%;
   border-width: 1px;
   height: 20px;
   width: 20px;
+  cursor: pointer;
 }
 
 .contraste {
+  border: 1px solid yellow;
   text-align: center;
   background-color: #000;
-  border-color: #000;
   border-radius: 50%;
   border-width: 1px;
   height: 20px;
   width: 20px;
+  cursor: pointer;
 }
 
+.botao-fonte{
+  
+}
 
 #increase-font {
+  background-color: #000;
+  color: yellow;
+  border: 1px solid yellow;
+  cursor: pointer;
   text-align: center;
   font-size: 12px;
   border-radius: 50%;
@@ -135,6 +152,10 @@ iframe {
 }
 
 #decrease-font {
+  background-color: #000;
+  color: yellow;
+  border: 1px solid yellow;
+  cursor: pointer;
   text-align: center;
   font-size: 12px;
   border-radius: 50%;
@@ -164,7 +185,7 @@ iframe {
 }
 
 .nav-list a {
-  color: #fff;
+  color: yellow;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -172,9 +193,8 @@ iframe {
 
 
 .nav-list a:hover {
-  background-color: rgba(0, 0, 0, 0);
-  opacity: 0.7;
-  color: #FFF;
+  background-color: yellow;
+  color: #000;
 }
 
 #nav-header {
@@ -182,7 +202,8 @@ iframe {
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #21629E;
+  background: #000;
+  border: 1px solid #fff;
   height: 12vh;
   top: 50px;
   position: fixed;
@@ -214,6 +235,15 @@ iframe {
   height: 100vh;
   padding: 2vw;
   font-size: 4vw;
+  color: #FFF;
+}
+
+#home-content h1 {
+  font-size: 6vw;
+}
+
+#home-content h3{
+  font-size: 3vw;
 }
 
 #home-content p {
@@ -268,12 +298,49 @@ iframe {
 }
 
 
+/* Acessibilidade */
+
+#acessibilidade-content {
+  position: relative;
+  top: 110px;
+  left: 10px;
+  right: 10px;
+}
+
+
+/* Fale conosco */
+
+#section-fale-conosco{
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+#form-fale-conosco input{
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: #000;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+#wrapper{
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+
+
 /* Sobre nós */
 
 #main-sobre-nos{
-  position: relative;
-  top: 150px;
+  margin-top: 30px;
+  padding-bottom: 30px;
 }
+
 
 .cards_sobre {
   display: flex;
@@ -286,16 +353,22 @@ iframe {
 }
 
 .cards_item_sobre{
+
   display: flex;
   padding: 1rem;
 }
 
 .card-image-sobre-nos img {
-  height: 250px;
+  border: 1px solid #FFF;
+  height: auto;
   width: 200px;
   border-radius: 50%;
   max-width: 100%;
   vertical-align: middle;
+}
+
+.card_content a img{
+  width: auto;
 }
 
 
@@ -325,7 +398,7 @@ iframe {
   }
   
   .main-menu {
-  background: var(--secundaria);
+  background: #000;
   border-right:1px solid #e5e5e5;
   position:fixed;
   top:0;
@@ -423,7 +496,7 @@ iframe {
   }
   .area {
   float: left;
-  background: #e2e2e2;
+  background: #000;
   width: 100%;
   height: 100%;
   }
@@ -475,7 +548,7 @@ iframe {
   width: 100%;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #0d47a1;
+  background: #000;
 }
 
 .btn_dashboard:hover {
@@ -508,7 +581,8 @@ iframe {
 }
 
 .card {
-  background-color: 000;
+  background-color: #000;
+  border: 1px solid #FFF;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -518,11 +592,11 @@ iframe {
 
 .card_content {
   padding: 1rem;
-  background: #fff;
+  background: #000;
 }
 
 .card_title {
-  color: #0d47a1;
+  color: #FFF;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -531,7 +605,7 @@ iframe {
 }
 
 .card_text {
-  color: #0d47a1;
+  color: #FFF;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;    
@@ -552,7 +626,7 @@ footer{
   justify-content: center;
   color: #fff;
   z-index: 1;
-  margin-top: 96px;
+  margin-top: 90px;
 
 }
 
@@ -577,22 +651,27 @@ footer h3{
 
 .socials a{
     text-decoration: none;
-    color: #fff; 
+    color: yellow;
+    font-size: 16px; 
     padding: 5px;
     border-radius: 50%;
 }
 
-.socials a i{
+.socials a li{
     font-size: 1.1rem;
     width: 20px;
     transition: color .4s ease;
 }
 
-.socials a:hover i{
-    color: aqua;
+.socials a:hover{
+  background-color: yellow;
+  color: #000;
 }
-#git-icon img {
+
+#git-icon {
+ /*  background-color: #FFF; */
   width: 100px;
+  filter: invert(75%);
 }
 
 
@@ -608,7 +687,7 @@ footer h3{
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: #000;
   margin: 8px;
   transition: 0.3s;
 }
@@ -624,12 +703,16 @@ footer h3{
     right: 0;
     width: 50vw;
     height: 100vh;
-    background: #21629E;
+    background: #000;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+  }
+
+  .nav-list a {
+    font-size: 16px;
   }
 
  
@@ -682,60 +765,6 @@ footer h3{
 /* Cadastro e Login */
 
 
-.ocean {
-  height: 2%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #08558b;
-  z-index: -1;
-}
-
-.wave {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
-  position: absolute;
-  top: -158px;
-  width: 6400px;
-  height: 198px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
-  z-index: -1;
-}
-
-.wave:nth-of-type(2) {
-  top: -175px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
-  z-index: -1;
-}
-
-@keyframes wave {
-  0% {
-    margin-left: 0;
-    z-index: -1;
-  }
-
-  100% {
-    margin-left: -1600px;
-    z-index: -1;
-  }
-}
-
-@keyframes swell {
-
-  0%,
-  100% {
-    transform: translate3d(0, -25px, 0);
-    z-index: -1;
-  }
-
-  50% {
-    transform: translate3d(0, 5px, 0);
-    z-index: -1;
-  }
-}
-
 textarea:focus,
 input:focus {
   outline: none;
@@ -749,40 +778,28 @@ input:focus {
 }
 
 a {
-  font-size: .8rem;
+  font-size: 16px;
 }
 
 a:hover {
   background-color: rgba(0, 0, 0, 0);
-  color: #08558b;
+  color: #000;
 }
 
-
-
-
-
-/* login-container */
 #login-container {
-  width: 400px;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
-  margin-top: 70px;
+  margin-top: 60px;
   border-radius: 10px;
   text-align: center;
   background: rgba(200, 200, 200, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
-
-
-
-
-
 
 /*formulário*/
 
@@ -815,8 +832,8 @@ input[type="submit"] {
   color: #fff;
   border: none;
   font-size: 16px;
-  margin-top: 55px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 19px;
 }
 
 input[type="submit"]:hover {
@@ -880,7 +897,7 @@ section {
   width: 2rem;
   height: 2rem;
   display: block;
-  background: var(--secundaria);
+  background: #000;
   color: #fff;
   padding: 6px 10px 4px 8px;
   border-radius: 50%;
@@ -905,7 +922,7 @@ section {
 /* article que acomoda a questao completa */
 .questoes {
   user-select: none;
-  background: #fff;
+  background: #000;
 
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   border: 1px solid #ececec;
@@ -922,7 +939,7 @@ section {
 }
 
 .questoes ol li:hover {
-  background: var(--secundaria);
+  background: #000;
   cursor: pointer;
 }
 
@@ -1003,13 +1020,13 @@ section {
 .placar {
   padding: 1rem;
   border-radius: 8px;
-  background: #03a9f4;
+  background: #000;
   font-size: 2rem;
 }
 
 .fim {
   display: none;
-  background-color: var(--secundaria);
+  background-color: #000;
   color: var(--branco);
   margin-bottom: 0.625rem;
   margin-left: 28px;
@@ -1020,7 +1037,7 @@ section {
 }
 
 .voltar {
-  background-color: var(--secundaria);
+  background-color: #000;
   color: var(--branco);
   margin-bottom: 0.625rem;
   padding: 1rem;
@@ -1041,11 +1058,5 @@ section {
   }
 }
 
-#teste {
-  width: 100%;
-  background-color: blue;
-  font-family: 'Courier New', Courier, monospace;
-  color: #FFF;
 
-}
 

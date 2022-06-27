@@ -74,7 +74,7 @@ else{
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/fonte.js"></script>
-  <script src="../js/contraste-views.js"></script>
+  <script src="../js/contraste.js"></script>
   <script src="../js/if-login.js"></script>
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com">
@@ -82,6 +82,7 @@ else{
   <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Roboto=wght@100;300;400;500;700&display=swap">
   <title>Login</title>
 </head>
+
 
 <body>
 
