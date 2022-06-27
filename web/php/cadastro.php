@@ -1,80 +1,80 @@
 <?php
-$erro;
-include_once('config.php');
-if (isset($_POST['cadastrar'])) {
+// $erro;
+// include_once('config.php');
+// if (isset($_POST['cadastrar'])) {
 
 
-    /* print_r('Nome: ' . $_POST['nome']);
-    print_r('<br>');
-    print_r('Email: ' . $_POST['email']);
-    print_r('<br>');
-    print_r('Senha: ' . $_POST['senha']); */
+//     /* print_r('Nome: ' . $_POST['nome']);
+//     print_r('<br>');
+//     print_r('Email: ' . $_POST['email']);
+//     print_r('<br>');
+//     print_r('Senha: ' . $_POST['senha']); */
 
-  /*CONETANDO CONFIG.PHP COM O CADASTRO*/
+//   /*CONETANDO CONFIG.PHP COM O CADASTRO*/
   
 
-  /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
-  $nome = $_POST['nome'];
-  $email = $_POST['email'];
+//   /*PEGANDO OS DADOS INSERIDOS NO FORMS.*/
+//   $nome = $_POST['nome'];
+//   $email = $_POST['email'];
 
-  /* CRIPTOGRAFANDO SENHA */
-  $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+//   /* CRIPTOGRAFANDO SENHA */
+//   $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
 
-  /* CHECANDO SE O EMAIL EXISTE OU NÃO */
-  $email_check = "SELECT * FROM usuarios WHERE email = '$email' ";
+//   /* CHECANDO SE O EMAIL EXISTE OU NÃO */
+//   $email_check = "SELECT * FROM usuarios WHERE email = '$email' ";
   
-  /* RODANDO A QUERY DO $EMAIL_CHECK */
-  $res = mysqli_query ($conexao, $email_check);
+//   /* RODANDO A QUERY DO $EMAIL_CHECK */
+//   $res = mysqli_query ($conexao, $email_check);
 
 
-  
-  
   
   
-  if (mysqli_num_rows($res) > 0) {
-    $erro = "<script> 
-      Swal.fire({
-        icon: 'error',
-        title: 'Email já cadastrado'
-      })
-    </script>";
+  
+  
+//   if (mysqli_num_rows($res) > 0) {
+//     $erro = "<script> 
+//       Swal.fire({
+//         icon: 'error',
+//         title: 'Email já cadastrado'
+//       })
+//     </script>";
 
-  } else{
-    $erro = "<script language='javascript' type='text/javascript'>
-    let timerInterval
-    Swal.fire({
-        icon: 'success'
-        title: 'Cadastro realizado com sucesso!',
-        timer: 2000,
-        didOpen: () => {
-            Swal.showLoading()
-            const b = Swal.getHtmlContainer().querySelector('b')
-            timerInterval = setInterval(() => {
-            b.textContent = Swal.getTimerLeft()
-            }, 100)
-        },
-        willClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then((result) => {
-    /* Read more about handling dismissals below */
-    if (result.dismiss === Swal.DismissReason.timer) {
-        console.log('I was closed by the timer')
-    }
-    }) </script>";
-    $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, nivel) VALUES ('$nome', '$email', '$senha', '1')");
-    header("location: login.php");
+//   } else{
+//     $erro = "<script language='javascript' type='text/javascript'>
+//     let timerInterval
+//     Swal.fire({
+//         icon: 'success'
+//         title: 'Cadastro realizado com sucesso!',
+//         timer: 2000,
+//         didOpen: () => {
+//             Swal.showLoading()
+//             const b = Swal.getHtmlContainer().querySelector('b')
+//             timerInterval = setInterval(() => {
+//             b.textContent = Swal.getTimerLeft()
+//             }, 100)
+//         },
+//         willClose: () => {
+//             clearInterval(timerInterval)
+//         }
+//     }).then((result) => {
+//     /* Read more about handling dismissals below */
+//     if (result.dismiss === Swal.DismissReason.timer) {
+//         console.log('I was closed by the timer')
+//     }
+//     }) </script>";
+//     $res = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha, nivel) VALUES ('$nome', '$email', '$senha', '1')");
+//     header("location: login.php");
     
-  }
+//   }
 
-    }
+//     }
 
 
 
-  /*INSERINDO OS DADOS NO BANCO DE DADOS.*/
-/*   $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha)
-  VALUES ('$nome', '$email', '$senha')"); */
+//   /*INSERINDO OS DADOS NO BANCO DE DADOS.*/
+// /*   $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha)
+//   VALUES ('$nome', '$email', '$senha')"); */
 
 ?>
 
@@ -148,6 +148,9 @@ if (isset($_POST['cadastrar'])) {
     <div class="wave"></div>
     <div class="wave"></div>
   </div>
+
+  
+  <script src="../js/font-size.js"></script>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');

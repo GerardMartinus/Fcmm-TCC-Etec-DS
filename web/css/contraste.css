@@ -76,6 +76,7 @@ iframe {
   text-decoration: none;
   font-size: 16px;
   margin-top: 55px;
+  margin-bottom: 20px;
   }
 
 .btn:hover{
@@ -865,11 +866,27 @@ a:hover {
   border: 1px solid #FFF;
 }
 
+@media screen and (max-width: 600px){
+  #login-container {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid #FFF;
+  }
+}
+
 /*formulário*/
 
 form {
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -906,7 +923,7 @@ input[type="submit"] {
   color: yellow;
   font-size: 16px;
   margin-top: 30px;
-  margin-bottom: 19px;
+  margin-bottom: 0;
 }
 
 input[type="submit"]:hover {
