@@ -186,50 +186,7 @@
     </nav>
   </header>
 
-  <!-- Dashboard Esquerda -->
-  <nav class="main-menu">
-    <ul>
-      <li>
-        <a href="/Fcmm-simples/web/php/dashboard.php">
-          <i class=""></i>
-          <span class="nav-text">
-          <?php echo "Olá," . $nome . "<br>" . $email . "<br> Nível atual: " .$nivel; ?>
-          </span>
-        </a>
-
-      </li>
-      <li>
-        <a href="/Fcmm-simples/web/html/dashboard.html">
-        <i class="fa fa-home fa-1x"></i>
-          <span class="nav-text">
-            Dashboard
-          </span>
-          
-        </a>
-
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-bar-chart-o fa-1x"></i>
-          <span class="nav-text">
-            Gráficos
-          </span>
-        </a>
-      </li>
-    </ul>
-    
-
-    <ul class="logout">
-      <li>
-        <a href="sair.php">
-        <i class="fa fa-power-off fa-1x"></i>
-          <span class="nav-text">
-            Sair
-          </span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  
 
   <!-- Dashboard Centro -->
   <br>
