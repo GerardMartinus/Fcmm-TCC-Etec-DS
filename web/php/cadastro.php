@@ -120,14 +120,18 @@
     </form>
       <a href="../html/index.html" class="btn">Voltar</a>
     <br><br>
-    <!-- Site Normal -->
-    <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
 
-    <!-- Site Auto Contraste -->
-    <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
+    <div>
+      <!-- Site Normal -->
+      <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
+  
+      <!-- Site Auto Contraste -->
+      <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
+  
+      <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+      <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
 
-    <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-    <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+    </div>
     <br><br>
     <h2> OU </h2>
     <br>

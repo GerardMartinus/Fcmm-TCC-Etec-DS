@@ -336,6 +336,16 @@ iframe {
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+  color: #FFF;
+}
+
+textarea{
+  background-color: #000;
+  border: 1px solid #FFF;
+}
+
+textarea::placeholder{
+  color: #FFF;
 }
 
 
@@ -858,7 +868,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
-  margin-top: 60px;
+  margin-top: 1px;
   border-radius: 10px;
   text-align: center;
   background: #000;
