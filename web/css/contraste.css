@@ -787,7 +787,7 @@ a:hover {
 }
 
 #login-container {
-  width: 70vw;
+  width: 45vh;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
@@ -799,6 +799,22 @@ a:hover {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+@media screen and (max-width: 500px){
+  #login-container{ 
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  margin-top: 60px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(200, 200, 200, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 }
 
 /*formulário*/

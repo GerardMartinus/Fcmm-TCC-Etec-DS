@@ -34,6 +34,12 @@ body {
   background-color: #FFF;
   overflow-x: hidden;
 }
+h2.titulo{
+  text-align: center;
+  color: #21629E;
+  font-size: 30px;
+}
+
 
 main{
   height: 100vh;
@@ -68,6 +74,7 @@ iframe {
 
 .btn {
   border-radius: 6px;
+  text-align: center;
   padding: 25px;
   cursor: pointer;
   text-decoration: none;
