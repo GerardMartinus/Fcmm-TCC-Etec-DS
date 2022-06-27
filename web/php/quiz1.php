@@ -1,6 +1,7 @@
 <?php
     session_start();
     $erro;
+    $validar;
     /* print_r($_SESSION); */
     include_once('config.php');
   
@@ -25,14 +26,14 @@
     }
 
     if (isset($_POST['finalizar'])){
-        if($nivel >= 1){
+        if($nivel <= 1){
             $sql = "UPDATE usuarios SET nivel = '2' WHERE email = '$logado'";
             $res = mysqli_query($conexao, $sql);
             $erro = "<script> Swal.fire({
                 icon: 'success',
-                title: 'Você subiu de nível!',
-                timer: '3000'
+                title: 'Você subiu de nível!'
             })</script>";
+            $validar = 1;
             header ('Location dashboard.php');
         }
         else{
@@ -40,7 +41,12 @@
                 icon: 'success',
                 title: 'Revisão feita!'
             })</script>";
+            $validar = 1;
         }
+    }
+
+    if(isset($_POST['voltar'])){
+        header ('Location dashboard.php');
     }
 ?>
 
@@ -55,25 +61,35 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Quiz capitulo 1</title>
     <link rel="stylesheet" href="../css/index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/contraste.js"></script>
 </head>
+
+
 
 <body>
 <?php echo $erro; ?>
     <header>
-        <div class="acessibilidade">
-            <div class="btn-container">
-                <label class="label-1">Contraste:</label>
+    <div class="acessibilidade">
+      <div class="btn-container">
+        <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o conteúdo [1]</a></label>
+        <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu [2]</a></label>
+        <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
+        <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
+        <label class="label-1">Contraste:</label>
 
-                <!-- Site Normal -->
-                <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
+        <!-- Site Normal -->
+        <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
 
-                <!-- Site Auto Contraste -->
-                <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
+        <!-- Site Auto Contraste -->
+        <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
 
-                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-            </div>
-        </div>
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+
+      </div>
+    </div>
+
 
         <!-- navbar -->
         <nav id="nav-header">
@@ -94,8 +110,15 @@
     </header>
 
     <main id="tela-principal-quiz">
+
         <section id='content-quiz'>
             <h1 id="quiz-titulo">Quiz</h1>
+            <?php
+                if($validar == 1){
+                    echo "<a href='dashboard.php'>Finalizar Nível</a>";
+                }
+            ?>
+
             
             <article class='questoes'>
                 <figure class='imagemDaQuestao'>
@@ -120,16 +143,15 @@
             <article class='centro' id='instrucoes'>
             </article>
 
-            <form action="quiz1.php" method="POST">
+            
                 <article id='aviso' class='centro'>
                     <input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /> <br>
                     <span id='numero'></span> de <span id='total'></span> <br>
-                    <input type="submit" onclick="fimDeJogo()" id="fimBotao" class="fim" value="Finalizar" name="finalizar">
-                    <input type="submit" onclick="retornar()" id="voltarBotao" class="voltar" value="Voltar" name="voltar">
-                    <button onclick="fimDeJogo()" id="fimBotao" class="fim"></button>
-                    <button onclick="retornar()" id="voltarBotao" class="voltar">Voltar</button>
+                    <form action="quiz1.php" method="POST">
+                        <input type="submit"  id="fimBotao" class="fim" value="Finalizar" name="finalizar">
+                        <input type="submit"  id="voltarBotao" class="voltar" value="Voltar" name="voltar">
+                    </form>
                 </article>
-            </form>
 
             <!-- footer -->
   <footer id="footer">

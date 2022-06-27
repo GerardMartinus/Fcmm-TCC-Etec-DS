@@ -262,13 +262,13 @@ function verificarSeAcertou(nQuestao, resposta) {
     desbloquearAlternativas()
 }
 
-function fimDeJogo(){
+/* function fimDeJogo(){
     if (pontos >= 70){
-        window.location.href = '../html/unidade2.html';
+        window.location.href = '../ṕhp/dashboard.php';
     } else {
         window.location.reload(true);
     }
-} 
+}  */
 
 function fimDoJogo() {
 
@@ -299,6 +299,6 @@ function fimDoJogo() {
     somAplausos.play()
 }
 
-function retornar(){
+/* function retornar(){
     window.location.href = '../html/unidade1.html';
-} 
+}  */

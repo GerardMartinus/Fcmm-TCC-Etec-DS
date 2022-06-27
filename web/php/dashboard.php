@@ -58,21 +58,11 @@
 
   }
 
-  if(isset($_POST['Nivel3'])){
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nivel = $row["nivel"];
-      }
-      if($nivel >= 2){
-        header ("Location: quiz3.php");
-      } else {
-        $erro = "<script> Swal.fire({
-          icon: 'error',
-          title: 'Você não está nesse nível ainda!'
+  if(isset($_POST ['Nivel3'])){
+    $erro = "<script> Swal.fire({
+      icon: 'error',
+      title: 'Fase indisponível no momento'
       })</script>";
-      }
-    }
-
   }
 
   if(isset($_POST ['Nivel4'])){
@@ -141,9 +131,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="../js/validar.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <title>Dashboard</title>
   <link rel="stylesheet" href="../css/index.css">
   <script src="https://kit.fontawesome.com/5d16dedfaf.js" crossorigin="anonymous"></script>
+  <script src="../js/contraste.js"></script>
 </head>
 
 <body>
@@ -187,6 +179,7 @@
         <li><a href="sobrenos.html">Sobre nós</a></li>
         <li><a href="faleconosco.html">Fale conosco</a></li>
         <li><a href="#"><?php echo "Olá, " . $nome ?></a></li>
+        <li><a href="sair.php">Sair</li>
         <li><a href="faleconosco.html"></a></li>
         
       </ul>
@@ -231,7 +224,7 @@
         <a href="sair.php">
         <i class="fa fa-power-off fa-1x"></i>
           <span class="nav-text">
-            Logout
+            Sair
           </span>
         </a>
       </li>
@@ -299,7 +292,7 @@
             <p class="card_text"></p>
             <form action="dashboard.php" method="POST">
 
-              <?php if($nivel == 3){
+              <?php if($nivel == 4){
                 echo '<input type="submit" class="btn_dashboard card_btn" name="Nivel3" value="Iniciar" action>';
               } 
               elseif($nivel >= 4){
