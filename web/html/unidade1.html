@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../js/contraste.js"></script>
 </head>
 
 <body>
@@ -14,25 +16,21 @@
   <header>
     <div class="acessibilidade">
       <div class="btn-container">
+        <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o conteúdo [1]</a></label>
+        <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu [2]</a></label>
+        <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
+        <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
         <label class="label-1">Contraste:</label>
-        <!-- Site claro -->
-        <button name="white-style" id="white-style" title="Site Normal" onclick="document.body.style.backgroundColor = '#fff'; 
-          document.body.style.color = '#000';
-          document.getElementById('logo').style.color = '#fff';  
-          
-          document.querySelector('.botao-footer1').setAttribute('style', 'color: #fff');
-          document.querySelector('.botao-footer2').setAttribute('style', 'color: #fff');
-          document.querySelector('.botao-footer3').setAttribute('style', 'color: #fff');">-</button>
-        <!-- Site escuro -->
-        <button name="black-style" id="black-style" title="Alto contraste" onclick="document.body.style.backgroundColor = '#202124'; 
-          document.body.style.color = '#fff';
-          document.getElementById('logo').style.color = 'yellow';
-          document.querySelector('.botao-footer1').setAttribute('style', 'color: yellow');
-          document.querySelector('.botao-footer2').setAttribute('style', 'color: yellow');
-          document.querySelector('.botao-footer3').setAttribute('style', 'color: yellow');">-</button>
+
+        <!-- Site Normal -->
+        <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
+
+        <!-- Site Auto Contraste -->
+        <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
 
         <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
         <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+
       </div>
     </div>
 

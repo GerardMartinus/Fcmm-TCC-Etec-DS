@@ -67,14 +67,22 @@ iframe {
 }
 
 .btn {
+  background-color: #000;
+  color: yellow;
+  border: 1px solid yellow;
   border-radius: 6px;
   padding: 25px;
   cursor: pointer;
   text-decoration: none;
-  border: none;
   font-size: 16px;
   margin-top: 55px;
   }
+
+.btn:hover{
+  background-color: yellow;
+  color: #000;
+
+}
 
 
 
@@ -123,7 +131,7 @@ iframe {
   cursor: pointer;
 }
 
-.contraste {
+#contraste {
   border: 1px solid yellow;
   text-align: center;
   background-color: #000;
@@ -132,10 +140,6 @@ iframe {
   height: 20px;
   width: 20px;
   cursor: pointer;
-}
-
-.botao-fonte{
-  
 }
 
 #increase-font {
@@ -222,6 +226,7 @@ iframe {
 }
 
 .mobile-menu {
+  color: #FFF;
   z-index: 1;
 }
 
@@ -671,7 +676,7 @@ footer h3{
 #git-icon {
  /*  background-color: #FFF; */
   width: 100px;
-  filter: invert(75%);
+  filter: invert(100%);
 }
 
 
@@ -687,7 +692,7 @@ footer h3{
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #000;
+  background: #FFF;
   margin: 8px;
   transition: 0.3s;
 }
@@ -750,19 +755,80 @@ footer h3{
 }
 
 .mobile-menu.active .line1 {
+  background-color: #FFF;
   transform: rotate(-45deg) translate(-8px, 8px);
 }
 
 .mobile-menu.active .line2 {
-  opacity: 0;
+  background-color: #FFF;
 }
 
 .mobile-menu.active .line3 {
+  background-color: #FFF;
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
 
 /* Cadastro e Login */
+
+.ocean { 
+  height: 200px;
+  width:100%;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  z-index: -1;
+}
+
+.ocean.v01 .wave {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  z-index: -1;
+}
+
+.ocean.v01 {
+	transform: rotate(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+  z-index: -1;
+}
+
+.wave {
+  display: none;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  bottom: -25px;
+  width: 6400px;
+  height: 100%;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -25px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
 
 
 textarea:focus,
@@ -794,11 +860,9 @@ a:hover {
   margin-top: 60px;
   border-radius: 10px;
   text-align: center;
-  background: rgba(200, 200, 200, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: #000;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid #FFF;
 }
 @media screen and (max-width: 500px){
   #login-container{ 
@@ -828,32 +892,42 @@ input {
   display: block;
   width: 100%;
   text-align: left;
-  border: none;
   background-color: #000;
+  color: #FFF;
+  border: 1px solid #FFF;
   padding: 10px;
   font-size: 1rem;
   margin-bottom: 20px;
   border-radius: 10px;
 }
 
-input:focus {
-  border-bottom: 2px solid #323232;
+input::placeholder{
+  color: #FFF;
 }
 
+input:focus {
+  border-bottom: 2px solid #FFF;
+}
+
+
+
+
+
 input[type="submit"] {
-  background: #069cc2;
+  background: #000;
   border-radius: 6px;
+  border: 1px solid #FFF;
   height: 30%;
   cursor: pointer;
-  color: #fff;
-  border: none;
+  color: yellow;
   font-size: 16px;
   margin-top: 30px;
   margin-bottom: 19px;
 }
 
 input[type="submit"]:hover {
-  background-color: #000;
+  background-color: yellow;
+  color: #000;
 }
 
 #esqueceuasenha {
@@ -874,6 +948,10 @@ input[type="submit"]:hover {
 #naopossuiconta {
   display: flex;
   justify-content: space-between;
+}
+
+#naopossuiconta a{
+  color: yellow;
 }
 
 
@@ -915,11 +993,13 @@ section {
   display: block;
   background: #000;
   color: #fff;
+  border: 1px solid #FFF;
   padding: 6px 10px 4px 8px;
   border-radius: 50%;
 }
 
 #pergunta {
+  color: #FFF;
   margin-left: 1rem;
 }
 
@@ -939,7 +1019,7 @@ section {
 .questoes {
   user-select: none;
   background: #000;
-
+  color: #FFF;
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   border: 1px solid #ececec;
   border-radius: 5px;
@@ -947,7 +1027,9 @@ section {
 }
 
 .questoes ol li {
-  border: 1px solid var(--secundaria);
+  background-color: #000;
+  border: 1px solid yellow;
+  color: yellow;
   display: block;
   margin-bottom: 0.625rem;
   padding: 1rem;
@@ -955,7 +1037,8 @@ section {
 }
 
 .questoes ol li:hover {
-  background: #000;
+  background: yellow;
+  color: #000;
   cursor: pointer;
 }
 
