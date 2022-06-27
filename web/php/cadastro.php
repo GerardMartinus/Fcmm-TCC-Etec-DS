@@ -120,6 +120,8 @@
     </form>
       <a href="../html/index.html" class="btn">Voltar</a>
     <br><br>
+
+    <div class="acessibilidade-login">
     <!-- Site Normal -->
     <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
 
@@ -128,6 +130,7 @@
 
     <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
     <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+</div>
     <br><br>
     <h2> OU </h2>
     <br>

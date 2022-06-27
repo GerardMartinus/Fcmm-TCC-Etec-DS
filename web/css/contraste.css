@@ -854,11 +854,11 @@ a:hover {
 }
 
 #login-container {
-  width: 45vh;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
-  margin-top: 60px;
+  margin-top: 10px;
   border-radius: 10px;
   text-align: center;
   background: #000;
