@@ -841,6 +841,9 @@ footer h3{
   }
 }
 
+#acessibilidade-cadastro{
+  margin-top: 20px;
+}
 
 textarea:focus,
 input:focus {
@@ -868,24 +871,21 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
-<<<<<<< HEAD
-  margin-top: 1px;
-=======
-  margin-top: 10px;
->>>>>>> df4d6d09295f955297e05fbfde7661ed9b603fb8
+  margin-top: 10vh;
   border-radius: 10px;
   text-align: center;
   background: #000;
   border-radius: 10px;
   border: 1px solid #FFF;
 }
+
 @media screen and (max-width: 500px){
   #login-container{ 
   width: auto;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
-  margin-top: 60px;
+  margin-top: 10vh;
   border-radius: 10px;
   text-align: center;
   background: rgba(200, 200, 200, 0.25);
@@ -896,13 +896,13 @@ a:hover {
 }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
   #login-container {
     width: auto;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 30px;
-    margin-top: 10px;
+    margin-top: 10vh;
     border-radius: 10px;
     text-align: center;
     backdrop-filter: blur(4px);
@@ -1136,6 +1136,10 @@ section {
     opacity: 1;
   }
 }
+
+#numero{color: var(--branco);}
+
+#total{color: var(--branco);}
 
 .acertou {
   background: var(--verde);

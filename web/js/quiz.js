@@ -275,7 +275,7 @@ function fimDoJogo() {
     if (pontos >= 70){
         let s = 's'
         pontos == 0 ? s = '' : s = s
-        instrucoes.textContent = "Fim de Jogo! Você conseguiu " + pontos + " ponto"+ s
+        instrucoes.textContent = "Parabens! Você conseguiu " + pontos + " ponto"+ s
         instrucoes.classList.add('placar')
         document.querySelector('.fim').style.display = "block";
         document.getElementById("fimBotao").innerHTML = "Continuar";

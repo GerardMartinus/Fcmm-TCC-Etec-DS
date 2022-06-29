@@ -1,53 +1,53 @@
 <?php
-    session_start();
-    $erro;
-    $validar;
-    /* print_r($_SESSION); */
-    include_once('config.php');
+    // session_start();
+    // $erro;
+    // $validar;
+    // /* print_r($_SESSION); */
+    // include_once('config.php');
   
   
-    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
-    {
-        unset($_SESSION['email']);
-        unset($_SESSION['senha']);
-        header('Location: login.php');
-    }
-    $logado = $_SESSION['email'];
+    // if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+    // {
+    //     unset($_SESSION['email']);
+    //     unset($_SESSION['senha']);
+    //     header('Location: login.php');
+    // }
+    // $logado = $_SESSION['email'];
   
-    $sql = "SELECT nome, email, nivel FROM usuarios WHERE email = '$logado' ";
-    $res = mysqli_query($conexao, $sql);
+    // $sql = "SELECT nome, email, nivel FROM usuarios WHERE email = '$logado' ";
+    // $res = mysqli_query($conexao, $sql);
   
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nome = $row["nome"]; 
-        $email = $row["email"];
-        $nivel = $row["nivel"] ;
-      }
-    }
+    // if(mysqli_num_rows($res) > 0){
+    //   while($row = mysqli_fetch_assoc($res)){
+    //     $nome = $row["nome"]; 
+    //     $email = $row["email"];
+    //     $nivel = $row["nivel"] ;
+    //   }
+    // }
 
-    if (isset($_POST['finalizar'])){
-        if($nivel <= 1){
-            $sql = "UPDATE usuarios SET nivel = '2' WHERE email = '$logado'";
-            $res = mysqli_query($conexao, $sql);
-            $erro = "<script> Swal.fire({
-                icon: 'success',
-                title: 'Você subiu de nível!'
-            })</script>";
-            $validar = 1;
-            header ('Location dashboard.php');
-        }
-        else{
-            $erro = "<script> Swal.fire({
-                icon: 'success',
-                title: 'Revisão feita!'
-            })</script>";
-            $validar = 1;
-        }
-    }
+    // if (isset($_POST['finalizar'])){
+    //     if($nivel <= 1){
+    //         $sql = "UPDATE usuarios SET nivel = '2' WHERE email = '$logado'";
+    //         $res = mysqli_query($conexao, $sql);
+    //         $erro = "<script> Swal.fire({
+    //             icon: 'success',
+    //             title: 'Você subiu de nível!'
+    //         })</script>";
+    //         $validar = 1;
+    //         header ('Location dashboard.php');
+    //     }
+    //     else{
+    //         $erro = "<script> Swal.fire({
+    //             icon: 'success',
+    //             title: 'Revisão feita!'
+    //         })</script>";
+    //         $validar = 1;
+    //     }
+    // }
 
-    if(isset($_POST['voltar'])){
-        header ('Location dashboard.php');
-    }
+    // if(isset($_POST['voltar'])){
+    //     header ('Location dashboard.php');
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -145,11 +145,11 @@
 
             
                 <article id='aviso' class='centro'>
-                    <input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /> <br>
-                    <span id='numero'></span> de <span id='total'></span> <br>
+                <div class="botao-quiz"><input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /></div>
+                <div class="botao-quiz"><span id='numero'></span> de <span id='total'></span></div>
                     <form action="quiz1.php" method="POST">
-                        <input type="submit"  id="fimBotao" class="fim" value="Finalizar" name="finalizar">
-                        <input type="submit"  id="voltarBotao" class="voltar" value="Voltar" name="voltar">
+                        <div class="botao-quiz"><input type="submit"  class="botoes-quiz" id="fimBotao" class="fim" value="Finalizar" name="finalizar"></div>
+                        <div class="botao-quiz"><input type="submit"  class="botoes-quiz" id="voltarBotao" class="voltar" value="Voltar" name="voltar"></div>
                     </form>
                 </article>
 

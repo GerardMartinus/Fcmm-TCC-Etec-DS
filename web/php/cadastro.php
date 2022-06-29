@@ -120,15 +120,8 @@ if (isset($_POST['cadastrar'])) {
     </form>
       <a href="../html/index.html" class="btn">Voltar</a>
     <br><br>
-<<<<<<< HEAD
-=======
 
-    <div class="acessibilidade-login">
-    <!-- Site Normal -->
-    <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
->>>>>>> df4d6d09295f955297e05fbfde7661ed9b603fb8
-
-    <div>
+    <div id="acessibilidade-cadastro">
       <!-- Site Normal -->
       <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
   
@@ -138,13 +131,7 @@ if (isset($_POST['cadastrar'])) {
       <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
       <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
 
-<<<<<<< HEAD
     </div>
-=======
-    <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-    <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-</div>
->>>>>>> df4d6d09295f955297e05fbfde7661ed9b603fb8
     <br><br>
     <h2> OU </h2>
     <br>
