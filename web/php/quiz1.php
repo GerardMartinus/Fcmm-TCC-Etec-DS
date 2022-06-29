@@ -112,7 +112,7 @@
     <main id="tela-principal-quiz">
 
         <section id='content-quiz'>
-            <h1 id="quiz-titulo">Quiz</h1>
+        <div class="centralizar"><h1 id="quiz-titulo">Quiz</h1></div>
             <?php
                 if($validar == 1){
                     echo "<a href='dashboard.php'>Finalizar Nível</a>";
@@ -145,11 +145,11 @@
 
             
                 <article id='aviso' class='centro'>
-                <div class="botao-quiz"><input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /></div>
-                <div class="botao-quiz"><span id='numero'></span> de <span id='total'></span></div>
+                <div class="centralizar"><input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /></div>
+                <div class="centralizar"><span id='numero'></span> de <span id='total'></span></div>
                     <form action="quiz1.php" method="POST">
-                        <div class="botao-quiz"><input type="submit"  class="botoes-quiz" id="fimBotao" class="fim" value="Finalizar" name="finalizar"></div>
-                        <div class="botao-quiz"><input type="submit"  class="botoes-quiz" id="voltarBotao" class="voltar" value="Voltar" name="voltar"></div>
+                        <div class="centralizar"><input type="submit"  class="botoes-quiz" id="fimBotao" class="fim" value="Finalizar" name="finalizar"></div>
+                        <div class="centralizar"><input type="submit"  class="botoes-quiz" id="voltarBotao" class="voltar" value="Voltar" name="voltar"></div>
                     </form>
                 </article>
 

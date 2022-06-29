@@ -846,11 +846,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
-<<<<<<< HEAD
   margin-top: 10vh;
-=======
-  margin-top: 20px;
->>>>>>> b9c164703b2201cac3a010f4f1fb47f746941e0a
   border-radius: 10px;
   text-align: center;
   background: rgba(200, 200, 200, 0.25);
@@ -959,9 +955,23 @@ section {
   color: #000;
 }
 
+#content-quiz{
+  top: 6rem;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+
 /* classe para centralizar textos, paragrafos */
 .centro {
   text-align: center;
+}
+
+#quiz-titulo{
+  margin-top: 30px;
 }
 
 /* div class questao com numero da questao e pergunta */
@@ -1124,7 +1134,7 @@ input[type="range"] {
   border: none; */
 }
 
-.botao-quiz {
+.centralizar {
   width: 22vw;
   margin-left: 40%;
   display: flex;

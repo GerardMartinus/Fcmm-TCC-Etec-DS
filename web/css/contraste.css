@@ -871,11 +871,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   padding: 20px 30px;
-<<<<<<< HEAD
   margin-top: 10vh;
-=======
-  margin-top: 20px;
->>>>>>> b9c164703b2201cac3a010f4f1fb47f746941e0a
   border-radius: 10px;
   text-align: center;
   background: #000;
@@ -1012,6 +1008,10 @@ section {
 /* classe para centralizar textos, paragrafos */
 .centro {
   text-align: center;
+}
+
+#quiz-titulo{
+  color: var(--branco);
 }
 
 /* div class questao com numero da questao e pergunta */
