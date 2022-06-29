@@ -41,21 +41,11 @@
 
   }
 
-  if(isset($_POST['Nivel2'])){
-    if(mysqli_num_rows($res) > 0){
-      while($row = mysqli_fetch_assoc($res)){
-        $nivel = $row["nivel"];
-      }
-      if($nivel >= 2){
-        header ("Location: quiz2.php");
-      } else {
-        $erro = "<script> Swal.fire({
-          icon: 'error',
-          title: 'Você não está nesse nível ainda!'
+  if(isset($_POST ['Nivel2'])){
+    $erro = "<script> Swal.fire({
+      icon: 'error',
+      title: 'Fase indisponível no momento'
       })</script>";
-      }
-    }
-
   }
 
   if(isset($_POST ['Nivel3'])){
